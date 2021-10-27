@@ -26,7 +26,7 @@ background-color:rgb(84, 116, 156);}
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
+   <item row="2" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
       <number>0</number>
@@ -81,8 +81,8 @@ background-color:rgb(208, 208, 208)</string>
       <widget class="QComboBox" name="loadedLayers">
        <property name="geometry">
         <rect>
-         <x>170</x>
-         <y>590</y>
+         <x>210</x>
+         <y>660</y>
          <width>581</width>
          <height>21</height>
         </rect>
@@ -317,39 +317,6 @@ SELECT ?label ?geo ?item WHERE {
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="layoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>380</x>
-         <y>110</y>
-         <width>182</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_7">
-        <item>
-         <widget class="QLabel" name="label_14">
-          <property name="text">
-           <string>Query Templates:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="queryTemplates_2">
-          <item>
-           <property name="text">
-            <string>Item+Label</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>All Attributes</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QWidget" name="layoutWidget_4">
        <property name="geometry">
         <rect>
@@ -379,124 +346,6 @@ SELECT ?label ?geo ?item WHERE {
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="widget" native="true">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>181</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QLabel" name="label_3">
-            <property name="maximumSize">
-             <size>
-              <width>78</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Select endpoint:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="comboBox_2">
-            <property name="minimumSize">
-             <size>
-              <width>77</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>77</width>
-              <height>20</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <widget class="QPushButton" name="quickAddTripleStore">
-          <property name="minimumSize">
-           <size>
-            <width>131</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius:10px;
-background-color:rgb(208, 208, 208)</string>
-          </property>
-          <property name="text">
-           <string>Quick Add Endpoint</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="loadFileButton">
-          <property name="minimumSize">
-           <size>
-            <width>111</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius:10px;
-selection-background-color: rgb(197, 250, 255);
-background-color:rgb(208, 208, 208)</string>
-          </property>
-          <property name="text">
-           <string>Load Graph</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="widget_2" native="true">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>170</y>
-         <width>171</width>
-         <height>201</height>
-        </rect>
-       </property>
-       <widget class="QWidget" name="layoutWidget_3">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>150</y>
-          <width>151</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
-         <item>
-          <widget class="QLabel" name="savedQueryLabel_2">
-           <property name="text">
-            <string>Saved Queries:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="savedQueries_2"/>
-         </item>
-        </layout>
-       </widget>
-      </widget>
       <widget class="QWidget" name="widget_3" native="true">
        <property name="geometry">
         <rect>
@@ -506,15 +355,7 @@ background-color:rgb(208, 208, 208)</string>
          <height>41</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="text">
-           <string>PushButton</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <layout class="QVBoxLayout" name="verticalLayout_3"/>
       </widget>
      </widget>
      <widget class="QWidget" name="tab_2">
