@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1230</width>
-    <height>767</height>
+    <width>1298</width>
+    <height>715</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -60,64 +60,279 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
        <attribute name="title">
         <string>Query</string>
        </attribute>
-       <widget class="QFrame" name="frame">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>130</y>
-          <width>861</width>
-          <height>491</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>791</width>
-          <height>391</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QObject#frame{
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="2">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>124</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="5" rowspan="2">
+         <widget class="QWidget" name="widget_2" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QCheckBox" name="exportTripleStore_2">
+             <property name="text">
+              <string>Export To Triple Store</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_5" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <underline>false</underline>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>layer name: unicorn_</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="inp_label">
+                <property name="minimumSize">
+                 <size>
+                  <width>128</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius:10px;
+
+border-color:rgb(45, 45, 45);</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="bboxButton">
+             <property name="minimumSize">
+              <size>
+               <width>171</width>
+               <height>21</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:10px;
+background-color:rgb(208, 208, 208)</string>
+             </property>
+             <property name="text">
+              <string>Constraint By BBOX</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="loadTripleStoreButton">
+             <property name="minimumSize">
+              <size>
+               <width>171</width>
+               <height>21</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <underline>false</underline>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:10px;
+background-color:rgb(208, 208, 208)</string>
+             </property>
+             <property name="text">
+              <string>Configure TripleStores</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1" rowspan="4" colspan="3">
+         <widget class="QWidget" name="widget_4" native="true">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QCheckBox" name="allownongeo">
+                <property name="text">
+                 <string>Allow non-geo queries</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QLabel" name="queryLimitLabel">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <underline>true</underline>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Query Limit:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="queryLimit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>81</width>
+                    <height>21</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius:10px;
+
+border-color:rgb(45, 45, 45);</string>
+                  </property>
+                  <property name="text">
+                   <string>10</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QLabel" name="saveQueryName_3">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <underline>true</underline>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> Query Name :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="saveQueryName_4">
+                  <property name="minimumSize">
+                   <size>
+                    <width>81</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius:10px;
+
+border-color:rgb(45, 45, 45);</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLabel" name="filterConceptsLabel">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <underline>true</underline>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Filter GeoConcepts:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="filterConcepts">
+                  <property name="minimumSize">
+                   <size>
+                    <width>133</width>
+                    <height>21</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius:10px;
+
+border-color:rgb(45, 45, 45);</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QFrame" name="frame">
+             <property name="minimumSize">
+              <size>
+               <width>791</width>
+               <height>391</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QObject#frame{
 background-color:rgb(217, 233, 255);
 border-radius:20px;}
 
 
 
 </string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QPlainTextEdit" name="inp_sparql">
-             <property name="minimumSize">
-              <size>
-               <width>561</width>
-               <height>471</height>
-              </size>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>561</width>
-               <height>471</height>
-              </size>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
-             <property name="font">
-              <font>
-               <family>Courier New</family>
-               <pointsize>12</pointsize>
-              </font>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:50px;</string>
-             </property>
-             <property name="plainText">
-              <string># Example: Airports in Germany
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <widget class="QPlainTextEdit" name="inp_sparql">
+                  <property name="minimumSize">
+                   <size>
+                    <width>561</width>
+                    <height>471</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>561</width>
+                    <height>471</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Courier New</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius:50px;</string>
+                  </property>
+                  <property name="plainText">
+                   <string># Example: Airports in Germany
 
 SELECT ?label ?geo ?item WHERE {
   ?item wdt:P31 wd:Q1248784; #Airport
@@ -126,260 +341,94 @@ SELECT ?label ?geo ?item WHERE {
     rdfs:label ?label.
   FILTER((LANG(?label)) = &quot;en&quot;)
 } LIMIT 100</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QListView" name="geoClassList">
-             <property name="minimumSize">
-              <size>
-               <width>271</width>
-               <height>471</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>271</width>
-               <height>471</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:30px;</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="widget_3" native="true">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>390</y>
-          <width>93</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3"/>
-       </widget>
-       <widget class="QWidget" name="widget" native="true">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>80</y>
-          <width>821</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <widget class="QCheckBox" name="allownongeo">
-           <property name="text">
-            <string>Allow non-geo queries</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QLabel" name="queryLimitLabel">
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-               <underline>true</underline>
-              </font>
-             </property>
-             <property name="text">
-              <string>Query Limit:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="queryLimit">
-             <property name="minimumSize">
-              <size>
-               <width>81</width>
-               <height>21</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:10px;
-
-border-color:rgb(45, 45, 45);</string>
-             </property>
-             <property name="text">
-              <string>10</string>
-             </property>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListView" name="geoClassList">
+                  <property name="minimumSize">
+                   <size>
+                    <width>271</width>
+                    <height>471</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>271</width>
+                    <height>471</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-radius:30px;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
-           <item>
-            <widget class="QLabel" name="saveQueryName_3">
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-               <underline>true</underline>
-              </font>
-             </property>
-             <property name="text">
-              <string> Query Name :</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="saveQueryName_4">
-             <property name="minimumSize">
-              <size>
-               <width>81</width>
-               <height>20</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:10px;
-
-border-color:rgb(45, 45, 45);</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_6">
-           <item>
-            <widget class="QLabel" name="filterConceptsLabel">
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-               <underline>true</underline>
-              </font>
-             </property>
-             <property name="text">
-              <string>Filter GeoConcepts:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="filterConcepts">
-             <property name="minimumSize">
-              <size>
-               <width>133</width>
-               <height>21</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:10px;
-
-border-color:rgb(45, 45, 45);</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="widget_2" native="true">
-        <property name="geometry">
-         <rect>
-          <x>910</x>
-          <y>20</y>
-          <width>292</width>
-          <height>133</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item>
-          <widget class="QCheckBox" name="exportTripleStore_2">
-           <property name="text">
-            <string>Export To Triple Store</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QWidget" name="widget_5" native="true">
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QLabel" name="label">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <underline>false</underline>
-               </font>
-              </property>
-              <property name="text">
-               <string>layer name: unicorn_</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="inp_label">
-              <property name="minimumSize">
-               <size>
-                <width>128</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">border-radius:10px;
-
-border-color:rgb(45, 45, 45);</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="bboxButton">
-           <property name="minimumSize">
-            <size>
-             <width>171</width>
-             <height>21</height>
-            </size>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:10px;
-background-color:rgb(208, 208, 208)</string>
-           </property>
-           <property name="text">
-            <string>Constraint By BBOX</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="loadTripleStoreButton">
-           <property name="minimumSize">
-            <size>
-             <width>171</width>
-             <height>21</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-             <underline>false</underline>
-            </font>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:10px;
-background-color:rgb(208, 208, 208)</string>
-           </property>
-           <property name="text">
-            <string>Configure TripleStores</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
+         </widget>
+        </item>
+        <item row="2" column="5">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>413</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>38</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="4">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>38</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="1">
+         <widget class="QWidget" name="widget_3" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_3"/>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>15</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -891,7 +940,7 @@ background-color:rgb(208, 208, 208)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1230</width>
+     <width>1298</width>
      <height>21</height>
     </rect>
    </property>
