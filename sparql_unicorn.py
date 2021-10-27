@@ -64,39 +64,39 @@ geoconcepts=""
 class SPAQLunicorn:
     """QGIS Plugin Implementation."""
     loadedfromfile=False
-	
+
     enrichedExport=False
-	
+
     exportNameSpace=None
 
     exportIdCol=None
-	
+
     exportSetClass=None
     # Triple store configuration map
     triplestoreconf=None
-    
+
     enrichLayer=None
-	
+
     qtask=None
-	
+
     currentgraph=None
-	
+
     originalRowCount=0
-	
+
     enrichLayerCounter=0
-	
+
     addVocabConf=None
-	
+
     savedQueriesJSON={}
-	
+
     exportColConfig={}
 
     valueconcept={}
-	
+
     columnvars={}
-	
+
     prefixes=[]
-   
+
     def __init__(self, iface):
         """Constructor.
 
@@ -313,7 +313,7 @@ class SPAQLunicorn:
             if len(conceptlist)>0:
                 self.dlg.geoClassList.selectionModel().setCurrentIndex(self.dlg.geoClassList.model().index(0,0),QItemSelectionModel.SelectCurrent)
             if "examplequery" in self.triplestoreconf[endpointIndex]:
-                self.dlg.inp_sparql2.setPlainText(self.triplestoreconf[endpointIndex]["examplequery"]) 
+                self.dlg.inp_sparql2.setPlainText(self.triplestoreconf[endpointIndex]["examplequery"])
                 self.dlg.inp_sparql2.columnvars={}
         if "areaconcepts" in self.triplestoreconf[endpointIndex] and self.triplestoreconf[endpointIndex]["areaconcepts"]:
             conceptlist2=self.triplestoreconf[endpointIndex]["areaconcepts"]
@@ -364,10 +364,10 @@ class SPAQLunicorn:
             else:
                 currentgeo['properties'][str(row[1])]=str(row[2])
         return geometries
-		
+
     def useDefaultIDPropProcess(self):
-        self.dlg.findIDPropertyEdit.setText("http://www.w3.org/2000/01/rdf-schema#label")       
-		
+        self.dlg.findIDPropertyEdit.setText("http://www.w3.org/2000/01/rdf-schema#label")
+
     def matchColumnValueFromTripleStore(self,toquery):
         values="VALUES ?vals { "
         for queryval in toquery:
@@ -387,8 +387,8 @@ class SPAQLunicorn:
         return viewlist
 
     ## Converts a QGIS layer to TTL with or withour a given column mapping.
-    #  @param self The object pointer. 
-    #  @param layer The layer to convert. 
+    #  @param self The object pointer.
+    #  @param layer The layer to convert.
     def layerToTTLString(self,layer,urilist=None,classurilist=None,includelist=None,proptypelist=None,valuemappings=None,valuequeries=None):
         fieldnames = [field.name() for field in layer.fields()]
         ttlstring="<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n"
@@ -440,7 +440,7 @@ class SPAQLunicorn:
                 #    fieldcounter=0
                 if includelist!=None and fieldcounter<len(includelist) and includelist[fieldcounter]==False:
                     continue
-                prop=propp    
+                prop=propp
                 print(str(fieldcounter))
                 print(str(urilist)+"\n")
                 print(str(classurilist)+"\n")
@@ -465,21 +465,21 @@ class SPAQLunicorn:
                  #   ttlstring+="<"+curid+"> <"+prop+"> <"+str(f[propp])+"> .\n"
                 #    if first<10:
                  #       ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .\n"
-                 #       ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"  
+                 #       ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
                   #      if classurilist[fieldcounter]!="":
                   #           ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <"+classurilist[fieldcounter]+"> .\n"
                 elif prop=="http://www.w3.org/2000/01/rdf-schema#label" or prop=="http://www.w3.org/2000/01/rdf-schema#comment" or (proptypelist!=None and proptypelist[fieldcounter]=="AnnotationProperty"):
                     ttlstring+="<"+curid+"> <"+prop+"> \""+str(f[propp]).replace('"','\\"')+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n"
                     if first<10:
-                        ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .\n" 
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"  						
+                        ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .\n"
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
                 elif not f[propp] or f[propp]==None or f[propp]=="":
                     continue
                 elif proptypelist!=None and proptypelist[fieldcounter]=="SubClass":
                     ttlstring+="<"+curid+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(f[propp])+"> .\n"
                     ttlstring+="<"+curid+"> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <"+curclassid+"> .\n"
                     if first<10:
-                        ttlstring+="<"+str(f[propp])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n" 
+                        ttlstring+="<"+str(f[propp])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n"
                 elif valuequeries!=None and propp in valuequeries:
                     ttlstring+=""
                     sparql = SPARQLWrapper(valuequeries[propp][1], agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
@@ -490,41 +490,41 @@ class SPAQLunicorn:
                     ttlstring+="<"+curid+"> <"+prop+"> <"+results["results"]["bindings"][0]["item"]["value"]+"> ."
                     if first<10:
                         ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .\n"
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"  
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
                         if classurilist[fieldcounter]!="":
                              ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <"+classurilist[fieldcounter]+"> .\n"
                 elif valuemappings!=None and propp in valuemappings and f[propp] in self.valuemappings[propp]:
                     ttlstring+="<"+curid+"> <"+prop+"> <"+str(self.valuemappings[propp][f[propp]])+"> .\n"
                     if first<10:
                         ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .\n"
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"  
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
                         if classurilist[fieldcounter]!="":
                              ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <"+classurilist[fieldcounter]+"> .\n"
                 elif "http" in str(f[propp]) or (proptypelist!=None and proptypelist[fieldcounter]=="ObjectProperty"):
                     ttlstring+="<"+curid+"> <"+prop+"> <"+str(f[propp])+"> .\n"
                     if first<10:
                         ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .\n"
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"  
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
                         if classurilist!=None and fieldcounter<len(classurilist) and classurilist[fieldcounter]!="":
                              ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <"+classurilist[fieldcounter]+"> .\n"
                 elif re.match(r'^-?\d+$', str(f[propp])):
                     ttlstring+="<"+curid+"> <"+prop+"> \""+str(f[propp])+"\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n"
                     if first<10:
                         ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .\n"
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n" 
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .\n" 
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .\n"
                 elif re.match(r'^-?\d+(?:\.\d+)?$', str(f[propp])):
                     ttlstring+="<"+curid+"> <"+prop+"> \""+str(f[propp])+"\"^^<http://www.w3.org/2001/XMLSchema#double> .\n"
                     if first:
                         ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .\n"
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n" 
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .\n" 
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .\n"
                 else:
                     ttlstring+="<"+curid+"> <"+prop+"> \""+str(f[propp]).replace('"','\\"')+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n"
                     if first<10:
                         ttlstring+="<"+prop+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .\n"
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n" 
-                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .\n" 
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#domain> <"+curclassid+"> .\n"
+                        ttlstring+="<"+prop+"> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .\n"
             if first<10:
                 first=first+1
         return ttlstring
@@ -640,14 +640,14 @@ class SPAQLunicorn:
             else:
                 with open(os.path.join(__location__, 'triplestoreconf.json'),'r') as myfile:
                     data=myfile.read()
-            # parse file 
+            # parse file
             with open(os.path.join(__location__, 'addvocabconf.json'),'r') as myfile:
                 data2=myfile.read()
             with open(os.path.join(__location__, 'vocabs.json'),'r') as myfile:
                 data3=myfile.read()
             with open(os.path.join(__location__, 'prefixes.json'),'r') as myfile:
                 data4=myfile.read()
-            if os.path.isfile(os.path.join(__location__, 'savedqueries.json')): 
+            if os.path.isfile(os.path.join(__location__, 'savedqueries.json')):
                 with open(os.path.join(__location__, 'savedqueries.json'),'r') as myfile:
                     data5=myfile.read()
                 self.savedQueriesJSON=json.loads(data5)
@@ -659,9 +659,9 @@ class SPAQLunicorn:
             counter=0
             for store in self.triplestoreconf:
                 self.prefixes.append("")
-                for prefix in store["prefixes"]:                 
+                for prefix in store["prefixes"]:
                     self.prefixes[counter]+="PREFIX "+prefix+":<"+store["prefixes"][prefix]+">\n"
-                counter+=1            
+                counter+=1
             self.addVocabConf = json.loads(data2)
             self.saveTripleStoreConfig()
             self.first_start = False
@@ -681,19 +681,19 @@ class SPAQLunicorn:
             self.dlg.viewselectaction()
             self.dlg.comboBox.currentIndexChanged.connect(self.endpointselectaction)
             self.endpointselectaction()
-            #self.dlg.exportTripleStore.hide()
-            #self.dlg.exportTripleStore_2.hide()
-            #self.dlg.tabWidget.removeTab(2)
-            #self.dlg.tabWidget.removeTab(1)
+            self.dlg.exportTripleStore.hide()
+            self.dlg.exportTripleStore_2.hide()
+            self.dlg.tabWidget.removeTab(2)
+            self.dlg.tabWidget.removeTab(1)
             self.dlg.loadedLayers.clear()
             self.dlg.pushButton.clicked.connect(self.create_unicorn_layer)
             self.dlg.geoClassList.doubleClicked.connect(self.create_unicorn_layer)
             self.dlg.exportLayers.clicked.connect(self.exportLayer2)
         #if self.first_start == False:
         #    self.dlg.loadUnicornLayers()
-        # show the dialog
+        #show the dialog
         self.dlg.show()
-        # Run the dialog event loop
+        #Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
