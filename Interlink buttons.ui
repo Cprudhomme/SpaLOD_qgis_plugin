@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1399</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>153</width>
+     <height>129</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="loadLayerInterlink">
+      <property name="text">
+       <string>Load Layer</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exportMappingButton">
+      <property name="text">
+       <string>Export Mapping</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exportInterlink">
+      <property name="minimumSize">
+       <size>
+        <width>151</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>3</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>true</underline>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:10px;
+background-color:rgb(211, 211, 211);</string>
+      </property>
+      <property name="text">
+       <string>Export Result</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="searchClass">
+      <property name="styleSheet">
+       <string notr="true">border-radius:10px;
+background-color:rgb(211, 211, 211);</string>
+      </property>
+      <property name="text">
+       <string>Search Class</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="importMappingButton">
+      <property name="text">
+       <string>Import Mapping</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>chooseLayerInterlink</zorder>
+  <zorder>loadLayerInterlink</zorder>
+  <zorder>exportMappingButton</zorder>
+  <zorder>importMappingButton</zorder>
+  <zorder>refreshLayersInterlink</zorder>
+  <zorder>interlinkOwlClassInput</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_7</zorder>
+  <zorder>interlinkNameSpace</zorder>
+  <zorder>label</zorder>
+  <zorder>chooseLayerInterlink</zorder>
+  <zorder>label_2</zorder>
+  <zorder>chooseLayerInterlink</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

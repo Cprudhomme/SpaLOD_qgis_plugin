@@ -445,90 +445,6 @@ SELECT ?label ?geo ?item WHERE {
        <attribute name="title">
         <string>Interlink</string>
        </attribute>
-       <widget class="QTableWidget" name="interlinkTable">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>170</y>
-          <width>1081</width>
-          <height>411</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>811</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="baseSize">
-         <size>
-          <width>4</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-        <property name="columnCount">
-         <number>8</number>
-        </property>
-        <column>
-         <property name="text">
-          <string>Export?</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>IDColumn?</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>GeoColumn?</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>ColumnProperty</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>PropertyType</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>ColumnConcept</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>ValueConcept</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QLabel" name="label_6">
-        <property name="geometry">
-         <rect>
-          <x>690</x>
-          <y>100</y>
-          <width>251</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Table Colums to Concepts:</string>
-        </property>
-       </widget>
        <widget class="QWidget" name="widget_6" native="true">
         <property name="geometry">
          <rect>
@@ -680,6 +596,129 @@ background-color:rgb(211, 211, 211);</string>
             </widget>
            </item>
           </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_8" native="true">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>170</y>
+          <width>1119</width>
+          <height>466</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Table Colums to Concepts:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QFrame" name="frame_2">
+           <property name="maximumSize">
+            <size>
+             <width>1101</width>
+             <height>431</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QObject#frame_2{
+background-color:rgb(217, 233, 255);
+border-radius:20px;}
+
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <widget class="QTableWidget" name="interlinkTable_3">
+              <property name="minimumSize">
+               <size>
+                <width>1081</width>
+                <height>411</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>4</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="columnCount">
+               <number>8</number>
+              </property>
+              <column>
+               <property name="text">
+                <string>Export?</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>IDColumn?</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>GeoColumn?</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Column</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>ColumnProperty</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>PropertyType</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>ColumnConcept</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>ValueConcept</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_9" native="true"/>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>
