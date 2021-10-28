@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1265</width>
-    <height>707</height>
+    <width>1326</width>
+    <height>838</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,32 +32,6 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
        <size>
         <width>20</width>
         <height>8</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="2">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>9</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="1" column="3">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>48</width>
-        <height>20</height>
        </size>
       </property>
      </spacer>
@@ -119,7 +93,7 @@ border-radius:20px;}
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(87, 129, 180);</string>
+           <string notr="true">color:rgb(0, 127, 165);</string>
           </property>
           <property name="text">
            <string>Allow non-geo queries</string>
@@ -135,11 +109,11 @@ border-radius:20px;}
               <pointsize>9</pointsize>
               <weight>75</weight>
               <bold>true</bold>
-              <underline>true</underline>
+              <underline>false</underline>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(87, 129, 180);</string>
+             <string notr="true">color:rgb(0, 127, 165);</string>
             </property>
             <property name="text">
              <string>Query Limit:</string>
@@ -177,11 +151,11 @@ background-color: rgb(253, 252, 250);</string>
               <pointsize>9</pointsize>
               <weight>75</weight>
               <bold>true</bold>
-              <underline>true</underline>
+              <underline>false</underline>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(87, 129, 180);</string>
+             <string notr="true">color:rgb(0, 127, 165);</string>
             </property>
             <property name="text">
              <string> Query Name :</string>
@@ -216,12 +190,11 @@ border-color:rgb(45, 45, 45);</string>
               <pointsize>10</pointsize>
               <weight>75</weight>
               <bold>true</bold>
-              <underline>true</underline>
+              <underline>false</underline>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-color: rgb(87, 129, 180);</string>
+             <string notr="true">color:rgb(0, 127, 165);</string>
             </property>
             <property name="text">
              <string>Filter GeoConcepts:</string>
@@ -260,7 +233,7 @@ background-color: rgb(253, 252, 250);</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(87, 129, 180);</string>
+             <string notr="true">color:rgb(0, 127, 165);</string>
             </property>
             <property name="text">
              <string>layer name: unicorn_</string>
@@ -402,9 +375,9 @@ background-color: rgb(253, 252, 250);</string>
              <property name="styleSheet">
               <string notr="true">
 
-background-color: rgb(124, 100, 80);
+background-color:rgb(0, 127, 165);
 border-radius:10px;
-color: rgb(143, 134, 117);</string>
+color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
               <string>Constraint By BBOX</string>
@@ -438,9 +411,9 @@ color: rgb(143, 134, 117);</string>
              </property>
              <property name="styleSheet">
               <string notr="true">
-color: rgb(104, 97, 92);
+background-color:rgb(0, 127, 165);
 border-radius:10px;
-background-color: rgb(143, 134, 117);</string>
+color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
               <string>Configure TripleStores</string>
@@ -469,8 +442,7 @@ background-color: rgb(143, 134, 117);</string>
           </property>
           <property name="styleSheet">
            <string notr="true">
-color: rgb(64, 182, 139);
-
+color:rgb(0, 127, 165);
 </string>
           </property>
           <property name="text">
@@ -482,6 +454,32 @@ color: rgb(64, 182, 139);
       </widget>
      </widget>
     </item>
+    <item row="1" column="3">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>48</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="2">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>9</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -489,7 +487,7 @@ color: rgb(64, 182, 139);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1265</width>
+     <width>1326</width>
      <height>21</height>
     </rect>
    </property>
