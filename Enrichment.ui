@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1121</width>
-    <height>551</height>
+    <width>1211</width>
+    <height>741</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
-    <spacer name="verticalSpacer_2">
+    <spacer name="verticalSpacer_top_Enrichment">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
@@ -31,29 +31,16 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>3</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="1">
+   <item row="1" column="1" rowspan="2">
     <widget class="QFrame" name="Enrichment_frame">
      <property name="minimumSize">
       <size>
-       <width>1091</width>
-       <height>521</height>
+       <width>1101</width>
+       <height>531</height>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">QObject#frame{
+      <string notr="true">QObject#Enrichment_frame{
 background-color:rgb(217, 233, 255);
 border-radius:20px;}
 
@@ -70,7 +57,7 @@ border-radius:20px;}
      <widget class="QTableWidget" name="enrichTableResult">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>30</x>
         <y>50</y>
         <width>1051</width>
         <height>451</height>
@@ -169,10 +156,74 @@ background-color:rgb(93, 138, 181);
        </item>
       </layout>
      </widget>
+     <widget class="QScrollBar" name="verticalScrollBar_Enrichment">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>16</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>16</width>
+        <height>451</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16</width>
+        <height>451</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:10px;
+background-color:rgb(93, 138, 181);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="horizontalScrollBar_Enrichment">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>500</y>
+        <width>1051</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1051</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1051</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:10px;
+background-color:rgb(93, 138, 181);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
     </widget>
    </item>
    <item row="1" column="2">
-    <spacer name="horizontalSpacer_2">
+    <spacer name="horizontalSpacer_right_Enrichment">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -184,8 +235,21 @@ background-color:rgb(93, 138, 181);
      </property>
     </spacer>
    </item>
-   <item row="2" column="1">
-    <spacer name="verticalSpacer">
+   <item row="2" column="0">
+    <spacer name="horizontalSpacer_left_Enrichment">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>3</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="1">
+    <spacer name="verticalSpacer_bottom_Entichment">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
