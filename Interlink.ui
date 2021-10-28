@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>InterlinkForm</class>
+ <widget class="QWidget" name="InterlinkForm">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,21 +18,21 @@
 background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="2">
-    <spacer name="verticalSpacer_2">
+   <item row="1" column="3">
+    <spacer name="horizontalSpacer_right_Interlink">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Horizontal</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
-       <width>20</width>
-       <height>85</height>
+       <width>60</width>
+       <height>20</height>
       </size>
      </property>
     </spacer>
    </item>
    <item row="1" column="0">
-    <spacer name="horizontalSpacer">
+    <spacer name="horizontalSpacer_left_Interlink">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -44,8 +44,34 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
      </property>
     </spacer>
    </item>
+   <item row="2" column="1">
+    <spacer name="verticalSpacer_bottom_Interlink">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>84</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="2">
+    <spacer name="verticalSpacer_top_Interlink">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>85</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
    <item row="1" column="1" colspan="2">
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="_Interlink_frame">
      <property name="minimumSize">
       <size>
        <width>1141</width>
@@ -130,7 +156,7 @@ border-radius:20px;}
        </property>
       </column>
      </widget>
-     <widget class="QWidget" name="widget_7" native="true">
+     <widget class="QWidget" name="Owl_Class_and_Target_Namespace_inp" native="true">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -143,7 +169,7 @@ border-radius:20px;}
        <item row="0" column="1">
         <layout class="QHBoxLayout" name="horizontalLayout_9">
          <item>
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="Target_Namespace_label">
            <property name="minimumSize">
             <size>
              <width>121</width>
@@ -199,7 +225,7 @@ background-color: rgb(253, 252, 250);</string>
        <item row="0" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="Owl_Class_label">
            <property name="minimumSize">
             <size>
              <width>71</width>
@@ -253,7 +279,7 @@ background-color: rgb(253, 252, 250);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="widget_6" native="true">
+     <widget class="QWidget" name="Export_trplstore_and_RefreshLayers" native="true">
       <property name="geometry">
        <rect>
         <x>910</x>
@@ -334,7 +360,7 @@ background-color:rgb(93, 138, 181);
        </item>
       </layout>
      </widget>
-     <widget class="QScrollBar" name="horizontalScrollBar">
+     <widget class="QScrollBar" name="horizontalScrollBar_Interlink">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -354,7 +380,7 @@ background-color:rgb(93, 138, 181);</string>
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QScrollBar" name="verticalScrollBar">
+     <widget class="QScrollBar" name="verticalScrollBar_Interlink">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -375,32 +401,6 @@ background-color:rgb(93, 138, 181);</string>
       </property>
      </widget>
     </widget>
-   </item>
-   <item row="1" column="3">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>60</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="2" column="1">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>84</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
