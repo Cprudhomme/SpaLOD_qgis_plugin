@@ -6,36 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1173</width>
-    <height>547</height>
+    <width>1265</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">Qobject#MainWindow{
-background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">QObject#centralwidget{
-background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795455 rgba(0, 57, 70, 255), stop:0.5625 rgba(0, 85, 104, 255), stop:0.954545 rgba(0, 107, 131, 255));}
+</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" rowspan="3">
-     <spacer name="horizontalSpacer_5">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
     <item row="0" column="1">
      <spacer name="verticalSpacer_2">
       <property name="orientation">
@@ -45,6 +32,45 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
        <size>
         <width>20</width>
         <height>8</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="2">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>9</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="3">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>48</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
        </size>
       </property>
      </spacer>
@@ -59,7 +85,8 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
       </property>
       <property name="styleSheet">
        <string notr="true">QObject#frame{
-background-color:rgb(217, 233, 255);
+	background-color: rgb(232, 157, 104);
+	
 border-radius:20px;}
 
 
@@ -374,12 +401,10 @@ background-color: rgb(253, 252, 250);</string>
              </property>
              <property name="styleSheet">
               <string notr="true">
-color: rgb(213, 223, 255);
 
+background-color: rgb(124, 100, 80);
 border-radius:10px;
-
-background-color:rgb(93, 138, 181);
-</string>
+color: rgb(143, 134, 117);</string>
              </property>
              <property name="text">
               <string>Constraint By BBOX</string>
@@ -412,12 +437,10 @@ background-color:rgb(93, 138, 181);
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true">color: rgb(213, 223, 255);
-
+              <string notr="true">
+color: rgb(104, 97, 92);
 border-radius:10px;
-
-background-color:rgb(93, 138, 181);
-</string>
+background-color: rgb(143, 134, 117);</string>
              </property>
              <property name="text">
               <string>Configure TripleStores</string>
@@ -445,7 +468,10 @@ background-color:rgb(93, 138, 181);
            <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(87, 129, 180);</string>
+           <string notr="true">
+color: rgb(64, 182, 139);
+
+</string>
           </property>
           <property name="text">
            <string>Export To Triple Store</string>
@@ -456,32 +482,6 @@ background-color:rgb(93, 138, 181);
       </widget>
      </widget>
     </item>
-    <item row="1" column="3">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>48</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="2">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>9</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -489,7 +489,7 @@ background-color:rgb(93, 138, 181);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1173</width>
+     <width>1265</width>
      <height>21</height>
     </rect>
    </property>
