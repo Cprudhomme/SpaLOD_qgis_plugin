@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>query_page_MainWindow</class>
+ <widget class="QMainWindow" name="query_page_MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1173</width>
-    <height>547</height>
+    <height>815</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <string notr="true">Qobject#MainWindow{
 background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="query_page_central_wiget">
    <property name="styleSheet">
     <string notr="true">QObject#centralwidget{
 background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
@@ -50,7 +50,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
      </spacer>
     </item>
     <item row="1" column="1" colspan="2">
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="query_page_frame">
       <property name="minimumSize">
        <size>
         <width>1143</width>
@@ -72,7 +72,7 @@ border-radius:20px;}
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="Query_page_txt_inp" native="true">
        <property name="geometry">
         <rect>
          <x>9</x>
@@ -223,7 +223,7 @@ background-color: rgb(253, 252, 250);</string>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="Layer_name_unicorn">
             <property name="font">
              <font>
               <pointsize>10</pointsize>
@@ -241,7 +241,7 @@ background-color: rgb(253, 252, 250);</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="inp_label">
+           <widget class="QLineEdit" name="Layer_name_unicorn_inp">
             <property name="minimumSize">
              <size>
               <width>161</width>
@@ -335,7 +335,7 @@ background-color: rgb(253, 252, 250);</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="widget_5" native="true">
+      <widget class="QWidget" name="export_trplstore_checkbox" native="true">
        <property name="geometry">
         <rect>
          <x>870</x>
@@ -346,7 +346,7 @@ background-color: rgb(253, 252, 250);</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="2" column="0">
-         <widget class="QWidget" name="widget_10" native="true">
+         <widget class="QWidget" name="conf_trpl_store_and_bbox_buttons" native="true">
           <layout class="QGridLayout" name="gridLayout_2">
            <item row="1" column="0">
             <widget class="QPushButton" name="bboxButton">
@@ -484,7 +484,7 @@ background-color:rgb(93, 138, 181);
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QMenuBar" name="menubar_Unicorn">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -505,7 +505,7 @@ background-color:rgb(93, 138, 181);
    <property name="nativeMenuBar">
     <bool>true</bool>
    </property>
-   <widget class="QMenu" name="menuEdit">
+   <widget class="QMenu" name="menuQuery">
     <property name="title">
      <string>Query</string>
     </property>
@@ -537,11 +537,11 @@ background-color:rgb(93, 138, 181);
     <addaction name="menuQuery_Options"/>
     <addaction name="menuLayers"/>
    </widget>
-   <widget class="QMenu" name="menuHelp">
+   <widget class="QMenu" name="menuInterlink">
     <property name="title">
      <string>Interlink</string>
     </property>
-    <addaction name="actionFile"/>
+    <addaction name="actionLoad_Layer_Interlink"/>
     <addaction name="actionImport_Mappoing"/>
     <addaction name="actionExport_Mapping"/>
     <addaction name="actionSearch_Class"/>
@@ -550,16 +550,16 @@ background-color:rgb(93, 138, 181);
     <property name="title">
      <string>Enrichement</string>
     </property>
-    <addaction name="actionLoad_Layer"/>
+    <addaction name="actionLoad_Layer_Enrichment"/>
     <addaction name="actionAdd_Enriched_Layer"/>
     <addaction name="actionRefresh_Layers"/>
     <addaction name="actionAdd_Row"/>
    </widget>
-   <addaction name="menuEdit"/>
-   <addaction name="menuHelp"/>
+   <addaction name="menuQuery"/>
+   <addaction name="menuInterlink"/>
    <addaction name="menuEnrichement"/>
   </widget>
-  <action name="actionFile">
+  <action name="actionLoad_Layer_Interlink">
    <property name="text">
     <string>Load Layer</string>
    </property>
@@ -619,7 +619,7 @@ background-color:rgb(93, 138, 181);
     <string>Export Mapping</string>
    </property>
   </action>
-  <action name="actionLoad_Layer">
+  <action name="actionLoad_Layer_Enrichment">
    <property name="text">
     <string>Load Layer</string>
    </property>
