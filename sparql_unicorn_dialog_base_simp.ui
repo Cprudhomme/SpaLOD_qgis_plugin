@@ -14,28 +14,15 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">Qobject#MainWindow{
+   <string notr="true">Qobject#query_page_MainWindow{
 background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
   </property>
-  <widget class="QWidget" name="query_page_central_wiget">
+  <widget class="QWidget" name="query_page_central_widget">
    <property name="styleSheet">
-    <string notr="true">QObject#centralwidget{
+    <string notr="true">QObject#query_page_central_widget{
 background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" rowspan="3">
-     <spacer name="horizontalSpacer_query_left">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
     <item row="0" column="1">
      <spacer name="verticalSpacer_query_top">
       <property name="orientation">
@@ -49,6 +36,45 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
       </property>
      </spacer>
     </item>
+    <item row="1" column="3">
+     <spacer name="horizontalSpacer_query_right">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>48</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="2">
+     <spacer name="verticalSpacer_query_bottom">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>9</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0" rowspan="3">
+     <spacer name="horizontalSpacer_query_left">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
     <item row="1" column="1" colspan="2">
      <widget class="QFrame" name="query_page_frame">
       <property name="minimumSize">
@@ -58,7 +84,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">QObject#frame{
+       <string notr="true">QObject#query_page_frame{
 background-color:rgb(217, 233, 255);
 border-radius:20px;}
 
@@ -455,32 +481,6 @@ background-color:rgb(93, 138, 181);
        </layout>
       </widget>
      </widget>
-    </item>
-    <item row="1" column="3">
-     <spacer name="horizontalSpacer_query_right">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>48</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="2">
-     <spacer name="verticalSpacer_query_bottom">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>9</height>
-       </size>
-      </property>
-     </spacer>
     </item>
    </layout>
   </widget>
