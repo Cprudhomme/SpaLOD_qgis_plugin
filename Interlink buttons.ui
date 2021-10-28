@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1399</width>
-    <height>638</height>
+    <width>449</width>
+    <height>415</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -89,19 +89,82 @@ background-color:rgb(211, 211, 211);</string>
     </item>
    </layout>
   </widget>
-  <zorder>chooseLayerInterlink</zorder>
-  <zorder>loadLayerInterlink</zorder>
-  <zorder>exportMappingButton</zorder>
-  <zorder>importMappingButton</zorder>
-  <zorder>refreshLayersInterlink</zorder>
-  <zorder>interlinkOwlClassInput</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_7</zorder>
-  <zorder>interlinkNameSpace</zorder>
-  <zorder>label</zorder>
-  <zorder>chooseLayerInterlink</zorder>
-  <zorder>label_2</zorder>
-  <zorder>chooseLayerInterlink</zorder>
+  <widget class="QPushButton" name="loadTripleStoreButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>160</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>171</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(213, 223, 255);
+
+border-radius:10px;
+
+background-color:rgb(93, 138, 181);
+</string>
+   </property>
+   <property name="text">
+    <string>Configure TripleStores</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bboxButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>120</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>171</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(213, 223, 255);
+
+border-radius:10px;
+
+background-color:rgb(93, 138, 181);
+</string>
+   </property>
+   <property name="text">
+    <string>Constraint By BBOX</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
