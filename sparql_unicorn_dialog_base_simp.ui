@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1173</width>
+    <width>1281</width>
     <height>815</height>
    </rect>
   </property>
@@ -24,7 +24,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0" rowspan="3">
-     <spacer name="horizontalSpacer_5">
+     <spacer name="horizontalSpacer_query_left">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -37,7 +37,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
      </spacer>
     </item>
     <item row="0" column="1">
-     <spacer name="verticalSpacer_2">
+     <spacer name="verticalSpacer_query_top">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -457,7 +457,7 @@ background-color:rgb(93, 138, 181);
      </widget>
     </item>
     <item row="1" column="3">
-     <spacer name="horizontalSpacer">
+     <spacer name="horizontalSpacer_query_right">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -470,7 +470,7 @@ background-color:rgb(93, 138, 181);
      </spacer>
     </item>
     <item row="2" column="2">
-     <spacer name="verticalSpacer">
+     <spacer name="verticalSpacer_query_bottom">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -489,7 +489,7 @@ background-color:rgb(93, 138, 181);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1173</width>
+     <width>1281</width>
      <height>21</height>
     </rect>
    </property>
