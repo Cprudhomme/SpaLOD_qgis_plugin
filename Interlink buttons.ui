@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>449</width>
-    <height>415</height>
+    <width>1046</width>
+    <height>307</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -89,81 +89,126 @@ background-color:rgb(211, 211, 211);</string>
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="loadTripleStoreButton">
+  <widget class="QWidget" name="widget_10" native="true">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>160</y>
-     <width>171</width>
-     <height>21</height>
+     <x>140</x>
+     <y>130</y>
+     <width>252</width>
+     <height>68</height>
     </rect>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>171</width>
-     <height>21</height>
-    </size>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QGridLayout" name="gridLayout_3"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="widget_5" native="true">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>0</y>
+     <width>146</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>IBeamCursor</cursorShape>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_5"/>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>350</y>
+     <width>170</width>
+     <height>16</height>
+    </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>9</pointsize>
+     <pointsize>10</pointsize>
      <weight>75</weight>
      <bold>true</bold>
-     <underline>false</underline>
+     <underline>true</underline>
     </font>
    </property>
-   <property name="cursor">
-    <cursorShape>PointingHandCursor</cursorShape>
-   </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(213, 223, 255);
-
-border-radius:10px;
-
-background-color:rgb(93, 138, 181);
-</string>
+    <string notr="true">color:rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Configure TripleStores</string>
+    <string>Table Colums to Concepts:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="bboxButton">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>120</y>
-     <width>171</width>
-     <height>21</height>
+     <x>580</x>
+     <y>330</y>
+     <width>350</width>
+     <height>30</height>
     </rect>
    </property>
-   <property name="minimumSize">
-    <size>
-     <width>171</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="cursor">
-    <cursorShape>PointingHandCursor</cursorShape>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-color: rgb(213, 223, 255);
-
-border-radius:10px;
-
-background-color:rgb(93, 138, 181);
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="minimumSize">
+       <size>
+        <width>91</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>91</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(255, 255, 255);
 </string>
-   </property>
-   <property name="text">
-    <string>Constraint By BBOX</string>
-   </property>
+      </property>
+      <property name="text">
+       <string>Search Class:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="chooseLayerInterlink_2">
+      <property name="minimumSize">
+       <size>
+        <width>251</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>251</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:10px;
+</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
