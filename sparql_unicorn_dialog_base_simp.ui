@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1298</width>
-    <height>715</height>
+    <width>1357</width>
+    <height>697</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,7 +42,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -85,6 +85,13 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
             <widget class="QCheckBox" name="exportTripleStore_2">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+color:rgb(255, 255, 255);</string>
+             </property>
              <property name="text">
               <string>Export To Triple Store</string>
              </property>
@@ -92,6 +99,9 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
            </item>
            <item>
             <widget class="QWidget" name="widget_5" native="true">
+             <property name="cursor">
+              <cursorShape>IBeamCursor</cursorShape>
+             </property>
              <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
                <widget class="QLabel" name="label">
@@ -100,6 +110,10 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
                   <pointsize>10</pointsize>
                   <underline>false</underline>
                  </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">
+color:rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
                  <string>layer name: unicorn_</string>
@@ -132,12 +146,22 @@ border-color:rgb(45, 45, 45);</string>
                <height>21</height>
               </size>
              </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true">border-radius:10px;
-background-color:rgb(208, 208, 208)</string>
+              <string notr="true">color:rgb(125, 164, 185);
+border-radius:10px;
+
+background-color:rgb(217, 233, 255);
+</string>
              </property>
              <property name="text">
               <string>Constraint By BBOX</string>
@@ -154,7 +178,9 @@ background-color:rgb(208, 208, 208)</string>
              </property>
              <property name="font">
               <font>
-               <pointsize>10</pointsize>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
                <underline>false</underline>
               </font>
              </property>
@@ -163,7 +189,10 @@ background-color:rgb(208, 208, 208)</string>
              </property>
              <property name="styleSheet">
               <string notr="true">border-radius:10px;
-background-color:rgb(208, 208, 208)</string>
+background-color:rgb(217, 233, 255);
+
+color:rgb(125, 164, 185);
+</string>
              </property>
              <property name="text">
               <string>Configure TripleStores</string>
@@ -181,6 +210,10 @@ background-color:rgb(208, 208, 208)</string>
              <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
                <widget class="QCheckBox" name="allownongeo">
+                <property name="styleSheet">
+                 <string notr="true">
+color:rgb(255, 255, 255);</string>
+                </property>
                 <property name="text">
                  <string>Allow non-geo queries</string>
                 </property>
@@ -217,7 +250,9 @@ background-color:rgb(208, 208, 208)</string>
                   <property name="styleSheet">
                    <string notr="true">border-radius:10px;
 
-border-color:rgb(45, 45, 45);</string>
+border-color:rgb(45, 45, 45);
+
+background-color: rgb(253, 252, 250);</string>
                   </property>
                   <property name="text">
                    <string>10</string>
@@ -236,6 +271,10 @@ border-color:rgb(45, 45, 45);</string>
                     <underline>true</underline>
                    </font>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">
+color:rgb(255, 255, 255);</string>
+                  </property>
                   <property name="text">
                    <string> Query Name :</string>
                   </property>
@@ -250,7 +289,9 @@ border-color:rgb(45, 45, 45);</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">border-radius:10px;
+                   <string notr="true">background-color: rgb(253, 252, 250);
+
+border-radius:10px;
 
 border-color:rgb(45, 45, 45);</string>
                   </property>
@@ -268,6 +309,10 @@ border-color:rgb(45, 45, 45);</string>
                     <underline>true</underline>
                    </font>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">
+color:rgb(255, 255, 255);</string>
+                  </property>
                   <property name="text">
                    <string>Filter GeoConcepts:</string>
                   </property>
@@ -284,7 +329,9 @@ border-color:rgb(45, 45, 45);</string>
                   <property name="styleSheet">
                    <string notr="true">border-radius:10px;
 
-border-color:rgb(45, 45, 45);</string>
+border-color:rgb(45, 45, 45);
+
+background-color: rgb(253, 252, 250);</string>
                   </property>
                  </widget>
                 </item>
@@ -321,12 +368,6 @@ border-radius:20px;}
                <layout class="QHBoxLayout" name="horizontalLayout">
                 <item>
                  <widget class="QPlainTextEdit" name="inp_sparql">
-                  <property name="minimumSize">
-                   <size>
-                    <width>561</width>
-                    <height>471</height>
-                   </size>
-                  </property>
                   <property name="maximumSize">
                    <size>
                     <width>561</width>
@@ -339,8 +380,12 @@ border-radius:20px;}
                     <pointsize>12</pointsize>
                    </font>
                   </property>
+                  <property name="cursor" stdset="0">
+                   <cursorShape>IBeamCursor</cursorShape>
+                  </property>
                   <property name="styleSheet">
-                   <string notr="true">border-radius:50px;</string>
+                   <string notr="true">
+background-color: rgb(253, 252, 250);</string>
                   </property>
                   <property name="plainText">
                    <string># Example: Airports in Germany
@@ -357,12 +402,6 @@ SELECT ?label ?geo ?item WHERE {
                 </item>
                 <item>
                  <widget class="QListView" name="geoClassList">
-                  <property name="minimumSize">
-                   <size>
-                    <width>271</width>
-                    <height>471</height>
-                   </size>
-                  </property>
                   <property name="maximumSize">
                    <size>
                     <width>271</width>
@@ -421,11 +460,6 @@ SELECT ?label ?geo ?item WHERE {
           </property>
          </spacer>
         </item>
-        <item row="5" column="1">
-         <widget class="QWidget" name="widget_3" native="true">
-          <layout class="QVBoxLayout" name="verticalLayout_3"/>
-         </widget>
-        </item>
         <item row="5" column="3">
          <spacer name="verticalSpacer_2">
           <property name="orientation">
@@ -438,6 +472,11 @@ SELECT ?label ?geo ?item WHERE {
            </size>
           </property>
          </spacer>
+        </item>
+        <item row="5" column="1">
+         <widget class="QWidget" name="widget_3" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_3"/>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -465,6 +504,13 @@ SELECT ?label ?geo ?item WHERE {
                <underline>false</underline>
               </font>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(255, 255, 255);
+</string>
+             </property>
              <property name="text">
               <string>Export To Triple Store</string>
              </property>
@@ -481,12 +527,19 @@ SELECT ?label ?geo ?item WHERE {
              <property name="font">
               <font>
                <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
                <underline>true</underline>
               </font>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
              <property name="styleSheet">
               <string notr="true">border-radius:10px;
-background-color:rgb(211, 211, 211);</string>
+background-color:rgb(217, 233, 255);
+color:rgb(255, 255, 255);
+</string>
              </property>
              <property name="text">
               <string>Refresh Layers</string>
@@ -526,8 +579,14 @@ background-color:rgb(211, 211, 211);</string>
              <property name="font">
               <font>
                <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
                <underline>false</underline>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(255, 255, 255);
+</string>
              </property>
              <property name="text">
               <string>Search Class:</string>
@@ -542,6 +601,13 @@ background-color:rgb(211, 211, 211);</string>
                <height>20</height>
               </size>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:5px;
+</string>
+             </property>
             </widget>
            </item>
           </layout>
@@ -550,6 +616,17 @@ background-color:rgb(211, 211, 211);</string>
           <layout class="QHBoxLayout" name="horizontalLayout_8">
            <item>
             <widget class="QLabel" name="label_5">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(255, 255, 255);
+
+</string>
+             </property>
              <property name="text">
               <string>OWL Class:</string>
              </property>
@@ -574,6 +651,16 @@ background-color:rgb(211, 211, 211);</string>
           <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
             <widget class="QLabel" name="label_7">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(255, 255, 255);
+</string>
+             </property>
              <property name="text">
               <string>Target Namespace:</string>
              </property>
@@ -761,6 +848,10 @@ border-radius:20px;}
           <width>321</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:5px;
+</string>
         </property>
        </widget>
        <widget class="QPushButton" name="startEnrichment">
@@ -984,7 +1075,7 @@ border-radius:20px;}
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1298</width>
+     <width>1357</width>
      <height>21</height>
     </rect>
    </property>
