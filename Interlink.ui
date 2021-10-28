@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QObject#Form{
+   <string notr="true">QObject#InterlinkForm{
 background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.125 rgba(82, 120, 174, 255), stop:0.545455 rgba(146, 170, 244, 255), stop:0.931818 rgba(159, 176, 230, 255));}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
@@ -71,7 +71,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
     </spacer>
    </item>
    <item row="1" column="1" colspan="2">
-    <widget class="QFrame" name="_Interlink_frame">
+    <widget class="QFrame" name="Interlink_frame">
      <property name="minimumSize">
       <size>
        <width>1141</width>
@@ -79,7 +79,7 @@ background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:1, stop:0.
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">QObject#frame_2{
+      <string notr="true">QObject#Interlink_frame{
 background-color:rgb(217, 233, 255);
 border-radius:20px;}
 
