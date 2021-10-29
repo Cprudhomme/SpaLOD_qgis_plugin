@@ -143,6 +143,12 @@ color: rgb(255, 255, 255);</string>
          <height>461</height>
         </rect>
        </property>
+       <property name="minimumSize">
+        <size>
+         <width>1061</width>
+         <height>461</height>
+        </size>
+       </property>
       </widget>
      </widget>
     </item>
