@@ -689,13 +689,13 @@ class SPAQLunicorn:
             self.dlg.pushButton.clicked.connect(self.create_unicorn_layer)
             self.dlg.geoClassList.doubleClicked.connect(self.create_unicorn_layer)
             self.dlg.exportLayers.clicked.connect(self.exportLayer2)
-        #if self.first_start == False:
-        #    self.dlg.loadUnicornLayers()
-        #show the dialog
+        if self.first_start == False:
+            self.dlg.loadUnicornLayers()
+        show the dialog
         self.dlg.show()
-        #Run the dialog event loop
+        Run the dialog event loop
         result = self.dlg.exec_()
-        # See if OK was pressed
+         See if OK was pressed
         if result:
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
