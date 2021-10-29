@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1173</width>
-    <height>534</height>
+    <width>1211</width>
+    <height>626</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -117,6 +117,9 @@ border-radius:20px;}
             <bold>true</bold>
            </font>
           </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(87, 129, 180);</string>
           </property>
@@ -201,46 +204,6 @@ background-color: rgb(253, 252, 250);</string>
 border-radius:10px;
 
 border-color:rgb(45, 45, 45);</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QLabel" name="filterConceptsLabel">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-              <underline>true</underline>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">
-color: rgb(87, 129, 180);</string>
-            </property>
-            <property name="text">
-             <string>Filter GeoConcepts:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="filterConcepts">
-            <property name="minimumSize">
-             <size>
-              <width>133</width>
-              <height>21</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-radius:10px;
-
-border-color:rgb(45, 45, 45);
-
-background-color: rgb(253, 252, 250);</string>
             </property>
            </widget>
           </item>
@@ -339,7 +302,7 @@ SELECT ?label ?geo ?item WHERE {
          </widget>
         </item>
         <item>
-         <widget class="QListView" name="geoClassList">
+         <widget class="QTreeView" name="geoClassTree">
           <property name="minimumSize">
            <size>
             <width>251</width>
@@ -489,7 +452,7 @@ background-color:rgb(93, 138, 181);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1173</width>
+     <width>1211</width>
      <height>21</height>
     </rect>
    </property>
@@ -547,9 +510,9 @@ background-color:rgb(93, 138, 181);
     <addaction name="actionSearch_Class"/>
     <addaction name="actionGo_to_Interlink_page"/>
    </widget>
-   <widget class="QMenu" name="menuEnrichement">
+   <widget class="QMenu" name="menuEnrichment">
     <property name="title">
-     <string>Enrichement</string>
+     <string>Enrichment</string>
     </property>
     <addaction name="actionLoad_Layer_Enrichment"/>
     <addaction name="actionAdd_Enriched_Layer"/>
@@ -558,7 +521,7 @@ background-color:rgb(93, 138, 181);
    </widget>
    <addaction name="menuQuery"/>
    <addaction name="menuInterlink"/>
-   <addaction name="menuEnrichement"/>
+   <addaction name="menuEnrichment"/>
   </widget>
   <action name="actionLoad_Layer_Interlink">
    <property name="text">
