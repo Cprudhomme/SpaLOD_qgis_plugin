@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1281</width>
-    <height>815</height>
+    <width>1173</width>
+    <height>534</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -489,7 +489,7 @@ background-color:rgb(93, 138, 181);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1281</width>
+     <width>1173</width>
      <height>21</height>
     </rect>
    </property>
@@ -545,6 +545,7 @@ background-color:rgb(93, 138, 181);
     <addaction name="actionImport_Mappoing"/>
     <addaction name="actionExport_Mapping"/>
     <addaction name="actionSearch_Class"/>
+    <addaction name="actionGo_to_Interlink_page"/>
    </widget>
    <widget class="QMenu" name="menuEnrichement">
     <property name="title">
@@ -647,6 +648,11 @@ background-color:rgb(93, 138, 181);
   <action name="actionAdd_Row">
    <property name="text">
     <string>Add Row</string>
+   </property>
+  </action>
+  <action name="actionGo_to_Interlink_page">
+   <property name="text">
+    <string>Go to Interlink page</string>
    </property>
   </action>
  </widget>
