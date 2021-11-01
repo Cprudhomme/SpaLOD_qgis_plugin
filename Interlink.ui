@@ -377,6 +377,24 @@ color: rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuQuery">
+    <property name="title">
+     <string>Query</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuInterlink">
+    <property name="title">
+     <string>Interlink</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuEnrichment">
+    <property name="title">
+     <string>Enrichment</string>
+    </property>
+   </widget>
+   <addaction name="menuQuery"/>
+   <addaction name="menuInterlink"/>
+   <addaction name="menuEnrichment"/>
   </widget>
  </widget>
  <resources/>
