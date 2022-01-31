@@ -1,6 +1,27 @@
 var a00041 =
 [
-    [ "PrefixDialog", "a00281.html", "a00281" ],
+    [ "SPARQLunicornDialog", "a00201.html", "a00201" ],
+    [ "buildConvertCRSDialog", "a00041.html#ab08c71db66baeab08958a227ed7de427", null ],
+    [ "buildCustomTripleStoreDialog", "a00041.html#ad2555fed48ab77e5e7accc5d6fe9bc5d", null ],
+    [ "buildQuickAddTripleStore", "a00041.html#a7e9d6fed75ec879357b83a9bd7d76dea", null ],
+    [ "buildSearchDialog", "a00041.html#a8c7751f86e3a7a5a8c7552febc3401b2", null ],
+    [ "getPointFromCanvas", "a00041.html#acf6097046e79e8b8a6f143ab6fd4c8a1", null ],
+    [ "loadQueryFunc", "a00041.html#a33fed6add3c3943faaffa5ce26abdffe", null ],
+    [ "loadUnicornLayers", "a00041.html#a74db4b2d3186e63202dce48e872daeeb", null ],
+    [ "onContext", "a00041.html#a1957a4af760ee1bf3e2dcc2c84c4a7d8", null ],
+    [ "openURL", "a00041.html#a2f54f044e7c3a209a5c5d1dfcd45c5ab", null ],
+    [ "saveQueryFunc", "a00041.html#a88f24193a8ab293a877781fade776edc", null ],
+    [ "setFilterFromText", "a00041.html#a8ef22bd3480ad1eddbd11718e3be46d6", null ],
+    [ "validateSPARQL", "a00041.html#adeb6f2ce69fdf41c479678aa2269b2b5", null ],
+    [ "viewselectaction", "a00041.html#afda9e6b72802aa4e48df2fad18cd2018", null ],
     [ "_", "a00041.html#a18f05aeddc212b523b40818fa2b87b33", null ],
-    [ "FORM_CLASS", "a00041.html#a0357d3c7a5047524e1543f2f43bc3e38", null ]
+    [ "currentcol", "a00041.html#a486aeee0a5d3170bc193bc29caf8a7b8", null ],
+    [ "currentrow", "a00041.html#a086f47cacf997373ef862200fcfb4612", null ],
+    [ "d", "a00041.html#a1aabac6d068eef6a7bad3fdf50a05cc8", null ],
+    [ "errorline", "a00041.html#a227c8351ef43c0146b7d43d0afe1c00c", null ],
+    [ "FORM_CLASS", "a00041.html#a0357d3c7a5047524e1543f2f43bc3e38", null ],
+    [ "interlinkdialog", "a00041.html#a816bebaf94e989ec4293bfee7a615a98", null ],
+    [ "justloadingfromfile", "a00041.html#a66e60c99e2cb67bdae8d0e12cba73350", null ],
+    [ "MESSAGE_CATEGORY", "a00041.html#a964735b6bbac75792f1ff19bab17c5e3", null ],
+    [ "searchTripleStoreDialog", "a00041.html#a0918bd6ea96ed15f91ffdf7d9e91776a", null ]
 ];
