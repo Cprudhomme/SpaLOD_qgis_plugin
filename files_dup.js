@@ -21,9 +21,7 @@ var files_dup =
     [ "interlinkMainWindow.py", "a00029.html", "a00029" ],
     [ "loadgraphdialog.py", "a00032.html", "a00032" ],
     [ "loadgraphtask.py", "a00083.html", "a00083" ],
-    [ "loginwindowdialog.py", "a00035.html", [
-      [ "LoginWindow", "a00193.html", "a00193" ]
-    ] ],
+    [ "loginwindowdialog.py", "a00035.html", "a00035" ],
     [ "mappingtools.py", "a00098.html", [
       [ "CircleMapTool", "a00277.html", "a00277" ],
       [ "PolygonMapTool", "a00281.html", "a00281" ],
