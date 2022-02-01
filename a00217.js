@@ -1,11 +1,7 @@
 var a00217 =
 [
     [ "__init__", "a00217.html#a11c26a374ef30da345563e1f5459936a", null ],
-    [ "addNewLayerToTripleStore", "a00217.html#ad37f8ed07349b0ff9667607c64473225", null ],
-    [ "check_state", "a00217.html#aee700008c6180fc09c43e84dd4cfc1f1", null ],
-    [ "check_state1", "a00217.html#a452dcd98676575e133f2fd74a3a8bd01", null ],
     [ "checkConnection", "a00217.html#ad3ee4f0a7774436bd1d9b8de64402137", null ],
-    [ "compareLayers", "a00217.html#a90fc6f7893dab1f161f0876eedf261af", null ],
     [ "currentrow", "a00217.html#a9dd9ae4cdd3fd369783ecc127c418871", null ],
     [ "fieldname", "a00217.html#a6aa91eb05e0f70d41e5ae3348922a469", null ],
     [ "interlinkOrEnrich", "a00217.html#a22becd814f00141dbdbb9167f5b9551f", null ],
