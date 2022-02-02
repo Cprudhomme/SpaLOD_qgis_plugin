@@ -79,7 +79,7 @@ Inheritance diagram for SPARQLunicornDialog:</div>
 <map name="SPARQLunicornDialog_inherit__map" id="SPARQLunicornDialog_inherit__map">
 <area shape="rect" title="This main dialog window is a previous version of the Qgis plugin before became the Spalod Qgis plugin..." alt="" coords="20,80,183,107"/>
 <area shape="rect" title=" " alt="" coords="5,5,80,32"/>
-<area shape="rect" href="a00825.html" title=" " alt="" coords="105,5,215,32"/>
+<area shape="rect" href="a00829.html" title=" " alt="" coords="105,5,215,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -89,7 +89,7 @@ Collaboration diagram for SPARQLunicornDialog:</div>
 <map name="SPARQLunicornDialog_coll__map" id="SPARQLunicornDialog_coll__map">
 <area shape="rect" title="This main dialog window is a previous version of the Qgis plugin before became the Spalod Qgis plugin..." alt="" coords="79,95,241,121"/>
 <area shape="rect" title=" " alt="" coords="5,5,80,32"/>
-<area shape="rect" href="a00825.html" title=" " alt="" coords="105,5,215,32"/>
+<area shape="rect" href="a00829.html" title=" " alt="" coords="105,5,215,32"/>
 <area shape="rect" title=" " alt="" coords="239,5,326,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -490,7 +490,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#ab08c71db66baeab08958a227ed7de427">buildConvertCRSDialog</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a6abc7ac30d4d4fec0a0bf19f83cf74e7">buildConvertCRSDialog</a>(self):</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        self.searchTripleStoreDialog = ConvertCRSDialog(self.triplestoreconf, self.maindlg, self)</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        self.searchTripleStoreDialog.setWindowTitle(<span class="stringliteral">&quot;Convert CRS&quot;</span>)</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        self.searchTripleStoreDialog.exec_()</div>
@@ -523,7 +523,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#ad2555fed48ab77e5e7accc5d6fe9bc5d">buildCustomTripleStoreDialog</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#aa4fb2be182cc4472b427434dfd36a54f">buildCustomTripleStoreDialog</a>(self):</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        self.searchTripleStoreDialog = TripleStoreDialog(self.triplestoreconf, self.prefixes, self.prefixstore,</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                                                         self.comboBox)</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        self.searchTripleStoreDialog.setMinimumSize(700, 500)</div>
@@ -591,7 +591,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a7e9d6fed75ec879357b83a9bd7d76dea">buildQuickAddTripleStore</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#aaa47ccc1253602e71b9979009521b763">buildQuickAddTripleStore</a>(self):</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        self.searchTripleStoreDialog = TripleStoreQuickAddDialog(self.triplestoreconf, self.prefixes, self.prefixstore,</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                                                                 self.comboBox)</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        self.searchTripleStoreDialog.setMinimumSize(580, 186)</div>
@@ -682,7 +682,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a8c7751f86e3a7a5a8c7552febc3401b2">buildSearchDialog</a>(self, row, column, interlinkOrEnrich, table, propOrClass, bothOptions=False,</div>
+<div class="fragment"><div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a40807158c346858bdd7d7e6d4418b0fd">buildSearchDialog</a>(self, row, column, interlinkOrEnrich, table, propOrClass, bothOptions=False,</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                          currentprefixes=None, addVocabConf=None):</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        self.currentcol = column</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        self.currentrow = row</div>
@@ -793,10 +793,10 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keyword">def </span>check_state3(self):</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        self.searchTripleStoreDialog.<a class="code" href="a00118.html#a9b6ed0a8bf0df816a72c13d221804a1b">check_state</a>(self.interlinkNameSpace)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        self.searchTripleStoreDialog.<a class="code" href="a00118.html#a1dffea44b532cc5b8185e2110c15b760">check_state</a>(self.interlinkNameSpace)</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00118.html#a9b6ed0a8bf0df816a72c13d221804a1b">Splalod_qgis_plugin.dialogs.convertcrsdialog.check_state()</a>, <a class="el" href="a00185.html#a0918bd6ea96ed15f91ffdf7d9e91776a">InterlinkMainWindow.searchTripleStoreDialog</a>, <a class="el" href="a00181.html#a0918bd6ea96ed15f91ffdf7d9e91776a">EnrichmentMainWindow.searchTripleStoreDialog</a>, and <a class="el" href="a00201.html#a0918bd6ea96ed15f91ffdf7d9e91776a">SPARQLunicornDialog.searchTripleStoreDialog</a>.</p>
+<p class="reference">References <a class="el" href="a00118.html#a1dffea44b532cc5b8185e2110c15b760">SpaLOD_qgis_plugin.dialogs.convertcrsdialog.check_state()</a>, <a class="el" href="a00185.html#a0918bd6ea96ed15f91ffdf7d9e91776a">InterlinkMainWindow.searchTripleStoreDialog</a>, <a class="el" href="a00181.html#a0918bd6ea96ed15f91ffdf7d9e91776a">EnrichmentMainWindow.searchTripleStoreDialog</a>, and <a class="el" href="a00201.html#a0918bd6ea96ed15f91ffdf7d9e91776a">SPARQLunicornDialog.searchTripleStoreDialog</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1037,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#acf6097046e79e8b8a6f143ab6fd4c8a1">getPointFromCanvas</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#aacd03f114d7d0fe258130b747172268a">getPointFromCanvas</a>(self):</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        self.d = BBOXDialog(self.inp_sparql2, self.triplestoreconf, self.comboBox.currentIndex())</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        self.d.setWindowTitle(<span class="stringliteral">&quot;Choose BoundingBox&quot;</span>)</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        self.d.exec_()</div>
@@ -1268,7 +1268,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a33fed6add3c3943faaffa5ce26abdffe">loadQueryFunc</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a579b2ce2ba17d65945487bb19ce31ce7">loadQueryFunc</a>(self):</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span> self.triplestoreconf[self.comboBox.currentIndex()][<span class="stringliteral">&quot;endpoint&quot;</span>] <span class="keywordflow">in</span> self.savedQueriesJSON:</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            self.inp_sparql2.setPlainText(</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                self.savedQueriesJSON[self.triplestoreconf[self.comboBox.currentIndex()][<span class="stringliteral">&quot;endpoint&quot;</span>]][</div>
@@ -1302,7 +1302,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a74db4b2d3186e63202dce48e872daeeb">loadUnicornLayers</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a5b97e48a9c2ae1a816a6d34883d1e094">loadUnicornLayers</a>(self):</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        layers = QgsProject.instance().layerTreeRoot().children()</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <span class="comment"># Populate the comboBox with names of all the loaded unicorn layers</span></div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        self.loadedLayers.clear()</div>
@@ -1342,7 +1342,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a1957a4af760ee1bf3e2dcc2c84c4a7d8">onContext</a>(self,position):</div>
+<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a588977212732d65c8687b9e6d4f2aa3e">onContext</a>(self,position):</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        menu = QMenu(<span class="stringliteral">&quot;Menu&quot;</span>, self.geoTreeView)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        action = QAction(<span class="stringliteral">&quot;Open in Webbrowser&quot;</span>)</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        menu.addAction(action)</div>
@@ -1369,7 +1369,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a2f54f044e7c3a209a5c5d1dfcd45c5ab">openURL</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a3e016b315516596fe6572afe08db980a">openURL</a>(self):</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        curindex = self.proxyModel.mapToSource(self.geoTreeView.selectionModel().currentIndex())</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        concept = self.geoTreeViewModel.itemFromIndex(curindex).data(2)</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        url = QUrl(concept)</div>
@@ -1397,7 +1397,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a88f24193a8ab293a877781fade776edc">saveQueryFunc</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#af87744023c2e38e54e52e7893558c984">saveQueryFunc</a>(self):</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        queryName = self.saveQueryName.text()</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">if</span> queryName <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> queryName != <span class="stringliteral">&quot;&quot;</span>:</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))</div>
@@ -1430,7 +1430,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#a8ef22bd3480ad1eddbd11718e3be46d6">setFilterFromText</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#af9416d716942fa4e1a4a37e8969d6e13">setFilterFromText</a>(self):</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        self.proxyModel.setFilterRegExp(self.filterConcepts.text())</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
 </div><!-- fragment -->
@@ -1496,7 +1496,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#adeb6f2ce69fdf41c479678aa2269b2b5">validateSPARQL</a>(self):</div>
+<div class="fragment"><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#adb9515b161123ab045058974f6a9aff3">validateSPARQL</a>(self):</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">if</span> self.prefixes <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> self.comboBox <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> self.comboBox.currentIndex() <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> self.prefixes[</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            self.comboBox.currentIndex()] <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> self.inp_sparql2.toPlainText() <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> self.inp_sparql2.toPlainText() != <span class="stringliteral">&quot;&quot;</span>:</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            <span class="keywordflow">try</span>:</div>
@@ -1569,7 +1569,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#afda9e6b72802aa4e48df2fad18cd2018">viewselectaction</a>(self,selected=None, deselected=None):</div>
+<div class="fragment"><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keyword">def </span><a class="code" href="a00124.html#ae1d6d8b424b085ac5f1b65df9d010c1b">viewselectaction</a>(self,selected=None, deselected=None):</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        endpointIndex = self.comboBox.currentIndex()</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">if</span> endpointIndex == 0:</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            self.justloadingfromfile = <span class="keyword">False</span></div>
@@ -2126,26 +2126,26 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00124_html_a7e9d6fed75ec879357b83a9bd7d76dea"><div class="ttname"><a href="a00124.html#a7e9d6fed75ec879357b83a9bd7d76dea">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.buildQuickAddTripleStore</a></div><div class="ttdeci">def buildQuickAddTripleStore(self)</div><div class="ttdoc">The buildQuickAddTripleStore methode determines that searchTripleStoreDialog is equivalent to the Tri...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:454</div></div>
-<div class="ttc" id="aa00124_html_adeb6f2ce69fdf41c479678aa2269b2b5"><div class="ttname"><a href="a00124.html#adeb6f2ce69fdf41c479678aa2269b2b5">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.validateSPARQL</a></div><div class="ttdeci">def validateSPARQL(self)</div><div class="ttdoc">Validates the SPARQL query in the input field and outputs errors in a label.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:505</div></div>
-<div class="ttc" id="aa00124_html_a1957a4af760ee1bf3e2dcc2c84c4a7d8"><div class="ttname"><a href="a00124.html#a1957a4af760ee1bf3e2dcc2c84c4a7d8">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.onContext</a></div><div class="ttdeci">def onContext(self, position)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:591</div></div>
-<div class="ttc" id="aa00124_html_ad2555fed48ab77e5e7accc5d6fe9bc5d"><div class="ttname"><a href="a00124.html#ad2555fed48ab77e5e7accc5d6fe9bc5d">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.buildCustomTripleStoreDialog</a></div><div class="ttdeci">def buildCustomTripleStoreDialog(self)</div><div class="ttdoc">The buildCustomTripleStoreDialog methode determines that searchTripleStoreDialog is equivalent to the...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:465</div></div>
-<div class="ttc" id="aa00273_html_a2b97505b4a89f59b1902bc41f75fba68"><div class="ttname"><a href="a00273.html#a2b97505b4a89f59b1902bc41f75fba68">Splalod_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.__init__</a></div><div class="ttdeci">def __init__(self, description, triplestoreurl, query, searchTerm, prefixes, searchResult, progress)</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:18</div></div>
-<div class="ttc" id="aa00118_html_a9b6ed0a8bf0df816a72c13d221804a1b"><div class="ttname"><a href="a00118.html#a9b6ed0a8bf0df816a72c13d221804a1b">Splalod_qgis_plugin.dialogs.convertcrsdialog.check_state</a></div><div class="ttdeci">def check_state(self, sender)</div><div class="ttdef"><b>Definition:</b> convertcrsdialog.py:53</div></div>
-<div class="ttc" id="aa00124_html_afda9e6b72802aa4e48df2fad18cd2018"><div class="ttname"><a href="a00124.html#afda9e6b72802aa4e48df2fad18cd2018">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.viewselectaction</a></div><div class="ttdeci">def viewselectaction(self, selected=None, deselected=None)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:543</div></div>
-<div class="ttc" id="aa00124_html_a8c7751f86e3a7a5a8c7552febc3401b2"><div class="ttname"><a href="a00124.html#a8c7751f86e3a7a5a8c7552febc3401b2">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.buildSearchDialog</a></div><div class="ttdeci">def buildSearchDialog(self, row, column, interlinkOrEnrich, table, propOrClass, bothOptions=False, currentprefixes=None, addVocabConf=None)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:628</div></div>
-<div class="ttc" id="aa00124_html_a74db4b2d3186e63202dce48e872daeeb"><div class="ttname"><a href="a00124.html#a74db4b2d3186e63202dce48e872daeeb">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.loadUnicornLayers</a></div><div class="ttdeci">def loadUnicornLayers(self)</div><div class="ttdoc">The loadUnicornLayers allows users to load their current plugin layers.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:608</div></div>
-<div class="ttc" id="aa00124_html_a88f24193a8ab293a877781fade776edc"><div class="ttname"><a href="a00124.html#a88f24193a8ab293a877781fade776edc">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.saveQueryFunc</a></div><div class="ttdeci">def saveQueryFunc(self)</div><div class="ttdoc">The saveQueryFunc allows users to save their queries when clicking on the Save Query button after hav...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:479</div></div>
-<div class="ttc" id="aa00124_html_a33fed6add3c3943faaffa5ce26abdffe"><div class="ttname"><a href="a00124.html#a33fed6add3c3943faaffa5ce26abdffe">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.loadQueryFunc</a></div><div class="ttdeci">def loadQueryFunc(self)</div><div class="ttdoc">The loadQueryFunc allows users to load their previously saved queries in the Qgis Plugin.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:537</div></div>
-<div class="ttc" id="aa00124_html_a2f54f044e7c3a209a5c5d1dfcd45c5ab"><div class="ttname"><a href="a00124.html#a2f54f044e7c3a209a5c5d1dfcd45c5ab">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.openURL</a></div><div class="ttdeci">def openURL(self)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:598</div></div>
-<div class="ttc" id="aa00124_html_acf6097046e79e8b8a6f143ab6fd4c8a1"><div class="ttname"><a href="a00124.html#acf6097046e79e8b8a6f143ab6fd4c8a1">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.getPointFromCanvas</a></div><div class="ttdeci">def getPointFromCanvas(self)</div><div class="ttdoc">Builds a boundingbox dialog allows to pick a bounding box for a SPARQL query.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:649</div></div>
-<div class="ttc" id="aa00124_html_ab08c71db66baeab08958a227ed7de427"><div class="ttname"><a href="a00124.html#ab08c71db66baeab08958a227ed7de427">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.buildConvertCRSDialog</a></div><div class="ttdeci">def buildConvertCRSDialog(self)</div><div class="ttdoc">The buildConvertCRSDialog methode determines that searchTripleStoreDialog is equivalent to the Conver...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:498</div></div>
-<div class="ttc" id="aa00124_html_a8ef22bd3480ad1eddbd11718e3be46d6"><div class="ttname"><a href="a00124.html#a8ef22bd3480ad1eddbd11718e3be46d6">Splalod_qgis_plugin.dialogs.sparql_unicorn_dialog.setFilterFromText</a></div><div class="ttdeci">def setFilterFromText(self)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:472</div></div>
+<div class="ttc" id="aa00118_html_a1dffea44b532cc5b8185e2110c15b760"><div class="ttname"><a href="a00118.html#a1dffea44b532cc5b8185e2110c15b760">SpaLOD_qgis_plugin.dialogs.convertcrsdialog.check_state</a></div><div class="ttdeci">def check_state(self, sender)</div><div class="ttdef"><b>Definition:</b> convertcrsdialog.py:53</div></div>
+<div class="ttc" id="aa00124_html_af9416d716942fa4e1a4a37e8969d6e13"><div class="ttname"><a href="a00124.html#af9416d716942fa4e1a4a37e8969d6e13">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.setFilterFromText</a></div><div class="ttdeci">def setFilterFromText(self)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:472</div></div>
+<div class="ttc" id="aa00124_html_a40807158c346858bdd7d7e6d4418b0fd"><div class="ttname"><a href="a00124.html#a40807158c346858bdd7d7e6d4418b0fd">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.buildSearchDialog</a></div><div class="ttdeci">def buildSearchDialog(self, row, column, interlinkOrEnrich, table, propOrClass, bothOptions=False, currentprefixes=None, addVocabConf=None)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:628</div></div>
+<div class="ttc" id="aa00124_html_ae1d6d8b424b085ac5f1b65df9d010c1b"><div class="ttname"><a href="a00124.html#ae1d6d8b424b085ac5f1b65df9d010c1b">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.viewselectaction</a></div><div class="ttdeci">def viewselectaction(self, selected=None, deselected=None)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:543</div></div>
+<div class="ttc" id="aa00124_html_a6abc7ac30d4d4fec0a0bf19f83cf74e7"><div class="ttname"><a href="a00124.html#a6abc7ac30d4d4fec0a0bf19f83cf74e7">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.buildConvertCRSDialog</a></div><div class="ttdeci">def buildConvertCRSDialog(self)</div><div class="ttdoc">The buildConvertCRSDialog methode determines that searchTripleStoreDialog is equivalent to the Conver...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:498</div></div>
+<div class="ttc" id="aa00124_html_aaa47ccc1253602e71b9979009521b763"><div class="ttname"><a href="a00124.html#aaa47ccc1253602e71b9979009521b763">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.buildQuickAddTripleStore</a></div><div class="ttdeci">def buildQuickAddTripleStore(self)</div><div class="ttdoc">The buildQuickAddTripleStore methode determines that searchTripleStoreDialog is equivalent to the Tri...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:454</div></div>
+<div class="ttc" id="aa00124_html_a5b97e48a9c2ae1a816a6d34883d1e094"><div class="ttname"><a href="a00124.html#a5b97e48a9c2ae1a816a6d34883d1e094">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.loadUnicornLayers</a></div><div class="ttdeci">def loadUnicornLayers(self)</div><div class="ttdoc">The loadUnicornLayers allows users to load their current plugin layers.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:608</div></div>
+<div class="ttc" id="aa00273_html_a2b97505b4a89f59b1902bc41f75fba68"><div class="ttname"><a href="a00273.html#a2b97505b4a89f59b1902bc41f75fba68">SpaLOD_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.__init__</a></div><div class="ttdeci">def __init__(self, description, triplestoreurl, query, searchTerm, prefixes, searchResult, progress)</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:18</div></div>
+<div class="ttc" id="aa00124_html_adb9515b161123ab045058974f6a9aff3"><div class="ttname"><a href="a00124.html#adb9515b161123ab045058974f6a9aff3">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.validateSPARQL</a></div><div class="ttdeci">def validateSPARQL(self)</div><div class="ttdoc">Validates the SPARQL query in the input field and outputs errors in a label.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:505</div></div>
+<div class="ttc" id="aa00124_html_af87744023c2e38e54e52e7893558c984"><div class="ttname"><a href="a00124.html#af87744023c2e38e54e52e7893558c984">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.saveQueryFunc</a></div><div class="ttdeci">def saveQueryFunc(self)</div><div class="ttdoc">The saveQueryFunc allows users to save their queries when clicking on the Save Query button after hav...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:479</div></div>
+<div class="ttc" id="aa00124_html_a579b2ce2ba17d65945487bb19ce31ce7"><div class="ttname"><a href="a00124.html#a579b2ce2ba17d65945487bb19ce31ce7">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.loadQueryFunc</a></div><div class="ttdeci">def loadQueryFunc(self)</div><div class="ttdoc">The loadQueryFunc allows users to load their previously saved queries in the Qgis Plugin.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:537</div></div>
+<div class="ttc" id="aa00124_html_a3e016b315516596fe6572afe08db980a"><div class="ttname"><a href="a00124.html#a3e016b315516596fe6572afe08db980a">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.openURL</a></div><div class="ttdeci">def openURL(self)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:598</div></div>
+<div class="ttc" id="aa00124_html_aa4fb2be182cc4472b427434dfd36a54f"><div class="ttname"><a href="a00124.html#aa4fb2be182cc4472b427434dfd36a54f">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.buildCustomTripleStoreDialog</a></div><div class="ttdeci">def buildCustomTripleStoreDialog(self)</div><div class="ttdoc">The buildCustomTripleStoreDialog methode determines that searchTripleStoreDialog is equivalent to the...</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:465</div></div>
+<div class="ttc" id="aa00124_html_aacd03f114d7d0fe258130b747172268a"><div class="ttname"><a href="a00124.html#aacd03f114d7d0fe258130b747172268a">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.getPointFromCanvas</a></div><div class="ttdeci">def getPointFromCanvas(self)</div><div class="ttdoc">Builds a boundingbox dialog allows to pick a bounding box for a SPARQL query.</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:649</div></div>
+<div class="ttc" id="aa00124_html_a588977212732d65c8687b9e6d4f2aa3e"><div class="ttname"><a href="a00124.html#a588977212732d65c8687b9e6d4f2aa3e">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.onContext</a></div><div class="ttdeci">def onContext(self, position)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:591</div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00110.html">Splalod_qgis_plugin</a></li><li class="navelem"><a class="el" href="a00116.html">dialogs</a></li><li class="navelem"><a class="el" href="a00125.html">sparql_unicorn_dialog_2</a></li><li class="navelem"><a class="el" href="a00205.html">SPARQLunicornDialog</a></li>
+    <li class="navelem"><a class="el" href="a00110.html">SpaLOD_qgis_plugin</a></li><li class="navelem"><a class="el" href="a00116.html">dialogs</a></li><li class="navelem"><a class="el" href="a00125.html">sparql_unicorn_dialog_2</a></li><li class="navelem"><a class="el" href="a00205.html">SPARQLunicornDialog</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

@@ -1,12 +1,12 @@
 var a00056 =
 [
     [ "ValueMappingDialog", "a00221.html", "a00221" ],
-    [ "addMappingToTable", "a00056.html#a78445de1c4002449bc8b50e0b245b866", null ],
-    [ "applyMapping", "a00056.html#a5eb3d1804b683a09cd6c25dd908665d9", null ],
-    [ "buildSearchDialog", "a00056.html#a74ffdc1d53377bcb78d6ad8b6f8a044d", null ],
-    [ "createValueMappingSearchDialog", "a00056.html#a3b7769548876cbfc786226945a1ca3da", null ],
-    [ "deleteSelectedRow", "a00056.html#afbcd750373d0d7178e9dc451f842c448", null ],
-    [ "getClassesFromLabel", "a00056.html#a1950270f98821a4f2c0ece06793e3e19", null ],
+    [ "addMappingToTable", "a00056.html#ae1ee46438aba0b78f81aee194b064153", null ],
+    [ "applyMapping", "a00056.html#ab37816dd7f07d48ba3c3b4cc8f1225b6", null ],
+    [ "buildSearchDialog", "a00056.html#ad83f7ca03ce1e9b8dbe51a33bac5334f", null ],
+    [ "createValueMappingSearchDialog", "a00056.html#ad054c3378ad8a015b02f16c979c62d96", null ],
+    [ "deleteSelectedRow", "a00056.html#aa191201ae4a36ee26950300eb1e2590f", null ],
+    [ "getClassesFromLabel", "a00056.html#a170cc43275330d051d30093fc8312c75", null ],
     [ "_", "a00056.html#a18f05aeddc212b523b40818fa2b87b33", null ],
     [ "currentcol", "a00056.html#a486aeee0a5d3170bc193bc29caf8a7b8", null ],
     [ "currentrow", "a00056.html#a086f47cacf997373ef862200fcfb4612", null ],

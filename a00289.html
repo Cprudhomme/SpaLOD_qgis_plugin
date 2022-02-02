@@ -213,7 +213,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> RedirectUrl == (info.requestUrl().host()+info.requestUrl().path()):</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            params = parse_qs(info.requestUrl().<a class="code" href="a00273.html#a6c84ba0942252fbf3bc9f20120a12ad1">query</a>())</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> <span class="stringliteral">&#39;code&#39;</span> <span class="keywordflow">in</span> params.keys():</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                print(<span class="stringliteral">&#39;OAuth code is {code}&#39;</span>.<a class="code" href="a00147.html#a5fb9d87aa473dffc3a04dff028e430d7">format</a>(code=params[<span class="stringliteral">&#39;code&#39;</span>]))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                print(<span class="stringliteral">&#39;OAuth code is {code}&#39;</span>.<a class="code" href="a00147.html#a46979924d8c070886506e89bb37bffd2">format</a>(code=params[<span class="stringliteral">&#39;code&#39;</span>]))</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                self.oauthcode=params[<span class="stringliteral">&#39;code&#39;</span>]</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="stringliteral">&quot;&quot;&quot;</span></div>
@@ -267,7 +267,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral">&quot;&quot;&quot;</span></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00147.html#a5fb9d87aa473dffc3a04dff028e430d7">Splalod_qgis_plugin.util.sparqlhighlighter.format()</a>, and <a class="el" href="a00289.html#ac89f05d3eeb1c5c95ecd3fde0ffc1abd">RequestInterceptor.oauthcode</a>.</p>
+<p class="reference">References <a class="el" href="a00147.html#a46979924d8c070886506e89bb37bffd2">SpaLOD_qgis_plugin.util.sparqlhighlighter.format()</a>, and <a class="el" href="a00289.html#ac89f05d3eeb1c5c95ecd3fde0ffc1abd">RequestInterceptor.oauthcode</a>.</p>
 
 </div>
 </div>
@@ -314,14 +314,14 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00273_html_a2b97505b4a89f59b1902bc41f75fba68"><div class="ttname"><a href="a00273.html#a2b97505b4a89f59b1902bc41f75fba68">Splalod_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.__init__</a></div><div class="ttdeci">def __init__(self, description, triplestoreurl, query, searchTerm, prefixes, searchResult, progress)</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:18</div></div>
-<div class="ttc" id="aa00273_html_a6c84ba0942252fbf3bc9f20120a12ad1"><div class="ttname"><a href="a00273.html#a6c84ba0942252fbf3bc9f20120a12ad1">Splalod_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.query</a></div><div class="ttdeci">query</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:22</div></div>
-<div class="ttc" id="aa00147_html_a5fb9d87aa473dffc3a04dff028e430d7"><div class="ttname"><a href="a00147.html#a5fb9d87aa473dffc3a04dff028e430d7">Splalod_qgis_plugin.util.sparqlhighlighter.format</a></div><div class="ttdeci">def format(color, style='')</div><div class="ttdef"><b>Definition:</b> sparqlhighlighter.py:5</div></div>
+<div class="ttc" id="aa00147_html_a46979924d8c070886506e89bb37bffd2"><div class="ttname"><a href="a00147.html#a46979924d8c070886506e89bb37bffd2">SpaLOD_qgis_plugin.util.sparqlhighlighter.format</a></div><div class="ttdeci">def format(color, style='')</div><div class="ttdef"><b>Definition:</b> sparqlhighlighter.py:5</div></div>
+<div class="ttc" id="aa00273_html_a2b97505b4a89f59b1902bc41f75fba68"><div class="ttname"><a href="a00273.html#a2b97505b4a89f59b1902bc41f75fba68">SpaLOD_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.__init__</a></div><div class="ttdeci">def __init__(self, description, triplestoreurl, query, searchTerm, prefixes, searchResult, progress)</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:18</div></div>
+<div class="ttc" id="aa00273_html_a6c84ba0942252fbf3bc9f20120a12ad1"><div class="ttname"><a href="a00273.html#a6c84ba0942252fbf3bc9f20120a12ad1">SpaLOD_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.query</a></div><div class="ttdeci">query</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:22</div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00110.html">Splalod_qgis_plugin</a></li><li class="navelem"><a class="el" href="a00144.html">util</a></li><li class="navelem"><a class="el" href="a00146.html">oauth</a></li><li class="navelem"><a class="el" href="a00289.html">RequestInterceptor</a></li>
+    <li class="navelem"><a class="el" href="a00110.html">SpaLOD_qgis_plugin</a></li><li class="navelem"><a class="el" href="a00144.html">util</a></li><li class="navelem"><a class="el" href="a00146.html">oauth</a></li><li class="navelem"><a class="el" href="a00289.html">RequestInterceptor</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

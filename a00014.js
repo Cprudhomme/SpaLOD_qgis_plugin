@@ -1,7 +1,7 @@
 var a00014 =
 [
-    [ "qCleanupResources", "a00014.html#a320f95e50d2144fb5f11aded8b5beb7e", null ],
-    [ "qInitResources", "a00014.html#a9612a21e118f65677108c61427871f11", null ],
+    [ "qCleanupResources", "a00014.html#a1fc70d5ab0486b4277318d9c0a669377", null ],
+    [ "qInitResources", "a00014.html#a7d29a69e6e3158a9982c3ae38fdf5298", null ],
     [ "qt_resource_data", "a00014.html#abec947f92cb69dde003e717bd2e91731", null ],
     [ "qt_resource_name", "a00014.html#a16a31e7133ec412b403a604dd136a87d", null ],
     [ "qt_resource_struct", "a00014.html#a97060c00d389d07beb5eb0df9ec7d340", null ],
