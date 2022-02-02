@@ -26,9 +26,9 @@ var a00161 =
     [ "currentgraph", "a00161.html#a05fd4bc138cb46df393976d344afb712", null ],
     [ "dlg", "a00161.html#ad2ee3c07560eb98d17a382b71105bf98", null ],
     [ "enrichedExport", "a00161.html#ac1babc27d21e85ac2fa395cccac38d15", null ],
+    [ "enrichedLayer", "a00161.html#aeb3b4c0c15b46a389395986c21140737", null ],
     [ "enrichLayer", "a00161.html#afe27f37e04aafb99a9b48eae8506bc9a", null ],
     [ "enrichLayerCounter", "a00161.html#a52fdefb870f38c907e9fede14b52425f", null ],
-    [ "exportColConfig", "a00161.html#ad5f7625f167d4c85dedb053be98e976d", null ],
     [ "exportIdCol", "a00161.html#a28e8c8cab7654b472c43f25f3005b3ad", null ],
     [ "exportNameSpace", "a00161.html#a53c91b53a9e6f8aa2e992e979da8af83", null ],
     [ "exportSetClass", "a00161.html#a4bb9e994037d80a7ace5ae573c602d45", null ],
@@ -45,6 +45,7 @@ var a00161 =
     [ "qtaskgeos", "a00161.html#aebb08cb654b48ca24d5e95ad1cfb3ec3", null ],
     [ "savedQueriesJSON", "a00161.html#a45ffed8ab78cccf90ca258ddb6b862b6", null ],
     [ "savedQueriesJSON", "a00161.html#a5fd6d186f2768ffa13a632afa1d938af", null ],
+    [ "selectedLayerIndex", "a00161.html#ad89cb0027c86c6a94a64de740524d043", null ],
     [ "translator", "a00161.html#a35456e6cc377bc269b33b87c89fe8f3e", null ],
     [ "triplestoreconf", "a00161.html#a330d24be0afd5a96238ca9e128328a2d", null ],
     [ "valueconcept", "a00161.html#a01eccfcf23836fbccab76d229474d829", null ]

@@ -13,6 +13,7 @@ var a00185 =
     [ "currentrow", "a00185.html#a086f47cacf997373ef862200fcfb4612", null ],
     [ "enrichedExport", "a00185.html#ac26f04155f19a0850f23ab9c063ba611", null ],
     [ "enrichtab", "a00185.html#a798047d7be0ff17b0e59b9f9d960d376", null ],
+    [ "exportColConfig", "a00185.html#ad5f7625f167d4c85dedb053be98e976d", null ],
     [ "exportIdCol", "a00185.html#a28e8c8cab7654b472c43f25f3005b3ad", null ],
     [ "exportNameSpace", "a00185.html#a53c91b53a9e6f8aa2e992e979da8af83", null ],
     [ "exportSetClass", "a00185.html#a4bb9e994037d80a7ace5ae573c602d45", null ],

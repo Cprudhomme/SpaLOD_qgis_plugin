@@ -5,8 +5,6 @@ var a00153 =
     [ "enrichLayerProcess", "a00153.html#a56c0d7bb6decc89954e354bbd53ec602", null ],
     [ "exportEnrichedLayer", "a00153.html#adfcc23a6b0a5b7441daa1d4b43a6e881", null ],
     [ "dlg", "a00153.html#ad2ee3c07560eb98d17a382b71105bf98", null ],
-    [ "enrichedExport", "a00153.html#ac1babc27d21e85ac2fa395cccac38d15", null ],
-    [ "enrichedExport", "a00153.html#ac26f04155f19a0850f23ab9c063ba611", null ],
     [ "enrichLayer", "a00153.html#afe27f37e04aafb99a9b48eae8506bc9a", null ],
     [ "enrichLayerCounter", "a00153.html#a52fdefb870f38c907e9fede14b52425f", null ],
     [ "exportIdCol", "a00153.html#a28e8c8cab7654b472c43f25f3005b3ad", null ],

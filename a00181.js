@@ -10,6 +10,7 @@ var a00181 =
     [ "showConfigTable", "a00181.html#a325fd8cbbc7334bc6881a68afd0c327f", null ],
     [ "addVocabConf", "a00181.html#a1c0f392d53979b034116808ade371029", null ],
     [ "enrichtab", "a00181.html#a798047d7be0ff17b0e59b9f9d960d376", null ],
+    [ "exportColConfig", "a00181.html#ad5f7625f167d4c85dedb053be98e976d", null ],
     [ "originalRowCount", "a00181.html#a69f706a761ec89c3b902ee489e8d7408", null ],
     [ "prefixes", "a00181.html#a302e350558edcbbd7b85927b33550548", null ],
     [ "searchTripleStoreDialog", "a00181.html#a0918bd6ea96ed15f91ffdf7d9e91776a", null ],

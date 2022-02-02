@@ -33,7 +33,7 @@ var files_dup =
     [ "resources.py", "a00014.html", "a00014" ],
     [ "searchdialog.py", "a00038.html", "a00038" ],
     [ "searchtask.py", "a00089.html", "a00089" ],
-    [ "sparql_unicorn.py", "a00017.html", "a00017" ],
+    [ "spalod.py", "a00017.html", "a00017" ],
     [ "sparql_unicorn_dialog.py", "a00041.html", "a00041" ],
     [ "sparql_unicorn_dialog_2.py", "a00044.html", "a00044" ],
     [ "sparqlhighlighter.py", "a00104.html", "a00104" ],

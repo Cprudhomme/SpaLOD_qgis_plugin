@@ -74,9 +74,8 @@ Collaboration diagram for EnrichmentTab:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00151.png" border="0" usemap="#EnrichmentTab_coll__map" alt="Collaboration graph"/></div>
 <map name="EnrichmentTab_coll__map" id="EnrichmentTab_coll__map">
-<area shape="rect" title=" " alt="" coords="47,109,165,136"/>
-<area shape="rect" title=" " alt="" coords="5,5,44,32"/>
-<area shape="rect" title=" " alt="" coords="162,5,213,32"/>
+<area shape="rect" title=" " alt="" coords="5,109,124,136"/>
+<area shape="rect" title=" " alt="" coords="45,5,84,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -104,15 +103,11 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a4bb9e994037d80a7ace5ae573c602d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94166918eca98bd0764f1c890ee2ec5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00153.html#a94166918eca98bd0764f1c890ee2ec5b">valueconcept</a></td></tr>
 <tr class="separator:a94166918eca98bd0764f1c890ee2ec5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac26f04155f19a0850f23ab9c063ba611"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00153.html#ac26f04155f19a0850f23ab9c063ba611">enrichedExport</a></td></tr>
-<tr class="separator:ac26f04155f19a0850f23ab9c063ba611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:afe27f37e04aafb99a9b48eae8506bc9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00153.html#afe27f37e04aafb99a9b48eae8506bc9a">enrichLayer</a> = None</td></tr>
 <tr class="separator:afe27f37e04aafb99a9b48eae8506bc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1babc27d21e85ac2fa395cccac38d15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00153.html#ac1babc27d21e85ac2fa395cccac38d15">enrichedExport</a> = False</td></tr>
-<tr class="separator:ac1babc27d21e85ac2fa395cccac38d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2ee3c07560eb98d17a382b71105bf98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00153.html#ad2ee3c07560eb98d17a382b71105bf98">dlg</a> = None</td></tr>
 <tr class="separator:ad2ee3c07560eb98d17a382b71105bf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09dec5fb4a23fd0028407eddbe26cc16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00153.html#a09dec5fb4a23fd0028407eddbe26cc16">qtask</a> = None</td></tr>
@@ -383,7 +378,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        proptypelist.append(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    <span class="keywordflow">if</span> self.dlg.interlinkTable.item(row, 6) != <span class="keywordtype">None</span>:</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        concept = self.dlg.interlinkTable.item(row, 6).data(0)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        self.exportColConfig[column] = concept</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        self.dlg.exportColConfig[column] = concept</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        classurilist.append(concept)</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                    <span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                        classurilist.append(<span class="stringliteral">&quot;&quot;</span>)</div>
@@ -397,9 +392,11 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                propurilist.append(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                classurilist.append(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                proptypelist.append(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        self.enrichedExport = <span class="keyword">True</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        self.dlg.maindlg.exportLayer(propurilist, classurilist, includelist, proptypelist, valuemappings, valuequeries,</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                                     self.dlg.exportTripleStore.isChecked())</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        self.dlg.maindlg.enrichedExport = <span class="keyword">True</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        self.dlg.maindlg.enrichedLayer = self.dlg.chooseLayerInterlink.currentIndex()</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        self.dlg.maindlg.exportLayer(propurilist, classurilist, includelist, proptypelist, valuemappings, valuequeries,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                     self.dlg.exportTripleStore.isChecked())</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        self.dlg.maindlg.enrichedExport = <span class="keyword">False</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -424,47 +421,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="a00157.html#a93626884d4600b8cf171d464a41099fd">InterlinkingTab.__init__()</a>, <a class="el" href="a00153.html#a93626884d4600b8cf171d464a41099fd">EnrichmentTab.__init__()</a>, <a class="el" href="a00153.html#aca6b7d4f8799f96244e4515a0a633386">EnrichmentTab.addEnrichedLayer()</a>, <a class="el" href="a00161.html#afb699b236ce4e28e8d4fabc71b0a63e1">SPARQLunicorn.create_unicorn_layer()</a>, <a class="el" href="a00161.html#a08f51981194b429b151dd50b4192c9da">SPARQLunicorn.endpointselectaction()</a>, <a class="el" href="a00153.html#a56c0d7bb6decc89954e354bbd53ec602">EnrichmentTab.enrichLayerProcess()</a>, <a class="el" href="a00161.html#a297becf2256721565827ce936e29a9ad">SPARQLunicorn.exportLayer()</a>, <a class="el" href="a00161.html#a2e739c89375383225076b8ab23b47841">SPARQLunicorn.exportLayer2()</a>, <a class="el" href="a00157.html#ac0b79f251af60953125dc0c3807d8010">InterlinkingTab.exportMapping()</a>, <a class="el" href="a00257.html#a5f4d426f44e2bbf0bcca08c50d1b5ee4">LoadGraphTask.finished()</a>, <a class="el" href="a00249.html#a5f4d426f44e2bbf0bcca08c50d1b5ee4">GeoCollectionsQueryTask.finished()</a>, <a class="el" href="a00161.html#ae28057dbf2c9c7667976c7abbd1ee51b">SPARQLunicorn.getGeoCollectionInstances()</a>, <a class="el" href="a00161.html#afdcc77b707ff20ed027197bc41ece770">SPARQLunicorn.getGeoConcepts()</a>, <a class="el" href="a00157.html#ab38c44b08c637c238d983ebcab2ef845">InterlinkingTab.loadMapping()</a>, <a class="el" href="a00157.html#a69357de86ed09826927e35b3c3378fcd">InterlinkingTab.readMapping()</a>, and <a class="el" href="a00161.html#a4646be8764a8bfa5b36f17573b34d825">SPARQLunicorn.useDefaultIDPropProcess()</a>.</p>
-
-</div>
-</div>
-<a id="ac1babc27d21e85ac2fa395cccac38d15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1babc27d21e85ac2fa395cccac38d15">&#9670;&nbsp;</a></span>enrichedExport <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool enrichedExport = False</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="a00161.html#a297becf2256721565827ce936e29a9ad">SPARQLunicorn.exportLayer()</a>.</p>
-
-</div>
-</div>
-<a id="ac26f04155f19a0850f23ab9c063ba611"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac26f04155f19a0850f23ab9c063ba611">&#9670;&nbsp;</a></span>enrichedExport <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enrichedExport</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="a00161.html#a297becf2256721565827ce936e29a9ad">SPARQLunicorn.exportLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00157.html#a93626884d4600b8cf171d464a41099fd">InterlinkingTab.__init__()</a>, <a class="el" href="a00153.html#a93626884d4600b8cf171d464a41099fd">EnrichmentTab.__init__()</a>, <a class="el" href="a00153.html#aca6b7d4f8799f96244e4515a0a633386">EnrichmentTab.addEnrichedLayer()</a>, <a class="el" href="a00161.html#afb699b236ce4e28e8d4fabc71b0a63e1">SpaLOD.create_unicorn_layer()</a>, <a class="el" href="a00161.html#a08f51981194b429b151dd50b4192c9da">SpaLOD.endpointselectaction()</a>, <a class="el" href="a00153.html#a56c0d7bb6decc89954e354bbd53ec602">EnrichmentTab.enrichLayerProcess()</a>, <a class="el" href="a00161.html#a297becf2256721565827ce936e29a9ad">SpaLOD.exportLayer()</a>, <a class="el" href="a00161.html#a2e739c89375383225076b8ab23b47841">SpaLOD.exportLayer2()</a>, <a class="el" href="a00157.html#ac0b79f251af60953125dc0c3807d8010">InterlinkingTab.exportMapping()</a>, <a class="el" href="a00257.html#a5f4d426f44e2bbf0bcca08c50d1b5ee4">LoadGraphTask.finished()</a>, <a class="el" href="a00249.html#a5f4d426f44e2bbf0bcca08c50d1b5ee4">GeoCollectionsQueryTask.finished()</a>, <a class="el" href="a00161.html#ae28057dbf2c9c7667976c7abbd1ee51b">SpaLOD.getGeoCollectionInstances()</a>, <a class="el" href="a00161.html#afdcc77b707ff20ed027197bc41ece770">SpaLOD.getGeoConcepts()</a>, <a class="el" href="a00157.html#ab38c44b08c637c238d983ebcab2ef845">InterlinkingTab.loadMapping()</a>, <a class="el" href="a00157.html#a69357de86ed09826927e35b3c3378fcd">InterlinkingTab.readMapping()</a>, and <a class="el" href="a00161.html#a4646be8764a8bfa5b36f17573b34d825">SpaLOD.useDefaultIDPropProcess()</a>.</p>
 
 </div>
 </div>
@@ -528,7 +485,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="a00161.html#ab229514567f36a825b2756e65973c3c7">SPARQLunicorn.layerToTTLString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00161.html#ab229514567f36a825b2756e65973c3c7">SpaLOD.layerToTTLString()</a>.</p>
 
 </div>
 </div>
@@ -544,7 +501,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="a00161.html#ab229514567f36a825b2756e65973c3c7">SPARQLunicorn.layerToTTLString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00161.html#ab229514567f36a825b2756e65973c3c7">SpaLOD.layerToTTLString()</a>.</p>
 
 </div>
 </div>
@@ -560,7 +517,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="a00161.html#ab229514567f36a825b2756e65973c3c7">SPARQLunicorn.layerToTTLString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00161.html#ab229514567f36a825b2756e65973c3c7">SpaLOD.layerToTTLString()</a>.</p>
 
 </div>
 </div>
@@ -608,7 +565,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="a00161.html#afb699b236ce4e28e8d4fabc71b0a63e1">SPARQLunicorn.create_unicorn_layer()</a>, <a class="el" href="a00153.html#a56c0d7bb6decc89954e354bbd53ec602">EnrichmentTab.enrichLayerProcess()</a>, <a class="el" href="a00233.html#a50aab9cd6a6029812a4e7f9b6a42f756">EnrichmentDialog.getAttributeStatistics()</a>, and <a class="el" href="a00161.html#afdcc77b707ff20ed027197bc41ece770">SPARQLunicorn.getGeoConcepts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00161.html#afb699b236ce4e28e8d4fabc71b0a63e1">SpaLOD.create_unicorn_layer()</a>, <a class="el" href="a00153.html#a56c0d7bb6decc89954e354bbd53ec602">EnrichmentTab.enrichLayerProcess()</a>, <a class="el" href="a00233.html#a50aab9cd6a6029812a4e7f9b6a42f756">EnrichmentDialog.getAttributeStatistics()</a>, and <a class="el" href="a00161.html#afdcc77b707ff20ed027197bc41ece770">SpaLOD.getGeoConcepts()</a>.</p>
 
 </div>
 </div>

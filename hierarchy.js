@@ -30,7 +30,7 @@ var hierarchy =
       [ "InterlinkMainWindow", "a00185.html", null ],
       [ "SPARQLunicornDialog", "a00201.html", null ]
     ] ],
-    [ "SPARQLunicorn", "a00161.html", null ],
+    [ "SpaLOD", "a00161.html", null ],
     [ "UserMetaData", "a00293.html", null ],
     [ "QCompleter", null, [
       [ "SPARQLCompleter", "a00165.html", null ],
