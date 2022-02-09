@@ -1,5 +1,5 @@
 var annotated_dup =
 [
-    [ "SpaLOD_qgis_plugin", "a00110.html", "a00110" ],
-    [ "FORM_CLASS", "a00829.html", null ]
+    [ "SpaLOD_qgis_plugin", "a00113.html", "a00113" ],
+    [ "FORM_CLASS", "a00837.html", null ]
 ];

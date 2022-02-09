@@ -1,4 +1,4 @@
 var a00125 =
 [
-    [ "SPARQLunicornDialog", "a00205.html", "a00205" ]
+    [ "LoadGraphDialog", "a00197.html", "a00197" ]
 ];

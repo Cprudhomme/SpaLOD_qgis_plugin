@@ -1,4 +1,4 @@
 var a00139 =
 [
-    [ "LoadGraphTask", "a00257.html", "a00257" ]
+    [ "DetectTripleStoreTask", "a00249.html", "a00249" ]
 ];

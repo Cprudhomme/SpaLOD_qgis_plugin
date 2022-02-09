@@ -1,14 +1,16 @@
 var a00217 =
 [
-    [ "__init__", "a00217.html#a11c26a374ef30da345563e1f5459936a", null ],
-    [ "checkConnection", "a00217.html#ad3ee4f0a7774436bd1d9b8de64402137", null ],
-    [ "currentrow", "a00217.html#a9dd9ae4cdd3fd369783ecc127c418871", null ],
-    [ "fieldname", "a00217.html#a6aa91eb05e0f70d41e5ae3348922a469", null ],
-    [ "interlinkOrEnrich", "a00217.html#a22becd814f00141dbdbb9167f5b9551f", null ],
-    [ "qtask", "a00217.html#a09dec5fb4a23fd0028407eddbe26cc16", null ],
-    [ "searchResultMap", "a00217.html#ab1c2bb7c4c08c1fad52520ab43f66f34", null ],
-    [ "table", "a00217.html#ab31a20ab07de26623b45757ffb619144", null ],
+    [ "__init__", "a00217.html#ac6ef1909b43c27723c2a89de86988023", null ],
+    [ "comboBox", "a00217.html#afcee2275fb7c24bb8979dd838f0dc90a", null ],
+    [ "prefixes", "a00217.html#a302e350558edcbbd7b85927b33550548", null ],
+    [ "prefixstore", "a00217.html#a4d9e45fd666bc36c0602e3a0c6244b3c", null ],
+    [ "proxyEnabled", "a00217.html#ae862ff88f11a3a2ef7eee0c21957dcb7", null ],
+    [ "proxyHost", "a00217.html#af2d0d5884751e69699ca9b2d6c2cd7f1", null ],
+    [ "proxyPassword", "a00217.html#add5abc4de55257ede4e0ab5db30de1ce", null ],
+    [ "proxyPort", "a00217.html#a2b3d20b1c7f6ec579fbb02a053c6c1a4", null ],
+    [ "proxyType", "a00217.html#a495fe54c42ce06ce71582737400c0d02", null ],
+    [ "proxyUser", "a00217.html#ab27c8ae6a38f63214b0413f461033e85", null ],
+    [ "sparqlhighlighter", "a00217.html#af81c2262d69f9184819dac236925d02b", null ],
     [ "triplestoreconf", "a00217.html#aafcf1146e38f7f4733cbf5dc6a6fb147", null ],
-    [ "ttlstring", "a00217.html#a3d5c5f8fd0529cd88f52bf58586cc0ec", null ],
-    [ "valmaptable", "a00217.html#afa678c21e5c99845c09c18d10cdbf7b5", null ]
+    [ "triplestoreconf", "a00217.html#a330d24be0afd5a96238ca9e128328a2d", null ]
 ];

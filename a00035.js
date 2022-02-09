@@ -1,7 +1,12 @@
 var a00035 =
 [
-    [ "LoginWindow", "a00193.html", "a00193" ],
-    [ "_loadFinished", "a00035.html#ab26e880923caa98c45526ef352f208c6", null ],
-    [ "callable", "a00035.html#a060dba02e4846cb35f69202cbf9c5bff", null ],
-    [ "html", "a00035.html#a8f99bc655183db169e126fc155ceb631", null ]
+    [ "LoadGraphDialog", "a00197.html", "a00197" ],
+    [ "check_state", "a00035.html#ae7e886b119d3b298e474e5af6d64e119", null ],
+    [ "check_state1", "a00035.html#a273a950c3fae36671e072542800fef3a", null ],
+    [ "loadFile", "a00035.html#a050d681aa25de7931dde1cbba148e4db", null ],
+    [ "loadURI", "a00035.html#ab2dd4b103895bb7604e7b432df5090ef", null ],
+    [ "_", "a00035.html#a18f05aeddc212b523b40818fa2b87b33", null ],
+    [ "FORM_CLASS", "a00035.html#a0357d3c7a5047524e1543f2f43bc3e38", null ],
+    [ "justloadingfromfile", "a00035.html#a66e60c99e2cb67bdae8d0e12cba73350", null ],
+    [ "qtask", "a00035.html#a09dec5fb4a23fd0028407eddbe26cc16", null ]
 ];

@@ -1,6 +1,7 @@
 var a00148 =
 [
-    [ "LineNumberArea", "a00309.html", "a00309" ],
-    [ "SPARQLCompleter", "a00305.html", "a00305" ],
-    [ "ToolTipPlainText", "a00313.html", "a00313" ]
+    [ "mappingtools", "a00149.html", "a00149" ],
+    [ "oauth", "a00150.html", "a00150" ],
+    [ "sparqlhighlighter", "a00151.html", "a00151" ],
+    [ "tooltipplaintext", "a00152.html", "a00152" ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SPARQLingUnicornQGISPlugin: varinputdialog.py File Reference</title>
+<title>SPARQLingUnicornQGISPlugin: valuemappingdialog.py File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,29 +63,59 @@ $(document).ready(function(){initNavTree('a00059.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">varinputdialog.py File Reference</div>  </div>
+<div class="title">valuemappingdialog.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00225.html">VarInputDialog</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class representing the variable input dialog which maps geodataset columns to SPARQL query variables.  <a href="a00225.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00229.html">ValueMappingDialog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="a00229.html" title="The ValueMappingDialog class contains all the variables and methods for the value mapping dialog @Ant...">ValueMappingDialog</a> class contains all the variables and methods for the value mapping dialog @Antoine.  <a href="a00229.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a00130"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00130.html">SpaLOD_qgis_plugin.dialogs.varinputdialog</a></td></tr>
+<tr class="memitem:a00133"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html">SpaLOD_qgis_plugin.dialogs.valuemappingdialog</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae1ee46438aba0b78f81aee194b064153"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#ae1ee46438aba0b78f81aee194b064153">addMappingToTable</a> (self)</td></tr>
+<tr class="memdesc:ae1ee46438aba0b78f81aee194b064153"><td class="mdescLeft">&#160;</td><td class="mdescRight">The addMappingToTable lets the user add a specific mapping to the Interlink Table @Antoine.  <a href="a00133.html#ae1ee46438aba0b78f81aee194b064153">More...</a><br /></td></tr>
+<tr class="separator:ae1ee46438aba0b78f81aee194b064153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa191201ae4a36ee26950300eb1e2590f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#aa191201ae4a36ee26950300eb1e2590f">deleteSelectedRow</a> (self)</td></tr>
+<tr class="memdesc:aa191201ae4a36ee26950300eb1e2590f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The deleteSelectedRow lets users delete a selected row from the Table @Antoine.  <a href="a00133.html#aa191201ae4a36ee26950300eb1e2590f">More...</a><br /></td></tr>
+<tr class="separator:aa191201ae4a36ee26950300eb1e2590f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170cc43275330d051d30093fc8312c75"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a170cc43275330d051d30093fc8312c75">getClassesFromLabel</a> (self, comboBox)</td></tr>
+<tr class="memdesc:a170cc43275330d051d30093fc8312c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The get getClassesFromLabel Returns classes for a given label from a triple store @Antoine.  <a href="a00133.html#a170cc43275330d051d30093fc8312c75">More...</a><br /></td></tr>
+<tr class="separator:a170cc43275330d051d30093fc8312c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad054c3378ad8a015b02f16c979c62d96"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#ad054c3378ad8a015b02f16c979c62d96">createValueMappingSearchDialog</a> (self, row=-1, column=-1)</td></tr>
+<tr class="memdesc:ad054c3378ad8a015b02f16c979c62d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">The createValueMappingSearchDialog allows the opening of the Value Mapping Search dialog.  <a href="a00133.html#ad054c3378ad8a015b02f16c979c62d96">More...</a><br /></td></tr>
+<tr class="separator:ad054c3378ad8a015b02f16c979c62d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83f7ca03ce1e9b8dbe51a33bac5334f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#ad83f7ca03ce1e9b8dbe51a33bac5334f">buildSearchDialog</a> (self, row, column, interlinkOrEnrich, table)</td></tr>
+<tr class="memdesc:ad83f7ca03ce1e9b8dbe51a33bac5334f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The buildSearchDialog allows the opening of the Search dialog @Antoine.  <a href="a00133.html#ad83f7ca03ce1e9b8dbe51a33bac5334f">More...</a><br /></td></tr>
+<tr class="separator:ad83f7ca03ce1e9b8dbe51a33bac5334f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37816dd7f07d48ba3c3b4cc8f1225b6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#ab37816dd7f07d48ba3c3b4cc8f1225b6">applyMapping</a> (self)</td></tr>
+<tr class="memdesc:ab37816dd7f07d48ba3c3b4cc8f1225b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applyMapping allows user to use their mapping when the apply mapping button is clicked @Antoine.  <a href="a00133.html#ab37816dd7f07d48ba3c3b4cc8f1225b6">More...</a><br /></td></tr>
+<tr class="separator:ab37816dd7f07d48ba3c3b4cc8f1225b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0357d3c7a5047524e1543f2f43bc3e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00130.html#a0357d3c7a5047524e1543f2f43bc3e38">FORM_CLASS</a></td></tr>
+<tr class="memitem:a0357d3c7a5047524e1543f2f43bc3e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a0357d3c7a5047524e1543f2f43bc3e38">FORM_CLASS</a></td></tr>
 <tr class="separator:a0357d3c7a5047524e1543f2f43bc3e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18f05aeddc212b523b40818fa2b87b33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00130.html#a18f05aeddc212b523b40818fa2b87b33">_</a></td></tr>
+<tr class="memitem:a18f05aeddc212b523b40818fa2b87b33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a18f05aeddc212b523b40818fa2b87b33">_</a></td></tr>
 <tr class="separator:a18f05aeddc212b523b40818fa2b87b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486aeee0a5d3170bc193bc29caf8a7b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a486aeee0a5d3170bc193bc29caf8a7b8">currentcol</a></td></tr>
+<tr class="separator:a486aeee0a5d3170bc193bc29caf8a7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdf3b07bd6d65a9a2395db633d382f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a1bdf3b07bd6d65a9a2395db633d382f0">searchResultMap</a></td></tr>
+<tr class="separator:a1bdf3b07bd6d65a9a2395db633d382f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086f47cacf997373ef862200fcfb4612"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a086f47cacf997373ef862200fcfb4612">currentrow</a></td></tr>
+<tr class="separator:a086f47cacf997373ef862200fcfb4612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816bebaf94e989ec4293bfee7a615a98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a816bebaf94e989ec4293bfee7a615a98">interlinkdialog</a></td></tr>
+<tr class="separator:a816bebaf94e989ec4293bfee7a615a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -93,7 +123,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_56b9387f66bbb1dccc82a920d3dbd989.html">dialogs</a></li><li class="navelem"><a class="el" href="a00059.html">varinputdialog.py</a></li>
+    <li class="navelem"><a class="el" href="dir_56b9387f66bbb1dccc82a920d3dbd989.html">dialogs</a></li><li class="navelem"><a class="el" href="a00059.html">valuemappingdialog.py</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

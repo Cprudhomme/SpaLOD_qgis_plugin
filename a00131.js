@@ -1,4 +1,4 @@
 var a00131 =
 [
-    [ "WarningLayerDlg", "a00229.html", "a00229" ]
+    [ "TripleStoreQuickAddDialog", "a00221.html", "a00221" ]
 ];
