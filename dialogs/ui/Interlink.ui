@@ -25,7 +25,7 @@
   <widget class="QWidget" name="centralwidget_Interlink">
    <property name="styleSheet">
     <string notr="true">QObject#centralwidget_Interlink{
-background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795455 rgba(0, 57, 70, 255), stop:0.5625 rgba(0, 85, 104, 255), stop:0.954545 rgba(0, 107, 131, 255));}
+background-colo:rgb(255, 255, 255)}
 </string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -51,9 +51,9 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
          </property>
          <property name="styleSheet">
           <string notr="true">QObject#Interlink_frame{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
+background-color: rgb(140, 140, 140);
 	
-border-radius:20px;}
+Border-radius:20px;}
 
 
 
@@ -81,7 +81,7 @@ border-radius:20px;}
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">color:rgb(0, 81, 135);</string>
+                  <string notr="true">color:rgb(0, 0, 0);</string>
                  </property>
                  <property name="text">
                   <string>Layer :</string>
@@ -152,9 +152,10 @@ selection-color:rgb(0, 81, 135);</string>
                   <cursorShape>PointingHandCursor</cursorShape>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">background-color:rgb(0, 127, 165);
+                  <string notr="true">background-color:rgb(189, 24, 29);
 border-radius:10px;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+</string>
                  </property>
                  <property name="text">
                   <string>Load Layer</string>
@@ -200,7 +201,7 @@ color: rgb(255, 255, 255);</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">color:rgb(0, 81, 135);</string>
+                  <string notr="true">color:rgb(0, 0, 0);</string>
                  </property>
                  <property name="text">
                   <string>OWL Class:</string>
@@ -268,9 +269,10 @@ border-color:rgb(45, 45, 45);</string>
                   <cursorShape>PointingHandCursor</cursorShape>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">background-color:rgb(0, 127, 165);
+                  <string notr="true">background-color:rgb(189, 24, 29);
 border-radius:10px;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+</string>
                  </property>
                  <property name="text">
                   <string>Search Class</string>
@@ -316,7 +318,7 @@ color: rgb(255, 255, 255);</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">color:rgb(0, 81, 135);</string>
+                  <string notr="true">color:rgb(0, 0, 0);</string>
                  </property>
                  <property name="text">
                   <string>Target Namespace:</string>
@@ -407,9 +409,10 @@ background-color: rgb(253, 252, 250);</string>
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color:rgb(0, 127, 165);
+                <string notr="true">background-color:rgb(189, 24, 29);
 border-radius:10px;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+</string>
                </property>
                <property name="text">
                 <string>Import Mapping</string>
@@ -441,9 +444,10 @@ color: rgb(255, 255, 255);</string>
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color:rgb(0, 127, 165);
+                <string notr="true">background-color:rgb(189, 24, 29);
 border-radius:10px;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+</string>
                </property>
                <property name="text">
                 <string>Export Mapping</string>
@@ -484,9 +488,10 @@ color: rgb(255, 255, 255);</string>
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color:rgb(0, 127, 165);
+             <string notr="true">background-color:rgb(189, 24, 29);
 border-radius:10px;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+</string>
             </property>
             <property name="text">
              <string>Export Result</string>
@@ -518,7 +523,7 @@ color: rgb(255, 255, 255);</string>
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">color:rgb(0, 81, 135);</string>
+             <string notr="true">color:rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>Export To Triple Store</string>
@@ -547,7 +552,7 @@ color: rgb(255, 255, 255);</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color:rgb(0, 81, 135);</string>
+             <string notr="true">color:rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>Table Colums to Concepts:</string>
