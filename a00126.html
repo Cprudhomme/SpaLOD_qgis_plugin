@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SPARQLingUnicornQGISPlugin: SpaLOD_qgis_plugin.dialogs.loginwindowdialog Namespace Reference</title>
+<title>SPARQLingUnicornQGISPlugin: SpaLOD_qgis_plugin.dialogs.triplestoredialog Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,30 +65,568 @@ $(document).ready(function(){initNavTree('a00126.html',''); initResizable(); });
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">SpaLOD_qgis_plugin.dialogs.loginwindowdialog Namespace Reference</div>  </div>
+<div class="title">SpaLOD_qgis_plugin.dialogs.triplestoredialog Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html">LoginWindow</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html">TripleStoreDialog</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab26e880923caa98c45526ef352f208c6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#ab26e880923caa98c45526ef352f208c6">_loadFinished</a> (self, result)</td></tr>
-<tr class="separator:ab26e880923caa98c45526ef352f208c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a060dba02e4846cb35f69202cbf9c5bff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a060dba02e4846cb35f69202cbf9c5bff">callable</a> (self, data)</td></tr>
-<tr class="separator:a060dba02e4846cb35f69202cbf9c5bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc59ce7a0a0d66a536781e9240ea83f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#aedc59ce7a0a0d66a536781e9240ea83f">loadTripleStoreConfig</a> (self)</td></tr>
+<tr class="memdesc:aedc59ce7a0a0d66a536781e9240ea83f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loadTripleStoreConfig will allow users to load their TripleStore configuration @Antoine.  <a href="a00126.html#aedc59ce7a0a0d66a536781e9240ea83f">More...</a><br /></td></tr>
+<tr class="separator:aedc59ce7a0a0d66a536781e9240ea83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa8f6297a5c85ed356bb37d2ff2108a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a5fa8f6297a5c85ed356bb37d2ff2108a">closeTripleStoreDialog</a> (self)</td></tr>
+<tr class="memdesc:a5fa8f6297a5c85ed356bb37d2ff2108a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The closeTripleStoreDialog will allow the user to close the TripleStore Dialog @Antoine.  <a href="a00126.html#a5fa8f6297a5c85ed356bb37d2ff2108a">More...</a><br /></td></tr>
+<tr class="separator:a5fa8f6297a5c85ed356bb37d2ff2108a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b47048934f06dab847222b33ba31dc1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a5b47048934f06dab847222b33ba31dc1">testTripleStoreConnection</a> (self, calledfromotherfunction=False, showMessageBox=True, query=&quot;SELECT ?a ?b ?c WHERE { ?a ?b ?c .} LIMIT 1&quot;)</td></tr>
+<tr class="memdesc:a5b47048934f06dab847222b33ba31dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The testTripleStoreConnection methode allows the plugi to test the validity of the users TripleStore URL @Antoine.  <a href="a00126.html#a5b47048934f06dab847222b33ba31dc1">More...</a><br /></td></tr>
+<tr class="separator:a5b47048934f06dab847222b33ba31dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28bcc5115bb05b2dd585af7e0d3683aa"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a28bcc5115bb05b2dd585af7e0d3683aa">detectTripleStoreConfiguration</a> (self)</td></tr>
+<tr class="memdesc:a28bcc5115bb05b2dd585af7e0d3683aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The detectTripleStoreConfiguration methode detects the user's current TripleStore configuration.  <a href="a00126.html#a28bcc5115bb05b2dd585af7e0d3683aa">More...</a><br /></td></tr>
+<tr class="separator:a28bcc5115bb05b2dd585af7e0d3683aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a629e7c80cc0c5352fd4e73ed5a9d68a2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a629e7c80cc0c5352fd4e73ed5a9d68a2">addNewSPARQLEndpoint</a> (self)</td></tr>
+<tr class="memdesc:a629e7c80cc0c5352fd4e73ed5a9d68a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new SPARQL endpoint to the triple store registry.  <a href="a00126.html#a629e7c80cc0c5352fd4e73ed5a9d68a2">More...</a><br /></td></tr>
+<tr class="separator:a629e7c80cc0c5352fd4e73ed5a9d68a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855d2afa7779f4d8d1143a736e7b0340"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a855d2afa7779f4d8d1143a736e7b0340">deleteTripleStoreFunc</a> (self)</td></tr>
+<tr class="memdesc:a855d2afa7779f4d8d1143a736e7b0340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addes a new SPARQL endpoint to the triple store registry.  <a href="a00126.html#a855d2afa7779f4d8d1143a736e7b0340">More...</a><br /></td></tr>
+<tr class="separator:a855d2afa7779f4d8d1143a736e7b0340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2c2ed8f62ab4a32ee6782d560dc668"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#abf2c2ed8f62ab4a32ee6782d560dc668">createNewTripleStore</a> (self)</td></tr>
+<tr class="memdesc:abf2c2ed8f62ab4a32ee6782d560dc668"><td class="mdescLeft">&#160;</td><td class="mdescRight">@Antoine  <a href="a00126.html#abf2c2ed8f62ab4a32ee6782d560dc668">More...</a><br /></td></tr>
+<tr class="separator:abf2c2ed8f62ab4a32ee6782d560dc668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216a70c7a04e748f679b154e80b0a605"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a216a70c7a04e748f679b154e80b0a605">restoreFactory</a> (self)</td></tr>
+<tr class="memdesc:a216a70c7a04e748f679b154e80b0a605"><td class="mdescLeft">&#160;</td><td class="mdescRight">The restoreFactory methode restores all triplestores to their original configuration.  <a href="a00126.html#a216a70c7a04e748f679b154e80b0a605">More...</a><br /></td></tr>
+<tr class="separator:a216a70c7a04e748f679b154e80b0a605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac244745c0d73ecdf6ee46057957b1e44"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#ac244745c0d73ecdf6ee46057957b1e44">addPrefixToList</a> (self)</td></tr>
+<tr class="memdesc:ac244745c0d73ecdf6ee46057957b1e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a prefix to the list of prefixes in the search dialog window.  <a href="a00126.html#ac244745c0d73ecdf6ee46057957b1e44">More...</a><br /></td></tr>
+<tr class="separator:ac244745c0d73ecdf6ee46057957b1e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4110c0efdd5bb319ef467f7abd6800"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a5b4110c0efdd5bb319ef467f7abd6800">removePrefixFromList</a> (self)</td></tr>
+<tr class="memdesc:a5b4110c0efdd5bb319ef467f7abd6800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a prefix from the list of prefixes in the search dialog window.  <a href="a00126.html#a5b4110c0efdd5bb319ef467f7abd6800">More...</a><br /></td></tr>
+<tr class="separator:a5b4110c0efdd5bb319ef467f7abd6800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77728b14ac0be90cb16897d91ffd17af"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a77728b14ac0be90cb16897d91ffd17af">writeConfiguration</a> (self)</td></tr>
+<tr class="memdesc:a77728b14ac0be90cb16897d91ffd17af"><td class="mdescLeft">&#160;</td><td class="mdescRight">The writeConfiguration methode allows the user to manually set up their TripleStore configuration @Antoine.  <a href="a00126.html#a77728b14ac0be90cb16897d91ffd17af">More...</a><br /></td></tr>
+<tr class="separator:a77728b14ac0be90cb16897d91ffd17af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cbb4ef1955d5385119aa80a9ba2618"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a32cbb4ef1955d5385119aa80a9ba2618">applyCustomSPARQLEndPoint</a> (self)</td></tr>
+<tr class="memdesc:a32cbb4ef1955d5385119aa80a9ba2618"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applyCustomSPARQLEndPoint methode allows the user to apply their custom SPARQLEndpoint to the plugin @Antoine.  <a href="a00126.html#a32cbb4ef1955d5385119aa80a9ba2618">More...</a><br /></td></tr>
+<tr class="separator:a32cbb4ef1955d5385119aa80a9ba2618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fee499e5c843b38084c62deb5ac288"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a34fee499e5c843b38084c62deb5ac288">check_state1</a> (self)</td></tr>
+<tr class="memdesc:a34fee499e5c843b38084c62deb5ac288"><td class="mdescLeft">&#160;</td><td class="mdescRight">The check_state1 methode checks the state of the tripleStoreEdit @Antoine.  <a href="a00126.html#a34fee499e5c843b38084c62deb5ac288">More...</a><br /></td></tr>
+<tr class="separator:a34fee499e5c843b38084c62deb5ac288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29109ac5d013bd32a89eb5e9d3ca8fc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#af29109ac5d013bd32a89eb5e9d3ca8fc">check_state2</a> (self)</td></tr>
+<tr class="memdesc:af29109ac5d013bd32a89eb5e9d3ca8fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The check_state2 methode verifies the state of user's edit of a TripleStore prefix @Antoine.  <a href="a00126.html#af29109ac5d013bd32a89eb5e9d3ca8fc">More...</a><br /></td></tr>
+<tr class="separator:af29109ac5d013bd32a89eb5e9d3ca8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4fcbfee1308e4d634fb41862a2a7fd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a5c4fcbfee1308e4d634fb41862a2a7fd">check_state</a> (self, sender)</td></tr>
+<tr class="memdesc:a5c4fcbfee1308e4d634fb41862a2a7fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">check_state verifies the state of validator @Antoine  <a href="a00126.html#a5c4fcbfee1308e4d634fb41862a2a7fd">More...</a><br /></td></tr>
+<tr class="separator:a5c4fcbfee1308e4d634fb41862a2a7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8f99bc655183db169e126fc155ceb631"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a8f99bc655183db169e126fc155ceb631">html</a></td></tr>
-<tr class="separator:a8f99bc655183db169e126fc155ceb631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0357d3c7a5047524e1543f2f43bc3e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a0357d3c7a5047524e1543f2f43bc3e38">FORM_CLASS</a></td></tr>
+<tr class="separator:a0357d3c7a5047524e1543f2f43bc3e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f05aeddc212b523b40818fa2b87b33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a18f05aeddc212b523b40818fa2b87b33">_</a></td></tr>
+<tr class="separator:a18f05aeddc212b523b40818fa2b87b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09dec5fb4a23fd0028407eddbe26cc16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a09dec5fb4a23fd0028407eddbe26cc16">qtask</a></td></tr>
+<tr class="separator:a09dec5fb4a23fd0028407eddbe26cc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a8aa8ceb4969b82047ab23c9d00c82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#af4a8aa8ceb4969b82047ab23c9d00c82">addTripleStore</a></td></tr>
+<tr class="separator:af4a8aa8ceb4969b82047ab23c9d00c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330d24be0afd5a96238ca9e128328a2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00126.html#a330d24be0afd5a96238ca9e128328a2d">triplestoreconf</a></td></tr>
+<tr class="separator:a330d24be0afd5a96238ca9e128328a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab26e880923caa98c45526ef352f208c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab26e880923caa98c45526ef352f208c6">&#9670;&nbsp;</a></span>_loadFinished()</h2>
+<a id="a629e7c80cc0c5352fd4e73ed5a9d68a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a629e7c80cc0c5352fd4e73ed5a9d68a2">&#9670;&nbsp;</a></span>addNewSPARQLEndpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.addNewSPARQLEndpoint </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new SPARQL endpoint to the triple store registry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>The object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a629e7c80cc0c5352fd4e73ed5a9d68a2">addNewSPARQLEndpoint</a>(self):</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        self.addTripleStore=<span class="keyword">True</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        self.applyCustomSPARQLEndPoint()</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac244745c0d73ecdf6ee46057957b1e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac244745c0d73ecdf6ee46057957b1e44">&#9670;&nbsp;</a></span>addPrefixToList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.addPrefixToList </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a prefix to the list of prefixes in the search dialog window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>The object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#ac244745c0d73ecdf6ee46057957b1e44">addPrefixToList</a>(self):</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        item=QListWidgetItem()</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        item.setData(0,<span class="stringliteral">&quot;PREFIX &quot;</span>+self.tripleStorePrefixNameEdit.text()+<span class="stringliteral">&quot;:&lt;&quot;</span>+self.tripleStorePrefixEdit.text()+<span class="stringliteral">&quot;&gt;&quot;</span>)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        item.setText(<span class="stringliteral">&quot;PREFIX &quot;</span>+self.tripleStorePrefixNameEdit.text()+<span class="stringliteral">&quot;:&lt;&quot;</span>+self.tripleStorePrefixEdit.text()+<span class="stringliteral">&quot;&gt;&quot;</span>)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        self.prefixList.addItem(item)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a32cbb4ef1955d5385119aa80a9ba2618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32cbb4ef1955d5385119aa80a9ba2618">&#9670;&nbsp;</a></span>applyCustomSPARQLEndPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.applyCustomSPARQLEndPoint </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The applyCustomSPARQLEndPoint methode allows the user to apply their custom SPARQLEndpoint to the plugin @Antoine. </p>
+<div class="fragment"><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a32cbb4ef1955d5385119aa80a9ba2618">applyCustomSPARQLEndPoint</a>(self):</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> self.testTripleStoreConnection(<span class="keyword">True</span>):</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;           <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">if</span> self.tripleStoreNameEdit.text()==<span class="stringliteral">&quot;&quot;</span>:</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;           msgBox=QMessageBox()</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;           msgBox.setWindowTitle(<span class="stringliteral">&quot;Triple Store Name is missing!&quot;</span>)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;           msgBox.setText(<span class="stringliteral">&quot;Please enter a triple store name&quot;</span>)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;           msgBox.exec()</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;           <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">#self.endpoints.append(self.tripleStoreEdit.text())</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        self.comboBox.addItem(self.tripleStoreNameEdit.text())</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        curprefixes=[]</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(self.prefixList.count()):</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            curprefixes.append(self.prefixList.item(i).text()   )</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span> self.addTripleStore:</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            index=len(self.triplestoreconf)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            self.tripleStoreChooser.addItem(self.tripleStoreNameEdit.text()     )</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            self.triplestoreconf.append({})</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            self.triplestoreconf[index][<span class="stringliteral">&quot;querytemplate&quot;</span>]=[]</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            self.triplestoreconf[index][<span class="stringliteral">&quot;querytemplate&quot;</span>].append({})</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            self.triplestoreconf[index][<span class="stringliteral">&quot;querytemplate&quot;</span>][0][<span class="stringliteral">&quot;label&quot;</span>]=<span class="stringliteral">&quot;Example Query&quot;</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            self.triplestoreconf[index][<span class="stringliteral">&quot;querytemplate&quot;</span>][0][<span class="stringliteral">&quot;query&quot;</span>]=self.exampleQuery.toPlainText()</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            index=self.tripleStoreChooser.currentIndex()</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        self.triplestoreconf[index]={}</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;endpoint&quot;</span>]=self.tripleStoreEdit.text()</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;name&quot;</span>]=self.tripleStoreNameEdit.text()</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;mandatoryvariables&quot;</span>]=[]</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;mandatoryvariables&quot;</span>].append(self.queryVarEdit.text())</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;mandatoryvariables&quot;</span>].append(self.queryVarItemEdit.text())</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;prefixes&quot;</span>]=curprefixes</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;crs&quot;</span>]=self.epsgEdit.text()</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        self.triplestoreconf[index][<span class="stringliteral">&quot;active&quot;</span>]=self.activeCheckBox.isChecked()</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        self.addTripleStore=<span class="keyword">False</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5c4fcbfee1308e4d634fb41862a2a7fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4fcbfee1308e4d634fb41862a2a7fd">&#9670;&nbsp;</a></span>check_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.check_state </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>sender</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check_state verifies the state of validator @Antoine </p>
+<div class="fragment"><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a5c4fcbfee1308e4d634fb41862a2a7fd">check_state</a>(self,sender):</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        validator = sender.validator()</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        state = validator.validate(sender.text(), 0)[0]</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">if</span> state == QValidator.Acceptable:</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            color = <span class="stringliteral">&#39;#c4df9b&#39;</span> <span class="comment"># green</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">elif</span> state == QValidator.Intermediate:</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            color = <span class="stringliteral">&#39;#fff79a&#39;</span> <span class="comment"># yellow</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            color = <span class="stringliteral">&#39;#f6989d&#39;</span> <span class="comment"># red</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        sender.setStyleSheet(<span class="stringliteral">&#39;QLineEdit { background-color: %s }&#39;</span> % color)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a34fee499e5c843b38084c62deb5ac288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fee499e5c843b38084c62deb5ac288">&#9670;&nbsp;</a></span>check_state1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.check_state1 </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The check_state1 methode checks the state of the tripleStoreEdit @Antoine. </p>
+<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a34fee499e5c843b38084c62deb5ac288">check_state1</a>(self):</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        self.check_state(self.tripleStoreEdit)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af29109ac5d013bd32a89eb5e9d3ca8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29109ac5d013bd32a89eb5e9d3ca8fc">&#9670;&nbsp;</a></span>check_state2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.check_state2 </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The check_state2 methode verifies the state of user's edit of a TripleStore prefix @Antoine. </p>
+<div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#af29109ac5d013bd32a89eb5e9d3ca8fc">check_state2</a>(self):</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        self.check_state(self.tripleStorePrefixEdit)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5fa8f6297a5c85ed356bb37d2ff2108a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa8f6297a5c85ed356bb37d2ff2108a">&#9670;&nbsp;</a></span>closeTripleStoreDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.closeTripleStoreDialog </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The closeTripleStoreDialog will allow the user to close the TripleStore Dialog @Antoine. </p>
+<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a5fa8f6297a5c85ed356bb37d2ff2108a">closeTripleStoreDialog</a>(self):</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        self.close()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abf2c2ed8f62ab4a32ee6782d560dc668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2c2ed8f62ab4a32ee6782d560dc668">&#9670;&nbsp;</a></span>createNewTripleStore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.createNewTripleStore </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@Antoine </p>
+<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#abf2c2ed8f62ab4a32ee6782d560dc668">createNewTripleStore</a>(self):</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        self.tripleStoreChooser.addItem(<span class="stringliteral">&quot;New triple store&quot;</span>)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        self.tripleStoreChooser.setCurrentIndex(self.tripleStoreChooser.count()-1)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        self.tripleStoreNameEdit.setText(<span class="stringliteral">&quot;New triple store&quot;</span>)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        self.tripleStoreEdit.setText(<span class="stringliteral">&quot;&quot;</span>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a855d2afa7779f4d8d1143a736e7b0340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855d2afa7779f4d8d1143a736e7b0340">&#9670;&nbsp;</a></span>deleteTripleStoreFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.deleteTripleStoreFunc </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Addes a new SPARQL endpoint to the triple store registry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>The object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a855d2afa7779f4d8d1143a736e7b0340">deleteTripleStoreFunc</a>(self):</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> self.tripleStoreChooser.currentIndex()!=0:</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            del self.triplestoreconf[self.tripleStoreChooser.currentIndex()]</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            self.tripleStoreChooser.clear()</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">for</span> item <span class="keywordflow">in</span> self.triplestoreconf:</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                self.tripleStoreChooser.addItem(item[<span class="stringliteral">&quot;name&quot;</span>])</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a28bcc5115bb05b2dd585af7e0d3683aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28bcc5115bb05b2dd585af7e0d3683aa">&#9670;&nbsp;</a></span>detectTripleStoreConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.detectTripleStoreConfiguration </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The detectTripleStoreConfiguration methode detects the user's current TripleStore configuration. </p>
+<p>@Antoine </p>
+<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a28bcc5115bb05b2dd585af7e0d3683aa">detectTripleStoreConfiguration</a>(self):</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        progress = QProgressDialog(<span class="stringliteral">&quot;Detecting configuration for triple store &quot;</span>+self.tripleStoreEdit.text()+<span class="stringliteral">&quot;...&quot;</span>, <span class="stringliteral">&quot;Abort&quot;</span>, 0, 0, self)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        progress.setWindowModality(Qt.WindowModal)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        progress.setCancelButton(<span class="keywordtype">None</span>)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        progress.show()</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        self.qtask=DetectTripleStoreTask(<span class="stringliteral">&quot;Detecting configuration for triple store &quot;</span>+self.tripleStoreEdit.text()+<span class="stringliteral">&quot;...&quot;</span>,self.triplestoreconf,self.tripleStoreEdit.text(),self.tripleStoreNameEdit.text(),<span class="keyword">False</span>,<span class="keyword">True</span>,self.prefixes,self.prefixstore,self.tripleStoreChooser,self.comboBox,<span class="keyword">False</span>,<span class="keywordtype">None</span>,progress)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        QgsApplication.taskManager().addTask(self.qtask)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aedc59ce7a0a0d66a536781e9240ea83f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc59ce7a0a0d66a536781e9240ea83f">&#9670;&nbsp;</a></span>loadTripleStoreConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.loadTripleStoreConfig </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The loadTripleStoreConfig will allow users to load their TripleStore configuration @Antoine. </p>
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#aedc59ce7a0a0d66a536781e9240ea83f">loadTripleStoreConfig</a>(self):</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> self.tripleStoreChooser.currentIndex()&lt;len(self.triplestoreconf):</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            self.tripleStoreEdit.setText(self.triplestoreconf[self.tripleStoreChooser.currentIndex()][<span class="stringliteral">&quot;endpoint&quot;</span>])</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            self.tripleStoreNameEdit.setText(self.triplestoreconf[self.tripleStoreChooser.currentIndex()][<span class="stringliteral">&quot;name&quot;</span>])</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            self.prefixList.clear()</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="comment"># msgBox=QMessageBox()</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="comment"># msgBox.setWindowTitle(&quot;Mandatory variables missing!&quot;)</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="comment"># msgBox.setText(&quot;The SPARQL query is missing the following mandatory variables: &quot;)</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="comment"># msgBox.exec()</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">for</span> prefix <span class="keywordflow">in</span> self.triplestoreconf[self.tripleStoreChooser.currentIndex()][<span class="stringliteral">&quot;prefixes&quot;</span>]:</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                self.prefixList.addItem(prefix)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            self.prefixList.sortItems()</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span> <span class="stringliteral">&quot;active&quot;</span> <span class="keywordflow">in</span> self.triplestoreconf[self.tripleStoreChooser.currentIndex()]:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                self.activeCheckBox.setChecked(self.triplestoreconf[self.tripleStoreChooser.currentIndex()][<span class="stringliteral">&quot;active&quot;</span>])</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">if</span> <span class="stringliteral">&quot;crs&quot;</span> <span class="keywordflow">in</span> self.triplestoreconf[self.tripleStoreChooser.currentIndex()]:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                self.epsgEdit.setText(str(self.triplestoreconf[self.tripleStoreChooser.currentIndex()][<span class="stringliteral">&quot;crs&quot;</span>]))</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                self.epsgEdit.setText(<span class="stringliteral">&quot;4326&quot;</span>)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            self.exampleQuery.setPlainText(self.triplestoreconf[self.tripleStoreChooser.currentIndex()][<span class="stringliteral">&quot;querytemplate&quot;</span>][0][<span class="stringliteral">&quot;query&quot;</span>])</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5b4110c0efdd5bb319ef467f7abd6800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4110c0efdd5bb319ef467f7abd6800">&#9670;&nbsp;</a></span>removePrefixFromList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.removePrefixFromList </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a prefix from the list of prefixes in the search dialog window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>The object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a5b4110c0efdd5bb319ef467f7abd6800">removePrefixFromList</a>(self):</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        item=QListWidgetItem()</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">for</span> item <span class="keywordflow">in</span> self.prefixList.selectedItems():</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            self.prefixList.removeItemWidget(item)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a216a70c7a04e748f679b154e80b0a605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216a70c7a04e748f679b154e80b0a605">&#9670;&nbsp;</a></span>restoreFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.restoreFactory </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The restoreFactory methode restores all triplestores to their original configuration. </p>
+<p>@Antoine </p>
+<div class="fragment"><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a216a70c7a04e748f679b154e80b0a605">restoreFactory</a>(self):</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keyword">with</span> open(os.path.join(__location__, <span class="stringliteral">&#39;triplestoreconf.json&#39;</span>),<span class="stringliteral">&#39;r&#39;</span>) <span class="keyword">as</span> myfile:</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            data=myfile.read()</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        self.triplestoreconf=json.loads(data)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        self.tripleStoreChooser.clear()</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">for</span> item <span class="keywordflow">in</span> self.triplestoreconf:</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            self.tripleStoreChooser.addItem(item[<span class="stringliteral">&quot;name&quot;</span>])</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        self.writeConfiguration()</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        msgBox=QMessageBox()</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        msgBox.setWindowTitle(<span class="stringliteral">&quot;Triple Store Settings Reset!&quot;</span>)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        msgBox.setText(<span class="stringliteral">&quot;Triple store settings have been reset to default!&quot;</span>)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        msgBox.exec()</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5b47048934f06dab847222b33ba31dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b47048934f06dab847222b33ba31dc1">&#9670;&nbsp;</a></span>testTripleStoreConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.testTripleStoreConnection </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>calledfromotherfunction</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>showMessageBox</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>query</em> = <code>&quot;SELECT&#160;?a&#160;?b&#160;?c&#160;WHERE&#160;{&#160;?a&#160;?b&#160;?c&#160;.}&#160;LIMIT&#160;1&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The testTripleStoreConnection methode allows the plugi to test the validity of the users TripleStore URL @Antoine. </p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a5b47048934f06dab847222b33ba31dc1">testTripleStoreConnection</a>(self,calledfromotherfunction=False,showMessageBox=True,query=&quot;SELECT ?a ?b ?c WHERE { ?a ?b ?c .} LIMIT 1&quot;):</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        progress = QProgressDialog(<span class="stringliteral">&quot;Checking connection to triple store &quot;</span>+self.tripleStoreEdit.text()+<span class="stringliteral">&quot;...&quot;</span>, <span class="stringliteral">&quot;Abort&quot;</span>, 0, 0, self)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        progress.setWindowModality(Qt.WindowModal)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        progress.setCancelButton(<span class="keywordtype">None</span>)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        progress.show()</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        self.qtask=DetectTripleStoreTask(<span class="stringliteral">&quot;Checking connection to triple store &quot;</span>+self.tripleStoreEdit.text()+<span class="stringliteral">&quot;...&quot;</span>,self.triplestoreconf,self.tripleStoreEdit.text(),self.tripleStoreNameEdit.text(),<span class="keyword">True</span>,<span class="keyword">False</span>,self.prefixes,self.prefixstore,self.tripleStoreChooser,self.comboBox,<span class="keyword">False</span>,<span class="keywordtype">None</span>,progress)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        QgsApplication.taskManager().addTask(self.qtask)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a77728b14ac0be90cb16897d91ffd17af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77728b14ac0be90cb16897d91ffd17af">&#9670;&nbsp;</a></span>writeConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def SpaLOD_qgis_plugin.dialogs.triplestoredialog.writeConfiguration </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The writeConfiguration methode allows the user to manually set up their TripleStore configuration @Antoine. </p>
+<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a77728b14ac0be90cb16897d91ffd17af">writeConfiguration</a>(self):</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        f = open(os.path.join(__location__, <span class="stringliteral">&quot;triplestoreconf_personal.json&quot;</span>), <span class="stringliteral">&quot;w&quot;</span>)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        f.write(json.dumps(self.triplestoreconf,indent=2))</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        f.close()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a18f05aeddc212b523b40818fa2b87b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f05aeddc212b523b40818fa2b87b33">&#9670;&nbsp;</a></span>_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -97,21 +635,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">def SpaLOD_qgis_plugin.dialogs.loginwindowdialog._loadFinished </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">_</td>
         </tr>
       </table>
   </td>
@@ -120,50 +644,59 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#ab26e880923caa98c45526ef352f208c6">_loadFinished</a>(self, result):</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        self.page().toHtml(self.callable)</div>
-</div><!-- fragment -->
+
 </div>
 </div>
-<a id="a060dba02e4846cb35f69202cbf9c5bff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a060dba02e4846cb35f69202cbf9c5bff">&#9670;&nbsp;</a></span>callable()</h2>
+<a id="af4a8aa8ceb4969b82047ab23c9d00c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a8aa8ceb4969b82047ab23c9d00c82">&#9670;&nbsp;</a></span>addTripleStore</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def SpaLOD_qgis_plugin.dialogs.loginwindowdialog.callable </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">addTripleStore</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">def </span><a class="code" href="a00126.html#a060dba02e4846cb35f69202cbf9c5bff">callable</a>(self, data):</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        self.html = data</div>
-</div><!-- fragment -->
+
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a8f99bc655183db169e126fc155ceb631"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f99bc655183db169e126fc155ceb631">&#9670;&nbsp;</a></span>html</h2>
+<a id="a0357d3c7a5047524e1543f2f43bc3e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0357d3c7a5047524e1543f2f43bc3e38">&#9670;&nbsp;</a></span>FORM_CLASS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">html</td>
+          <td class="memname"><a class="el" href="a00829.html">FORM_CLASS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09dec5fb4a23fd0028407eddbe26cc16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09dec5fb4a23fd0028407eddbe26cc16">&#9670;&nbsp;</a></span>qtask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qtask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a330d24be0afd5a96238ca9e128328a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330d24be0afd5a96238ca9e128328a2d">&#9670;&nbsp;</a></span>triplestoreconf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">triplestoreconf</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -172,13 +705,26 @@ Variables</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00126_html_ab26e880923caa98c45526ef352f208c6"><div class="ttname"><a href="a00126.html#ab26e880923caa98c45526ef352f208c6">SpaLOD_qgis_plugin.dialogs.loginwindowdialog._loadFinished</a></div><div class="ttdeci">def _loadFinished(self, result)</div><div class="ttdef"><b>Definition:</b> loginwindowdialog.py:29</div></div>
-<div class="ttc" id="aa00126_html_a060dba02e4846cb35f69202cbf9c5bff"><div class="ttname"><a href="a00126.html#a060dba02e4846cb35f69202cbf9c5bff">SpaLOD_qgis_plugin.dialogs.loginwindowdialog.callable</a></div><div class="ttdeci">def callable(self, data)</div><div class="ttdef"><b>Definition:</b> loginwindowdialog.py:36</div></div>
+<div class="ttc" id="aa00126_html_a5b47048934f06dab847222b33ba31dc1"><div class="ttname"><a href="a00126.html#a5b47048934f06dab847222b33ba31dc1">SpaLOD_qgis_plugin.dialogs.triplestoredialog.testTripleStoreConnection</a></div><div class="ttdeci">def testTripleStoreConnection(self, calledfromotherfunction=False, showMessageBox=True, query=&quot;SELECT ?a ?b ?c WHERE { ?a ?b ?c .} LIMIT 1&quot;)</div><div class="ttdoc">The testTripleStoreConnection methode allows the plugi to test the validity of the users TripleStore ...</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:180</div></div>
+<div class="ttc" id="aa00126_html_a28bcc5115bb05b2dd585af7e0d3683aa"><div class="ttname"><a href="a00126.html#a28bcc5115bb05b2dd585af7e0d3683aa">SpaLOD_qgis_plugin.dialogs.triplestoredialog.detectTripleStoreConfiguration</a></div><div class="ttdeci">def detectTripleStoreConfiguration(self)</div><div class="ttdoc">The detectTripleStoreConfiguration methode detects the user's current TripleStore configuration.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:190</div></div>
+<div class="ttc" id="aa00126_html_a32cbb4ef1955d5385119aa80a9ba2618"><div class="ttname"><a href="a00126.html#a32cbb4ef1955d5385119aa80a9ba2618">SpaLOD_qgis_plugin.dialogs.triplestoredialog.applyCustomSPARQLEndPoint</a></div><div class="ttdeci">def applyCustomSPARQLEndPoint(self)</div><div class="ttdoc">The applyCustomSPARQLEndPoint methode allows the user to apply their custom SPARQLEndpoint to the plu...</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:276</div></div>
+<div class="ttc" id="aa00126_html_a77728b14ac0be90cb16897d91ffd17af"><div class="ttname"><a href="a00126.html#a77728b14ac0be90cb16897d91ffd17af">SpaLOD_qgis_plugin.dialogs.triplestoredialog.writeConfiguration</a></div><div class="ttdeci">def writeConfiguration(self)</div><div class="ttdoc">The writeConfiguration methode allows the user to manually set up their TripleStore configuration @An...</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:267</div></div>
+<div class="ttc" id="aa00126_html_a216a70c7a04e748f679b154e80b0a605"><div class="ttname"><a href="a00126.html#a216a70c7a04e748f679b154e80b0a605">SpaLOD_qgis_plugin.dialogs.triplestoredialog.restoreFactory</a></div><div class="ttdeci">def restoreFactory(self)</div><div class="ttdoc">The restoreFactory methode restores all triplestores to their original configuration.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:230</div></div>
+<div class="ttc" id="aa00126_html_aedc59ce7a0a0d66a536781e9240ea83f"><div class="ttname"><a href="a00126.html#aedc59ce7a0a0d66a536781e9240ea83f">SpaLOD_qgis_plugin.dialogs.triplestoredialog.loadTripleStoreConfig</a></div><div class="ttdeci">def loadTripleStoreConfig(self)</div><div class="ttdoc">The loadTripleStoreConfig will allow users to load their TripleStore configuration @Antoine.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:152</div></div>
+<div class="ttc" id="aa00126_html_a34fee499e5c843b38084c62deb5ac288"><div class="ttname"><a href="a00126.html#a34fee499e5c843b38084c62deb5ac288">SpaLOD_qgis_plugin.dialogs.triplestoredialog.check_state1</a></div><div class="ttdeci">def check_state1(self)</div><div class="ttdoc">The check_state1 methode checks the state of the tripleStoreEdit @Antoine.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:313</div></div>
+<div class="ttc" id="aa00126_html_a5b4110c0efdd5bb319ef467f7abd6800"><div class="ttname"><a href="a00126.html#a5b4110c0efdd5bb319ef467f7abd6800">SpaLOD_qgis_plugin.dialogs.triplestoredialog.removePrefixFromList</a></div><div class="ttdeci">def removePrefixFromList(self)</div><div class="ttdoc">Removes a prefix from the list of prefixes in the search dialog window.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:259</div></div>
+<div class="ttc" id="aa00126_html_a5c4fcbfee1308e4d634fb41862a2a7fd"><div class="ttname"><a href="a00126.html#a5c4fcbfee1308e4d634fb41862a2a7fd">SpaLOD_qgis_plugin.dialogs.triplestoredialog.check_state</a></div><div class="ttdeci">def check_state(self, sender)</div><div class="ttdoc">check_state verifies the state of validator @Antoine</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:324</div></div>
+<div class="ttc" id="aa00126_html_a629e7c80cc0c5352fd4e73ed5a9d68a2"><div class="ttname"><a href="a00126.html#a629e7c80cc0c5352fd4e73ed5a9d68a2">SpaLOD_qgis_plugin.dialogs.triplestoredialog.addNewSPARQLEndpoint</a></div><div class="ttdeci">def addNewSPARQLEndpoint(self)</div><div class="ttdoc">Adds a new SPARQL endpoint to the triple store registry.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:202</div></div>
+<div class="ttc" id="aa00126_html_a5fa8f6297a5c85ed356bb37d2ff2108a"><div class="ttname"><a href="a00126.html#a5fa8f6297a5c85ed356bb37d2ff2108a">SpaLOD_qgis_plugin.dialogs.triplestoredialog.closeTripleStoreDialog</a></div><div class="ttdeci">def closeTripleStoreDialog(self)</div><div class="ttdoc">The closeTripleStoreDialog will allow the user to close the TripleStore Dialog @Antoine.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:175</div></div>
+<div class="ttc" id="aa00126_html_af29109ac5d013bd32a89eb5e9d3ca8fc"><div class="ttname"><a href="a00126.html#af29109ac5d013bd32a89eb5e9d3ca8fc">SpaLOD_qgis_plugin.dialogs.triplestoredialog.check_state2</a></div><div class="ttdeci">def check_state2(self)</div><div class="ttdoc">The check_state2 methode verifies the state of user's edit of a TripleStore prefix @Antoine.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:319</div></div>
+<div class="ttc" id="aa00126_html_abf2c2ed8f62ab4a32ee6782d560dc668"><div class="ttname"><a href="a00126.html#abf2c2ed8f62ab4a32ee6782d560dc668">SpaLOD_qgis_plugin.dialogs.triplestoredialog.createNewTripleStore</a></div><div class="ttdeci">def createNewTripleStore(self)</div><div class="ttdoc">@Antoine</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:221</div></div>
+<div class="ttc" id="aa00126_html_ac244745c0d73ecdf6ee46057957b1e44"><div class="ttname"><a href="a00126.html#ac244745c0d73ecdf6ee46057957b1e44">SpaLOD_qgis_plugin.dialogs.triplestoredialog.addPrefixToList</a></div><div class="ttdeci">def addPrefixToList(self)</div><div class="ttdoc">Adds a prefix to the list of prefixes in the search dialog window.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:249</div></div>
+<div class="ttc" id="aa00126_html_a855d2afa7779f4d8d1143a736e7b0340"><div class="ttname"><a href="a00126.html#a855d2afa7779f4d8d1143a736e7b0340">SpaLOD_qgis_plugin.dialogs.triplestoredialog.deleteTripleStoreFunc</a></div><div class="ttdeci">def deleteTripleStoreFunc(self)</div><div class="ttdoc">Addes a new SPARQL endpoint to the triple store registry.</div><div class="ttdef"><b>Definition:</b> triplestoredialog.py:210</div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00113.html">SpaLOD_qgis_plugin</a></li><li class="navelem"><a class="el" href="a00120.html">dialogs</a></li><li class="navelem"><a class="el" href="a00126.html">loginwindowdialog</a></li>
+    <li class="navelem"><a class="el" href="a00110.html">SpaLOD_qgis_plugin</a></li><li class="navelem"><a class="el" href="a00116.html">dialogs</a></li><li class="navelem"><a class="el" href="a00126.html">triplestoredialog</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

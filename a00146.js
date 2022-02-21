@@ -1,4 +1,6 @@
 var a00146 =
 [
-    [ "GeoConceptsQueryTask", "a00277.html", "a00277" ]
+    [ "GitlabRequestInterceptor", "a00297.html", "a00297" ],
+    [ "RequestInterceptor", "a00289.html", "a00289" ],
+    [ "UserMetaData", "a00293.html", "a00293" ]
 ];

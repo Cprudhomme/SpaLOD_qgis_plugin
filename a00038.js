@@ -1,7 +1,6 @@
 var a00038 =
 [
-    [ "LoginWindow", "a00201.html", "a00201" ],
-    [ "_loadFinished", "a00038.html#ab26e880923caa98c45526ef352f208c6", null ],
-    [ "callable", "a00038.html#a060dba02e4846cb35f69202cbf9c5bff", null ],
-    [ "html", "a00038.html#a8f99bc655183db169e126fc155ceb631", null ]
+    [ "SearchDialog", "a00197.html", "a00197" ],
+    [ "_", "a00038.html#a18f05aeddc212b523b40818fa2b87b33", null ],
+    [ "FORM_CLASS", "a00038.html#a0357d3c7a5047524e1543f2f43bc3e38", null ]
 ];

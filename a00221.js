@@ -1,15 +1,19 @@
 var a00221 =
 [
-    [ "__init__", "a00221.html#ac6ef1909b43c27723c2a89de86988023", null ],
-    [ "comboBox", "a00221.html#afcee2275fb7c24bb8979dd838f0dc90a", null ],
-    [ "prefixes", "a00221.html#a302e350558edcbbd7b85927b33550548", null ],
-    [ "prefixstore", "a00221.html#a4d9e45fd666bc36c0602e3a0c6244b3c", null ],
-    [ "proxyEnabled", "a00221.html#ae862ff88f11a3a2ef7eee0c21957dcb7", null ],
-    [ "proxyHost", "a00221.html#af2d0d5884751e69699ca9b2d6c2cd7f1", null ],
-    [ "proxyPassword", "a00221.html#add5abc4de55257ede4e0ab5db30de1ce", null ],
-    [ "proxyPort", "a00221.html#a2b3d20b1c7f6ec579fbb02a053c6c1a4", null ],
-    [ "proxyType", "a00221.html#a495fe54c42ce06ce71582737400c0d02", null ],
-    [ "proxyUser", "a00221.html#ab27c8ae6a38f63214b0413f461033e85", null ],
+    [ "__init__", "a00221.html#a795776fea09886aa089329e906a89696", null ],
+    [ "currentcol", "a00221.html#a486aeee0a5d3170bc193bc29caf8a7b8", null ],
+    [ "currentrow", "a00221.html#a9dd9ae4cdd3fd369783ecc127c418871", null ],
+    [ "currentrow", "a00221.html#a086f47cacf997373ef862200fcfb4612", null ],
+    [ "fieldname", "a00221.html#a6aa91eb05e0f70d41e5ae3348922a469", null ],
+    [ "fieldname", "a00221.html#a74a6acc20b656e099fa6e5d473a7ca43", null ],
+    [ "interlinkOrEnrich", "a00221.html#a22becd814f00141dbdbb9167f5b9551f", null ],
+    [ "interlinkOrEnrich", "a00221.html#a69b33bf970ec8c6eac8e2cd4578172fc", null ],
+    [ "queryhighlight", "a00221.html#a306acd4c32d934ab249b95388e925da9", null ],
+    [ "searchResultMap", "a00221.html#ab1c2bb7c4c08c1fad52520ab43f66f34", null ],
+    [ "table", "a00221.html#ab31a20ab07de26623b45757ffb619144", null ],
+    [ "table", "a00221.html#ab172ed3d3d31ff02fc5f798fe7e1bfb8", null ],
     [ "triplestoreconf", "a00221.html#aafcf1146e38f7f4733cbf5dc6a6fb147", null ],
-    [ "triplestoreconf", "a00221.html#a330d24be0afd5a96238ca9e128328a2d", null ]
+    [ "triplestoreconf", "a00221.html#a330d24be0afd5a96238ca9e128328a2d", null ],
+    [ "valmaptable", "a00221.html#afa678c21e5c99845c09c18d10cdbf7b5", null ],
+    [ "valuemap", "a00221.html#ac23f279f2a5cc72ae6a9a1ef5b4ce0ae", null ]
 ];
