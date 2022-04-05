@@ -379,7 +379,7 @@ class SpaLOD:
 
             for concept in conceptlist:
                 item = QStandardItem()
-                item.setData(concept, 1)
+                item.setData(concept)
                 item.setText(concept[concept.rfind('/') + 1:])
                 self.dlg.autocomplete["completerClassList"][concept[concept.rfind('/') + 1:]] = "<" + concept + ">"
                 self.dlg.geoTreeViewModel.appendRow(item)

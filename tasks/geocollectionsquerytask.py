@@ -90,7 +90,7 @@ class GeoCollectionsQueryTask(QgsTask):
             for concept in self.resultlist:
                 # self.layerconcepts.addItem(concept)
                 item = QStandardItem()
-                item.setData(concept["uri"], 1)
+                item.setData(concept["uri"])
                 itemtext=""
                 if "label" in concept:
                     itemtext=concept["label"]+" ("+concept["uri"][concept["uri"].rfind('/') + 1:]+")"
@@ -112,7 +112,7 @@ class GeoCollectionsQueryTask(QgsTask):
             for concept in self.viewlist:
                 # self.layerconcepts.addItem(concept)
                 item = QStandardItem()
-                item.setData(concept["uri"], 1)
+                item.setData(concept["uri"])
                 itemtext=""
                 if "label" in concept:
                     itemtext=concept["label"]+" ("+concept["uri"][concept["uri"].rfind('/') + 1:]+")"

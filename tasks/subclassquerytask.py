@@ -129,7 +129,7 @@ class GeoConceptsQueryTask(QgsTask):
             first = True
             for concept in self.resultlist:
                 item = QStandardItem()
-                item.setData(concept, 1)
+                item.setData(concept)
                 item.setText(concept[concept.rfind('/') + 1:])
                 item.setForeground(QColor(0,0,0))
                 item.setEditable(False)
@@ -153,7 +153,7 @@ class GeoConceptsQueryTask(QgsTask):
             for concept in self.viewlist:
                 # self.layerconcepts.addItem(concept)
                 item = QStandardItem()
-                item.setData(concept, 1)
+                item.setData(concept)
                 item.setText(concept[concept.rfind('/') + 1:])
                 item.setForeground(QColor(0,0,0))
                 item.setEditable(False)

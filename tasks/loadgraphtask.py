@@ -84,7 +84,7 @@ class LoadGraphTask(QgsTask):
             self.dlg.layercount.setText("[" + str(len(self.geoconcepts)) + "]")
             for geo in self.geoconcepts:
                 item = QStandardItem()
-                item.setData(geo, 1)
+                item.setData(geo)
                 item.setText(geo[geo.rfind('/') + 1:])
                 # self.dlg.geoClassListModel.appendRow(item)
                 self.dlg.geoClassListModel.append(item)
