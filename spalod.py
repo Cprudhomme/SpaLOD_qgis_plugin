@@ -190,7 +190,7 @@ class SpaLOD:
         # a = str('numpy' in sys.modules)
         # iface.messageBar().pushMessage("load libs", a, level=Qgis.Success)
 
-        icon_path = ':/plugins/sparql_unicorn/icon.png'
+        icon_path = os.path.join(os.path.dirname(__file__), "icon.png")
         self.add_action(
             icon_path,
             text=self.tr(u'Adds GeoJSON layer from a Wikidata'),
