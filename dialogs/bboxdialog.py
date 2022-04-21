@@ -235,6 +235,11 @@ class BBOXDialog(QDialog, FORM_CLASS):
         # distance.setEllipsoidalMode(True)
         # distance.setEllipsoid('WGS84')
         curquery = self.inp_sparql.toPlainText()
+
+        if "bboxquery" in self.triplestoreconf[self.endpointIndex] and \
+                "queryTemplatePartToDelete" in self.triplestoreconf[self.endpointIndex]["bboxquery"]:
+            curquery = curquery.replace(self.triplestoreconf[self.endpointIndex]["bboxquery"]["queryTemplatePartToDelete"], "")
+
         if self.rectangle or self.circle:
             widthm = 100  # distance.measureLine(pointt1, pointt2)
             self.curbbox = []

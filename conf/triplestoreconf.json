@@ -85,7 +85,8 @@
         "endpoint": "https://query.wikidata.org/sparql",
         "bboxquery": {
             "type": "minmax",
-            "query": "SERVICE wikibase:box {\n ?item wdt:P625 ?geo .\n bd:serviceParam wikibase:cornerSouthWest \"%%minPoint%%\"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .\nbd:serviceParam wikibase:cornerNorthEast \"%%maxPoint%%\"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .\n}\n }"
+            "queryTemplatePartToDelete": "?item wdt:P625 ?geo .",
+            "query": "SERVICE wikibase:box {\n ?item wdt:P625 ?geo .\n bd:serviceParam wikibase:cornerSouthWest \"%%minPoint%%\"^^geo:wktLiteral .\nbd:serviceParam wikibase:cornerNorthEast \"%%maxPoint%%\"^^geo:wktLiteral .\n}\n }"
         },
         "mandatoryvariables": ["item", "geo"],
 		"featurecollectionclasses":["http://www.opengis.net/ont/geosparql#FeatureCollection"],
