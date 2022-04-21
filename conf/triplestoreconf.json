@@ -194,7 +194,7 @@
         "staticconcepts": ["http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing", "http://www.w3.org/2004/02/skos/core#Concept", "http://nomisma.org/ontology#Mint", "http://nomisma.org/ontology#Region"],
         "bboxquery": {
             "type": "pointdistance",
-            "query": "?loc spatial:nearby (%%lat%% %%lon%% %%width%% 'km') ."
+            "query": "?loc spatial:nearby (%%lat%% %%lon%% %%distance%% 'km') ."
         },
         "active": true
     },
@@ -279,7 +279,7 @@
         "staticconcepts": [],
         "bboxquery": {
             "type": "pointdistance",
-            "query": "Filter(bif:st_intersects (?geo, bif:st_point (%%lat%%,%%lon%%),%%width%%))"
+            "query": "Filter(bif:st_intersects (?geo, bif:st_point (%%lat%%,%%lon%%),%%distance%%))"
         },
         "active": true
     },
@@ -314,7 +314,7 @@
         "staticconcepts": [],
         "bboxquery": {
             "type": "pointdistance",
-            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%width%%))"
+            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%distance%%))"
         },
         "active": true
     },
@@ -322,7 +322,7 @@
         "name": "Geonames",
         "bboxquery": {
             "type": "pointdistance",
-            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%width%%))"
+            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%distance%%))"
         },
         "prefixes": {
             "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

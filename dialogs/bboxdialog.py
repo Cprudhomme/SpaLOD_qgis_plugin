@@ -287,7 +287,7 @@ class BBOXDialog(QDialog, FORM_CLASS):
                 curquery = curquery[0:curquery.rfind('}')] + self.triplestoreconf[self.endpointIndex]["bboxquery"][
                     "query"].replace("%%lat%%", str(center.asPoint().y())).replace("%%lon%%",
                                                                                      str(center.asPoint().x())).replace(
-                    "%%distance%%", str(widthm / 1000)) + curquery[curquery.rfind('}') + 1:]
+                    "%%distance%%", str(widthm / 1000)) + "}\n" + curquery[curquery.rfind('}') + 1:]
             ##
             # @Antoine modified indentation because it was wrong
         elif polygon:
@@ -311,7 +311,7 @@ class BBOXDialog(QDialog, FORM_CLASS):
                 curquery = curquery[0:curquery.rfind('}')] + self.triplestoreconf[self.endpointIndex]["bboxquery"][
                     "query"].replace("%%lat%%", str(polygon.boundingBox().center().asPoint().y())).replace("%%lon%%",
                                                                                                             str(polygon.boundingBox().center().asPoint().x())).replace(
-                                                                                                            "%%distance%%", str(widthm / 1000)) + curquery[curquery.rfind('}') + 1:]
+                                                                                                            "%%distance%%", str(widthm / 1000)) + "}\n" + curquery[curquery.rfind('}') + 1:]
 
         self.inp_sparql.setPlainText(curquery)
         self.close()
