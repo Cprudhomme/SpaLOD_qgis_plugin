@@ -133,7 +133,7 @@
             "spatial": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/",
             "gaz": "http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
         },
-        "endpoint": "http://data.ordnancesurvey.co.uk/datasets/os-linked-data/apis/sparql",
+        "endpoint": "https://data.ordnancesurvey.co.uk/datasets/os-linked-data/apis/sparql",
         "classfromlabelquery": "SELECT DISTINCT ?class { ?class rdf:type owl:Class . ?class rdfs:label ?label . FILTER(CONTAINS(?label,\"%%label%%\"))} LIMIT 100 ",
         "mandatoryvariables": ["item", "easting", "northing"],
 		"featurecollectionclasses":["http://www.opengis.net/ont/geosparql#FeatureCollection"],
