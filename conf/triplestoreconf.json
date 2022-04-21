@@ -14,7 +14,7 @@
         "name": "Atlantgis",
         "prefixes": {
             "geosparql": "http://www.opengis.net/ont/geosparql#",
-            "atlantgis": "http://atlantgis.squirrel.link/ontology#",
+            "atlantgis": "http://atlantgis.squirrel.link/ontology/",
             "owl": "http://www.w3.org/2002/07/owl#",
             "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
             "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -37,14 +37,15 @@
             "query": "SELECT ?item ?geo WHERE {\n ?item geosparql:hasGeometry ?geom_obj .\n ?geom_obj geosparql:asWKT ?geo .\n }"
         }],
         "crs": 4326,
-        "staticconcepts": ["http://atlantgis.squirrel.link/ontology#ArchaeologicalSite",
-            "http://atlantgis.squirrel.link/ontology#CoastLine",
-            "http://atlantgis.squirrel.link/ontology#LandType",
-            "http://atlantgis.squirrel.link/ontology#Goldkupfererz",
-            "http://atlantgis.squirrel.link/ontology#Zinn",
-            "http://atlantgis.squirrel.link/ontology#Silber",
-            "http://atlantgis.squirrel.link/ontology#Stream",
-            "http://atlantgis.squirrel.link/ontology#Voronoi"
+        "staticconcepts": [
+            "http://atlantgis.squirrel.link/ontology/ArchaeologicalSite",
+            "http://atlantgis.squirrel.link/ontology/CoastLine",
+            "http://atlantgis.squirrel.link/ontology/LandType",
+            "http://atlantgis.squirrel.link/ontology/Goldkupfererz",
+            "http://atlantgis.squirrel.link/ontology/Zinn",
+            "http://atlantgis.squirrel.link/ontology/Silber",
+            "http://atlantgis.squirrel.link/ontology/Stream",
+            "http://atlantgis.squirrel.link/ontology/Voronoi"
         ],
         "active": true
     },
