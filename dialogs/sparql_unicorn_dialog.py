@@ -165,7 +165,7 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
         # The line below determines the inp_sparql2 object's minimum size
         #
         # @Antoine
-        self.inp_sparql2.setMinimumSize(780, 431)
+        # self.inp_sparql2.setMinimumSize(780, 431)
         ##
         # The line below determines the text's size
         #
