@@ -325,7 +325,7 @@ border-radius:10px;
 color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
-                <string>Add Layer</string>
+                <string>Add Layer </string>
                </property>
               </widget>
              </item>
