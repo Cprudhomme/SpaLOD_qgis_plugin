@@ -75,9 +75,9 @@ class EnrichmentQueryTask(QgsTask):
             if str(it).startswith("http"):
                 query += "<" + str(it) + "> "
             elif self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and self.language != None and self.language != "":
-                query += "\"" + str(it) + "\"@" + self.language + " "
+                query += "\"" + str(it).replace("\"", "\\\"") + "\"@" + self.language + " "
             else:
-                query += "\"" + str(it) + "\" "
+                query += "\"" + str(it).replace("\"", "\\\"") + "\" "
         query += " } . \n"
         proppp = self.propertyy.data(1)
         if self.propertyy.data(1).startswith("//"):
