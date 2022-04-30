@@ -24,6 +24,18 @@
 background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795455 rgba(0, 57, 70, 255), stop:0.5625 rgba(0, 85, 104, 255), stop:0.954545 rgba(0, 107, 131, 255));}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item row="0" column="0">
     <widget class="QFrame" name="frame">
      <property name="minimumSize">
@@ -34,9 +46,9 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
      </property>
      <property name="styleSheet">
       <string notr="true">QObject#frame{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
+	background-color:rgb(200, 201, 219);
 	
-border-radius:20px;}
+}
 </string>
      </property>
      <property name="frameShape">
@@ -46,20 +58,31 @@ border-radius:20px;}
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
       <item row="3" column="0">
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
          <widget class="QLabel" name="queryVarLabel">
           <property name="maximumSize">
            <size>
-            <width>115</width>
+            <width>999</width>
             <height>20</height>
            </size>
           </property>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -112,7 +135,6 @@ background-color: rgb(253, 252, 250);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -134,7 +156,7 @@ background-color: rgb(253, 252, 250);</string>
           </property>
           <property name="maximumSize">
            <size>
-            <width>401</width>
+            <width>999</width>
             <height>25</height>
            </size>
           </property>
@@ -160,14 +182,13 @@ background-color: rgb(253, 252, 250);</string>
            <widget class="QLabel" name="activeTripleStoreLabel">
             <property name="maximumSize">
              <size>
-              <width>42</width>
+              <width>999</width>
               <height>14</height>
              </size>
             </property>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -201,7 +222,7 @@ background-color: rgb(253, 252, 250);</string>
           </property>
           <property name="maximumSize">
            <size>
-            <width>211</width>
+            <width>999</width>
             <height>20</height>
            </size>
           </property>
@@ -232,7 +253,6 @@ background-color: rgb(253, 252, 250);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -254,7 +274,7 @@ background-color: rgb(253, 252, 250);</string>
           </property>
           <property name="maximumSize">
            <size>
-            <width>401</width>
+            <width>999</width>
             <height>25</height>
            </size>
           </property>
@@ -287,7 +307,6 @@ selection-color:rgb(0, 81, 135);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -309,7 +328,7 @@ selection-color:rgb(0, 81, 135);</string>
           </property>
           <property name="maximumSize">
            <size>
-            <width>401</width>
+            <width>999</width>
             <height>25</height>
            </size>
           </property>
@@ -335,14 +354,13 @@ background-color: rgb(253, 252, 250);</string>
            <widget class="QLabel" name="prefixListLabel">
             <property name="maximumSize">
              <size>
-              <width>61</width>
-              <height>16</height>
+              <width>999</width>
+              <height>999</height>
              </size>
             </property>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -356,6 +374,12 @@ background-color: rgb(253, 252, 250);</string>
           </item>
           <item>
            <widget class="QPushButton" name="removePrefixButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>161</width>
@@ -364,14 +388,13 @@ background-color: rgb(253, 252, 250);</string>
             </property>
             <property name="maximumSize">
              <size>
-              <width>161</width>
+              <width>999</width>
               <height>21</height>
              </size>
             </property>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -389,17 +412,29 @@ color: rgb(255, 255, 255);</string>
            </widget>
           </item>
           <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QLabel" name="exampleQueryLabel">
             <property name="maximumSize">
              <size>
-              <width>171</width>
-              <height>16</height>
+              <width>999</width>
+              <height>999</height>
              </size>
             </property>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -425,7 +460,6 @@ color: rgb(255, 255, 255);</string>
             </property>
             <property name="font">
              <font>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -469,14 +503,13 @@ background-color: rgb(253, 252, 250);</string>
             </property>
             <property name="maximumSize">
              <size>
-              <width>301</width>
+              <width>999</width>
               <height>25</height>
              </size>
             </property>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -494,6 +527,19 @@ color: rgb(255, 255, 255);</string>
            </widget>
           </item>
           <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QPushButton" name="tripleStoreApplyButton">
             <property name="minimumSize">
              <size>
@@ -503,14 +549,13 @@ color: rgb(255, 255, 255);</string>
             </property>
             <property name="maximumSize">
              <size>
-              <width>151</width>
+              <width>999</width>
               <height>23</height>
              </size>
             </property>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -537,14 +582,13 @@ color: rgb(255, 255, 255);</string>
             </property>
             <property name="maximumSize">
              <size>
-              <width>151</width>
+              <width>999</width>
               <height>23</height>
              </size>
             </property>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -571,14 +615,13 @@ color: rgb(255, 255, 255);</string>
          <widget class="QLabel" name="epsgLabel">
           <property name="maximumSize">
            <size>
-            <width>70</width>
+            <width>999</width>
             <height>20</height>
            </size>
           </property>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -624,14 +667,13 @@ background-color: rgb(253, 252, 250);</string>
          <widget class="QLabel" name="tripleStorePrefixNameLabel">
           <property name="maximumSize">
            <size>
-            <width>39</width>
+            <width>999</width>
             <height>20</height>
            </size>
           </property>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -686,7 +728,6 @@ background-color: rgb(253, 252, 250);</string>
             <property name="font">
              <font>
               <pointsize>9</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -725,7 +766,6 @@ background-color: rgb(253, 252, 250);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -757,7 +797,6 @@ color: rgb(255, 255, 255);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -785,7 +824,6 @@ color: rgb(255, 255, 255);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -813,7 +851,6 @@ color: rgb(255, 255, 255);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -841,7 +878,6 @@ color: rgb(255, 255, 255);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>

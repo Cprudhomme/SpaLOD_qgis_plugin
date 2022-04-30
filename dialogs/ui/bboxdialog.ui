@@ -27,7 +27,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QObject#BBOXDialog{
-background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795455 rgba(0, 57, 70, 255), stop:0.5625 rgba(0, 85, 104, 255), stop:0.954545 rgba(0, 107, 131, 255));}
+background-color: rgb(94, 94, 94);
+}
 </string>
   </property>
   <widget class="QLabel" name="searchPlace">
@@ -57,9 +58,9 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
    </property>
    <property name="styleSheet">
     <string notr="true">QObject#frame_2{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
+	background-color:rgb(200, 201, 219);
 	
-border-radius:20px;}
+}
 </string>
    </property>
    <property name="frameShape">
@@ -94,7 +95,7 @@ border-radius:20px;}
       <widget class="QPushButton" name="searchButton">
        <property name="maximumSize">
         <size>
-         <width>131</width>
+         <width>999</width>
          <height>25</height>
         </size>
        </property>
@@ -107,7 +108,6 @@ border-radius:20px;}
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -134,14 +134,13 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="maximumSize">
         <size>
-         <width>131</width>
+         <width>999</width>
          <height>25</height>
         </size>
        </property>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -169,7 +168,6 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -196,14 +194,13 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="maximumSize">
         <size>
-         <width>131</width>
+         <width>999</width>
          <height>25</height>
         </size>
        </property>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -230,14 +227,13 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="maximumSize">
         <size>
-         <width>131</width>
+         <width>999</width>
          <height>25</height>
         </size>
        </property>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -274,7 +270,6 @@ color: rgb(255, 255, 255);</string>
           <property name="font">
            <font>
             <pointsize>16</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -308,7 +303,6 @@ color: rgb(255, 255, 255);</string>
           <property name="font">
            <font>
             <pointsize>20</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -342,9 +336,9 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QObject#frame{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
+	background-color:rgb(200, 201, 219);
 	
-border-radius:20px;}
+}
 </string>
    </property>
    <property name="frameShape">
@@ -395,7 +389,6 @@ border-radius:20px;}
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -450,7 +443,6 @@ background-color: rgb(253, 252, 250);</string>
        <property name="font">
         <font>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -469,7 +461,7 @@ background-color: rgb(253, 252, 250);</string>
      <rect>
       <x>10</x>
       <y>100</y>
-      <width>288</width>
+      <width>501</width>
       <height>45</height>
      </rect>
     </property>
@@ -481,7 +473,7 @@ background-color: rgb(253, 252, 250);</string>
     </property>
     <property name="maximumSize">
      <size>
-      <width>288</width>
+      <width>999</width>
       <height>45</height>
      </size>
     </property>
@@ -498,14 +490,13 @@ background-color: rgb(253, 252, 250);</string>
          </property>
          <property name="maximumSize">
           <size>
-           <width>131</width>
+           <width>999</width>
            <height>25</height>
           </size>
          </property>
          <property name="font">
           <font>
            <pointsize>9</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -524,22 +515,27 @@ color: rgb(255, 255, 255);</string>
        </item>
        <item>
         <widget class="QPushButton" name="b1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>131</width>
+           <width>0</width>
            <height>25</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>131</width>
+           <width>999</width>
            <height>25</height>
           </size>
          </property>
          <property name="font">
           <font>
            <pointsize>9</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>

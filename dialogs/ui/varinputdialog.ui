@@ -19,6 +19,18 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
 </string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item row="0" column="0">
     <widget class="QFrame" name="frame">
      <property name="minimumSize">
@@ -29,9 +41,8 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
      </property>
      <property name="styleSheet">
       <string notr="true">QObject#frame{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
-	
-border-radius:20px;}
+	background-color:rgb(200, 201, 219);
+}
 </string>
      </property>
      <property name="frameShape">
@@ -41,6 +52,18 @@ border-radius:20px;}
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
       <item row="0" column="0">
        <widget class="QLabel" name="layerLabel">
         <property name="minimumSize">
@@ -58,7 +81,6 @@ border-radius:20px;}
         <property name="font">
          <font>
           <pointsize>9</pointsize>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -130,7 +152,6 @@ selection-color:rgb(0, 81, 135);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -187,7 +208,6 @@ selection-color:rgb(0, 81, 135);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -219,7 +239,6 @@ selection-color:rgb(0, 81, 135);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -1190,7 +1209,6 @@ selection-color:rgb(0, 81, 135);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -1242,7 +1260,6 @@ border-color:rgb(45, 45, 45);</string>
           <property name="font">
            <font>
             <pointsize>9</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -1328,7 +1345,6 @@ selection-color:rgb(0, 81, 135);</string>
         <property name="font">
          <font>
           <pointsize>9</pointsize>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>

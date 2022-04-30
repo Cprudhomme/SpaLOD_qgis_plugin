@@ -29,13 +29,28 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
 </string>
    </property>
    <layout class="QGridLayout" name="gridLayout_4">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>0</number>
+    </property>
     <item row="1" column="0">
      <widget class="QFrame" name="query_page_frame">
       <property name="styleSheet">
        <string notr="true">QObject#query_page_frame{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
+	background-color:rgb(200, 201, 219);
 	
-border-radius:20px;}
+}
 
 
 
@@ -48,6 +63,18 @@ border-radius:20px;}
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>15</number>
+       </property>
+       <property name="topMargin">
+        <number>15</number>
+       </property>
+       <property name="rightMargin">
+        <number>15</number>
+       </property>
+       <property name="bottomMargin">
+        <number>15</number>
+       </property>
        <item row="3" column="0" colspan="2">
         <widget class="QLabel" name="errorLabel">
          <property name="minimumSize">
@@ -73,7 +100,7 @@ border-radius:20px;}
        <item row="0" column="1">
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <property name="rightMargin">
-          <number>30</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="label_11">
@@ -86,7 +113,7 @@ border-radius:20px;}
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>16</height>
+             <height>999</height>
             </size>
            </property>
            <property name="font">
@@ -105,10 +132,16 @@ border-radius:20px;}
          </item>
          <item>
           <widget class="QComboBox" name="queryTemplates">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>131</width>
-             <height>21</height>
+             <height>22</height>
             </size>
            </property>
            <property name="cursor">
@@ -615,19 +648,25 @@ background-color: rgb(253, 252, 250);</string>
        <item row="0" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <property name="rightMargin">
-          <number>30</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="label_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
-             <width>111</width>
+             <width>120</width>
              <height>20</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>111</width>
+             <width>999</width>
              <height>20</height>
             </size>
            </property>
@@ -647,15 +686,15 @@ background-color: rgb(253, 252, 250);</string>
          </item>
          <item>
           <widget class="QComboBox" name="endpointCB">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
-             <width>301</width>
-             <height>22</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>301</width>
+             <width>0</width>
              <height>22</height>
             </size>
            </property>
@@ -838,7 +877,7 @@ background-color: rgb(253, 252, 250);</string>
            <property name="minimumSize">
             <size>
              <width>211</width>
-             <height>21</height>
+             <height>22</height>
             </size>
            </property>
            <property name="styleSheet">

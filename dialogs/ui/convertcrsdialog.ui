@@ -12,13 +12,13 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>535</width>
+    <width>0</width>
     <height>347</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>535</width>
+    <width>999</width>
     <height>347</height>
    </size>
   </property>
@@ -31,34 +31,59 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
 </string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
    <item row="0" column="0">
     <widget class="QFrame" name="frame">
      <property name="minimumSize">
       <size>
-       <width>517</width>
-       <height>329</height>
+       <width>0</width>
+       <height>347</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>517</width>
-       <height>329</height>
+       <width>999</width>
+       <height>347</height>
       </size>
      </property>
      <property name="styleSheet">
       <string notr="true">QObject#frame{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
-	
-border-radius:20px;}
-</string>
+	background-color:rgb(200, 201, 219);
+	}</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Sunken</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item row="0" column="0">
        <widget class="QWidget" name="widget_2" native="true">
         <layout class="QGridLayout" name="gridLayout_3">
@@ -72,14 +97,13 @@ border-radius:20px;}
            </property>
            <property name="maximumSize">
             <size>
-             <width>351</width>
-             <height>20</height>
+             <width>999</width>
+             <height>999</height>
             </size>
            </property>
            <property name="font">
             <font>
              <pointsize>11</pointsize>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -91,404 +115,7 @@ border-radius:20px;}
            </property>
           </widget>
          </item>
-         <item row="1" column="0" rowspan="2">
-          <widget class="QLabel" name="chooseFileLabel">
-           <property name="minimumSize">
-            <size>
-             <width>101</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>101</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color:rgb(0, 81, 135);</string>
-           </property>
-           <property name="text">
-            <string>Choose a file</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1" colspan="4">
-          <widget class="QLabel" name="chosenFileLabel">
-           <property name="minimumSize">
-            <size>
-             <width>351</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>351</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLabel" name="fileLoadedLabel">
-           <property name="minimumSize">
-            <size>
-             <width>62</width>
-             <height>17</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>62</width>
-             <height>17</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QPushButton" name="loadFromFileButton">
-           <property name="minimumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color:rgb(0, 127, 165);
-border-radius:10px;
-color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string>Load TTL File</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="convertLiteralSelectionLabel">
-           <property name="minimumSize">
-            <size>
-             <width>81</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>81</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color:rgb(0, 81, 135);</string>
-           </property>
-           <property name="text">
-            <string>Convert all</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QCheckBox" name="wktLiteralCheckBox">
-           <property name="minimumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>7</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color:rgb(0, 81, 135);</string>
-           </property>
-           <property name="text">
-            <string>WKT Literals</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="2" colspan="2">
-          <widget class="QCheckBox" name="wkbLiteralCheckBox">
-           <property name="minimumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>7</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color:rgb(0, 81, 135);</string>
-           </property>
-           <property name="text">
-            <string>WKB Literals</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="4">
-          <widget class="QCheckBox" name="geojsonLiteralCheckBox">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>131</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>131</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>GeoJSON Literals</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1">
-          <widget class="QCheckBox" name="gmlLiteralCheckBox">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>GML Literals</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="2" colspan="2">
-          <widget class="QCheckBox" name="kmlLiteralCheckBox">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>111</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>KML Literals</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="4">
-          <widget class="QCheckBox" name="dggsLiteralCheckBox">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>121</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>121</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>DGGS Literals</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_4">
-           <property name="minimumSize">
-            <size>
-             <width>81</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>81</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color:rgb(0, 81, 135);</string>
-           </property>
-           <property name="text">
-            <string>Convert all</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1" colspan="2">
-          <widget class="QComboBox" name="comboBox">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>131</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>131</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:10px;
-
-border-color:rgb(45, 45, 45);
-
-background-color: rgb(253, 252, 250);
-selection-background-color: rgb(255, 255, 255);
-selection-color:rgb(0, 81, 135);</string>
-           </property>
-           <item>
-            <property name="text">
-             <string>WKT Literal</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>WKB Literal</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>KML Literal</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>GML Literal</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>GeoJSON Literal</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>DGGS Literal</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="6" column="3">
-          <widget class="QLabel" name="label_5">
-           <property name="minimumSize">
-            <size>
-             <width>41</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>41</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color:rgb(0, 81, 135);</string>
-           </property>
-           <property name="text">
-            <string>To</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="4">
+         <item row="8" column="4">
           <widget class="QComboBox" name="comboBox_2">
            <property name="enabled">
             <bool>false</bool>
@@ -546,7 +173,306 @@ selection-color:rgb(0, 81, 135);</string>
            </item>
           </widget>
          </item>
-         <item row="7" column="0" colspan="2">
+         <item row="6" column="0">
+          <widget class="QLabel" name="convertLiteralSelectionLabel">
+           <property name="minimumSize">
+            <size>
+             <width>81</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(0, 81, 135);</string>
+           </property>
+           <property name="text">
+            <string>Convert all</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="4">
+          <widget class="QCheckBox" name="geojsonLiteralCheckBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>131</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>GeoJSON Literals</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="3">
+          <widget class="QLabel" name="label_5">
+           <property name="minimumSize">
+            <size>
+             <width>41</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>41</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(0, 81, 135);</string>
+           </property>
+           <property name="text">
+            <string>To</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="4">
+          <widget class="QLabel" name="chosenFileLabel">
+           <property name="minimumSize">
+            <size>
+             <width>351</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>351</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QCheckBox" name="wktLiteralCheckBox">
+           <property name="minimumSize">
+            <size>
+             <width>111</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(0, 81, 135);</string>
+           </property>
+           <property name="text">
+            <string>WKT Literals</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="2" colspan="2">
+          <widget class="QCheckBox" name="kmlLiteralCheckBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>111</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>KML Literals</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="minimumSize">
+            <size>
+             <width>81</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(0, 81, 135);</string>
+           </property>
+           <property name="text">
+            <string>Convert all</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1" colspan="2">
+          <widget class="QComboBox" name="comboBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>131</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>131</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:10px;
+
+border-color:rgb(45, 45, 45);
+
+background-color: rgb(253, 252, 250);
+selection-background-color: rgb(255, 255, 255);
+selection-color:rgb(0, 81, 135);</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>WKT Literal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WKB Literal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>KML Literal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>GML Literal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>GeoJSON Literal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>DGGS Literal</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="fileLoadedLabel">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>62</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="4">
+          <widget class="QCheckBox" name="dggsLiteralCheckBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>121</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>DGGS Literals</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QCheckBox" name="gmlLiteralCheckBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>111</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>GML Literals</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0" colspan="2">
           <widget class="QLabel" name="toTargetProjectionLabel">
            <property name="minimumSize">
             <size>
@@ -556,13 +482,12 @@ selection-color:rgb(0, 81, 135);</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>161</width>
-             <height>20</height>
+             <width>999</width>
+             <height>999</height>
             </size>
            </property>
            <property name="font">
             <font>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -574,8 +499,8 @@ selection-color:rgb(0, 81, 135);</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="0" colspan="5">
-          <widget class="QgsProjectionSelectionWidget" name="projectionSelect">
+         <item row="10" column="0" colspan="5">
+          <widget class="QgsProjectionSelectionWidget" name="projectionSelect" native="true">
            <property name="minimumSize">
             <size>
              <width>481</width>
@@ -602,6 +527,107 @@ selection-color:rgb(0, 81, 135);</string>
            </property>
           </widget>
          </item>
+         <item row="6" column="2" colspan="2">
+          <widget class="QCheckBox" name="wkbLiteralCheckBox">
+           <property name="minimumSize">
+            <size>
+             <width>111</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(0, 81, 135);</string>
+           </property>
+           <property name="text">
+            <string>WKB Literals</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="5">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="chooseFileLabel">
+             <property name="minimumSize">
+              <size>
+               <width>101</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>999</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(0, 81, 135);</string>
+             </property>
+             <property name="text">
+              <string>Choose a file</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="loadFromFileButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>111</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>999</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(0, 127, 165);
+border-radius:10px;
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Load TTL File</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
         </layout>
        </widget>
       </item>
@@ -618,14 +644,13 @@ selection-color:rgb(0, 81, 135);</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>111</width>
+             <width>999</width>
              <height>23</height>
             </size>
            </property>
            <property name="font">
             <font>
              <pointsize>8</pointsize>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -652,14 +677,13 @@ color: rgb(255, 255, 255);</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>111</width>
+             <width>999</width>
              <height>23</height>
             </size>
            </property>
            <property name="font">
             <font>
              <pointsize>9</pointsize>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
