@@ -317,7 +317,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            first = <span class="keyword">True</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">for</span> concept <span class="keywordflow">in</span> self.resultlist:</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                item = QStandardItem()</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                item.setData(concept, 1)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                item.setData(concept)</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                item.setText(concept[concept.rfind(<span class="stringliteral">&#39;/&#39;</span>) + 1:])</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                item.setForeground(QColor(0,0,0))</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                item.setEditable(<span class="keyword">False</span>)</div>
@@ -336,12 +336,12 @@ Public Attributes</h2></td></tr>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            self.sparql.updateNewClassList()</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            self.geoClassListGui.selectionModel().setCurrentIndex(self.geoClassList.index(0, 0),</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                                                  QItemSelectionModel.SelectCurrent)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            self.dlg.<a class="code" href="a00124.html#ae1d6d8b424b085ac5f1b65df9d010c1b">viewselectaction</a>()</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            self.dlg.viewselectaction()</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">elif</span> len(self.viewlist) &gt; 0:</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">for</span> concept <span class="keywordflow">in</span> self.viewlist:</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="comment"># self.layerconcepts.addItem(concept)</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                item = QStandardItem()</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                item.setData(concept, 1)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                item.setData(concept)</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                item.setText(concept[concept.rfind(<span class="stringliteral">&#39;/&#39;</span>) + 1:])</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                item.setForeground(QColor(0,0,0))</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                item.setEditable(<span class="keyword">False</span>)</div>
@@ -365,7 +365,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            self.sparql.updateNewClassList()</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            self.geoClassListGui.selectionModel().setCurrentIndex(self.geoClassList.index(0, 0),</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                                                  QItemSelectionModel.SelectCurrent)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            self.dlg.<a class="code" href="a00124.html#ae1d6d8b424b085ac5f1b65df9d010c1b">viewselectaction</a>()</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            self.dlg.viewselectaction()</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> self.amountoflabels != -1:</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            self.layercount.setText(<span class="stringliteral">&quot;[&quot;</span> + str(self.amountoflabels) + <span class="stringliteral">&quot;]&quot;</span>)</div>
 </div><!-- fragment -->
@@ -876,7 +876,6 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa00147_html_a46979924d8c070886506e89bb37bffd2"><div class="ttname"><a href="a00147.html#a46979924d8c070886506e89bb37bffd2">SpaLOD_qgis_plugin.util.sparqlhighlighter.format</a></div><div class="ttdeci">def format(color, style='')</div><div class="ttdef"><b>Definition:</b> sparqlhighlighter.py:5</div></div>
-<div class="ttc" id="aa00124_html_ae1d6d8b424b085ac5f1b65df9d010c1b"><div class="ttname"><a href="a00124.html#ae1d6d8b424b085ac5f1b65df9d010c1b">SpaLOD_qgis_plugin.dialogs.sparql_unicorn_dialog.viewselectaction</a></div><div class="ttdeci">def viewselectaction(self, selected=None, deselected=None)</div><div class="ttdef"><b>Definition:</b> sparql_unicorn_dialog.py:543</div></div>
 <div class="ttc" id="aa00273_html_a2b97505b4a89f59b1902bc41f75fba68"><div class="ttname"><a href="a00273.html#a2b97505b4a89f59b1902bc41f75fba68">SpaLOD_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.__init__</a></div><div class="ttdeci">def __init__(self, description, triplestoreurl, query, searchTerm, prefixes, searchResult, progress)</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:18</div></div>
 <div class="ttc" id="aa00273_html_a5f4d426f44e2bbf0bcca08c50d1b5ee4"><div class="ttname"><a href="a00273.html#a5f4d426f44e2bbf0bcca08c50d1b5ee4">SpaLOD_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.finished</a></div><div class="ttdeci">def finished(self, result)</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:97</div></div>
 <div class="ttc" id="aa00273_html_ad22709b2e67308af35f55680d5a026e0"><div class="ttname"><a href="a00273.html#ad22709b2e67308af35f55680d5a026e0">SpaLOD_qgis_plugin.tasks.whattoenrichquerytask.WhatToEnrichQueryTask.run</a></div><div class="ttdeci">def run(self)</div><div class="ttdef"><b>Definition:</b> whattoenrichquerytask.py:40</div></div>
