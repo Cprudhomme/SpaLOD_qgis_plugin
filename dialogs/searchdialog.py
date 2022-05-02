@@ -60,9 +60,9 @@ class SearchDialog(QDialog, FORM_CLASS):
             self.findConcept.setChecked(True)
         if column == 4 or (not interlinkOrEnrich and column != 4) or (not interlinkOrEnrich and propOrClass):
             self.findProperty.setChecked(True)
-        if not bothOptions:
-            self.findProperty.setEnabled(False)
-            self.findConcept.setEnabled(False)
+        # if not bothOptions:
+        #     self.findProperty.setEnabled(False)
+        #     self.findConcept.setEnabled(False)
         for triplestore in self.triplestoreconf:
             if not "File" == triplestore["name"]:
                 self.tripleStoreEdit.addItem(triplestore["name"])
