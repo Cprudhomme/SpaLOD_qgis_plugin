@@ -66,16 +66,18 @@ class EnrichmentQueryTask(QgsTask):
             attlist[self.idfield][f[self.idfield]] = True
             query = ""
             if self.content == "Enrich URI":
-                query += "SELECT ?item WHERE {\n"
+                query += "SELECT distinct ?item WHERE {\n"
             elif self.content == "Enrich Value" or self.strategy == "Enrich Both":
-                query += "SELECT ?item ?val ?valLabel ?vals WHERE {\n"
+                query += "SELECT distinct ?item ?val ?valLabel ?vals WHERE {\n"
             query += "VALUES ?vals { "
             print(attlist)
         for it in attlist[self.idfield]:
             if str(it).startswith("http"):
                 query += "<" + str(it) + "> "
-            elif self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and self.language != None and self.language != "":
-                query += "\"" + str(it).replace("\"", "\\\"") + "\"@" + self.language + " "
+            elif self.idfield == "wikidata" and "wikidata" in self.triplestoreurl:
+                query += "wd:" + str(it) + " "
+            # elif self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and self.language != None and self.language != "":
+            #     query += "\"" + str(it).replace("\"", "\\\"") + "\"@" + self.language + " "
             else:
                 query += "\"" + str(it).replace("\"", "\\\"") + "\" "
         query += " } . \n"
@@ -84,27 +86,38 @@ class EnrichmentQueryTask(QgsTask):
             proppp = "http:" + proppp
         if self.table.item(self.row, 7).text() != "" and "wikidata" in self.triplestoreurl:
             query += "?item wdt:P31 <" + self.table.item(self.row, 7).text() + "> .\n"
-        else:
+        elif self.table.item(self.row, 7).text() != "":
             query += "?item rdf:type <" + self.table.item(self.row, 7).text() + "> .\n"
-        query += "?item <" + self.idprop + "> ?vals .\n"
-        query += "?item <" + proppp + "> ?val . \n"
+        
+        if self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and "wikidata" in self.triplestoreurl:
+            if self.idfield != "wikidata":
+                query += "?item ?rel ?vals .\n"
+                query += "?item <" + proppp + "> ?val . \n"
+            else:
+                query += "?vals <" + proppp + "> ?val . \n"
+        else:
+            query += "?item <" + self.idprop + "> ?vals .\n"
+            query += "?item <" + proppp + "> ?val . \n"
+        
         if (self.content == "Enrich Value" or self.content == "Enrich Both") and not "wikidata" in self.triplestoreurl:
             query += "OPTIONAL{ ?val rdfs:label ?valLabel }"
         elif (self.content == "Enrich Value" or self.content == "Enrich Both") and "wikidata" in self.triplestoreurl:
-            query += "SERVICE wikibase:label { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE]," + self.language + "\". }\n"
+            query += "SERVICE wikibase:label { bd:serviceParam wikibase:language \"" + ["en", self.language][self.language != None and self.language != ""] + ",[AUTO_LANGUAGE]\". }\n"
         query += "} "
+        QgsMessageLog.logMessage("idfield: " + self.idfield,
+                                 MESSAGE_CATEGORY, Qgis.Info)
         QgsMessageLog.logMessage("proppp: " + str(proppp),
                                  MESSAGE_CATEGORY, Qgis.Info)
         QgsMessageLog.logMessage("idprop: " + self.idprop,
                                  MESSAGE_CATEGORY, Qgis.Info)
-        QgsMessageLog.logMessage(query,
+        QgsMessageLog.logMessage(query.replace("<", "").replace(">", ""),
                                  MESSAGE_CATEGORY, Qgis.Info)
         QgsMessageLog.logMessage(self.triplestoreurl,
                                  MESSAGE_CATEGORY, Qgis.Info)
         print(self.triplestoreurl)
         try:
-            sparql = SPARQLWrapper(self.triplestoreurl,
-                                   agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
+            sparql = SPARQLWrapper(self.triplestoreurl)#,
+                                   #agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
             sparql.setQuery(query)
             sparql.setMethod(POST)
             print("now sending query")
@@ -126,8 +139,13 @@ class EnrichmentQueryTask(QgsTask):
                 # msgBox.exec()
                 return False
         print(str(results))
+        QgsMessageLog.logMessage(str(results),
+                                 MESSAGE_CATEGORY, Qgis.Info)
         # resultcounter=0
         for resultcounter in results["results"]["bindings"]:
+            if self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and "wikidata" in self.triplestoreurl and self.idfield == "wikidata":
+                resultcounter["vals"]["value"] = resultcounter["vals"]["value"].replace("http://www.wikidata.org/entity/", "")
+            #http://www.wikidata.org/entity/
             if self.content == "Enrich Value":
                 self.resultmap[resultcounter["vals"]["value"]] = resultcounter["valLabel"]["value"]
             elif self.content == "Enrich URI":

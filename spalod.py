@@ -339,6 +339,7 @@ class SpaLOD:
         conceptlist = []
         self.dlg.geoTreeViewModel.clear()
         self.dlg.savedQueries.clear()
+        self.dlg.concepts = []
 
 
         if "endpoint" in self.triplestoreconf[endpointIndex] and self.triplestoreconf[endpointIndex][

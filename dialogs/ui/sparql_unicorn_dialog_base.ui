@@ -592,20 +592,36 @@ background-color: rgb(253, 252, 250);</string>
             <attribute name="title">
              <string>GeoConcepts</string>
             </attribute>
-            <widget class="QTreeView" name="geoTreeView">
+            <widget class="QWidget" name="verticalLayoutWidget">
              <property name="geometry">
               <rect>
-               <x>0</x>
-               <y>0</y>
+               <x>-1</x>
+               <y>-1</y>
                <width>331</width>
-               <height>411</height>
+               <height>461</height>
               </rect>
              </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:10px;
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QCheckBox" name="checkBoxUnionConcept">
+                <property name="styleSheet">
+                 <string notr="true">padding: 10px;</string>
+                </property>
+                <property name="text">
+                 <string>Concept union</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTreeView" name="geoTreeView">
+                <property name="styleSheet">
+                 <string notr="true">border: none;
 
 background-color: rgb(253, 252, 250);</string>
-             </property>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </widget>
            <widget class="QWidget" name="GeometryCollectionsTab">

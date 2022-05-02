@@ -458,6 +458,9 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
         # so that when the Enrichment menu is selected the Enrichment window will open
         # @Antoine
 
+
+        self.concepts = []
+
     def buildEnrichmentDlg(self):
         enrichmentdlg = EnrichmentMainWindow(
             QgsProject.instance().layerTreeRoot().children(),
@@ -664,33 +667,50 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
                 'Concept: "{}"'.format(str(self.geoTreeViewModel.itemFromIndex(curindex).data)), "SPARQL Unicorn", Qgis.Info
             )
 
-        print(concept)
+        if self.checkBoxUnionConcept.isChecked():
+            self.concepts.append(concept)
+        else:
+            self.concepts = [concept]
+
 
         if "querytemplate" in self.triplestoreconf[endpointIndex]:
-            if (
-                "wd:Q%%concept%% ."
-                in self.triplestoreconf[endpointIndex]["querytemplate"][
-                    self.queryTemplates.currentIndex()
-                ]["query"]
-            ):
-                querytext = ""
-                if concept != None and concept.startswith("http"):
-                    querytext = self.triplestoreconf[endpointIndex]["querytemplate"][
-                        self.queryTemplates.currentIndex()
-                    ]["query"].replace(
-                        "wd:Q%%concept%% .",
-                        "wd:" + concept[concept.rfind("/") + 1 :] + " .",
-                    )
-                elif concept != None:
-                    querytext = self.triplestoreconf[endpointIndex]["querytemplate"][
-                        self.queryTemplates.currentIndex()
-                    ]["query"].replace("wd:Q%%concept%% .", "wd:" + concept + " .")
-            else:
-                querytext = self.triplestoreconf[endpointIndex]["querytemplate"][
-                    self.queryTemplates.currentIndex()
-                ]["query"].replace("%%concept%%", concept)
+            querytext = self.triplestoreconf[endpointIndex]["querytemplate"][self.queryTemplates.currentIndex()]["query"]
 
-            print("1")
+            if len(self.concepts) > 1:
+                regRes = re.search(r"([\s\S]*)(\?.*? .*? .*?%%concept%%.*?\.)([\s\S]*)", querytext)
+                start = regRes.group(1)
+                end = regRes.group(3)
+
+                requestConceptPart = regRes.group(2)
+
+                result = "{ "
+                i = 0
+
+                for concept in self.concepts:
+                    if "wd:Q%%concept%% ." in requestConceptPart:
+                        if concept != None and concept.startswith("http"):
+                            requestConceptPartResult = requestConceptPart.replace("wd:Q%%concept%% .", "wd:" + concept[concept.rfind("/") + 1 :] + " .")
+                        elif concept != None:
+                            requestConceptPartResult = requestConceptPart.replace("wd:Q%%concept%% .", "wd:" + concept + " .")
+                    else:
+                        requestConceptPartResult = requestConceptPart.replace("%%concept%%", concept)
+
+                    if i == 0:
+                        result += requestConceptPartResult + " } \nUNION {\n"
+                    else:
+                        result += requestConceptPartResult
+
+                    i += 1
+
+                querytext = start + result + "\n}" + end
+            else:
+                if "wd:Q%%concept%% ." in querytext:
+                    if concept != None and concept.startswith("http"):
+                        querytext = querytext.replace("wd:Q%%concept%% .", "wd:" + concept[concept.rfind("/") + 1 :] + " .")
+                    elif concept != None:
+                        querytext = querytext.replace("wd:Q%%concept%% .", "wd:" + concept + " .")
+                else:
+                    querytext = querytext.replace("%%concept%%", concept)
 
             self.inp_sparql2.setPlainText(querytext)
             self.inp_sparql2.columnvars = {}
