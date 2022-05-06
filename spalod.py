@@ -345,6 +345,7 @@ class SpaLOD:
         self.dlg.concepts = []
 
         self.dlg.checkBoxPartOf.setVisible("partOf" in self.triplestoreconf[endpointIndex])
+        self.dlg.bboxButton.setVisible("bboxquery" in self.triplestoreconf[endpointIndex] and self.triplestoreconf[endpointIndex]["bboxquery"]["type"] != "pointdistance")
 
         if "endpoint" in self.triplestoreconf[endpointIndex] and self.triplestoreconf[endpointIndex][
             "endpoint"] in self.savedQueriesJSON:
