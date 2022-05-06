@@ -57,107 +57,94 @@ class EnrichmentQueryTask(QgsTask):
             proxy = urllib.request.ProxyHandler({'http': self.proxyHost})
             opener = urllib.request.build_opener(proxy)
             urllib.request.install_opener(opener)
-        attlist = {}
-        attlist[self.item] = []
-        attlist[self.idfield] = {}
-        for f in self.layer.getFeatures():
-            if self.item in f:
-                attlist[self.item].append(f[self.item])
-            attlist[self.idfield][f[self.idfield]] = True
-            query = ""
-            if self.content == "Enrich URI":
-                query += "SELECT distinct ?item WHERE {\n"
-            elif self.content == "Enrich Value" or self.strategy == "Enrich Both":
-                query += "SELECT distinct ?item ?val ?valLabel ?vals WHERE {\n"
-            query += "VALUES ?vals { "
-            print(attlist)
-        for it in attlist[self.idfield]:
-            if str(it).startswith("http"):
-                query += "<" + str(it) + "> "
-            elif self.idfield == "wikidata" and "wikidata" in self.triplestoreurl:
-                query += "wd:" + str(it) + " "
-            # elif self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and self.language != None and self.language != "":
-            #     query += "\"" + str(it).replace("\"", "\\\"") + "\"@" + self.language + " "
+
+        for idfield in self.idfield.split(", "):
+            attlist = {}
+            attlist[self.item] = []
+            attlist[idfield] = {}
+            for f in self.layer.getFeatures():
+                if self.item in f:
+                    attlist[self.item].append(f[self.item])
+                attlist[idfield][f[idfield]] = True
+                query = ""
+                if self.content == "Enrich URI":
+                    query += "SELECT distinct ?item WHERE {\n"
+                elif self.content == "Enrich Value" or self.strategy == "Enrich Both":
+                    query += "SELECT distinct ?item ?val ?valLabel ?vals WHERE {\n"
+                query += "VALUES ?vals { "
+                print(attlist)
+            for it in attlist[idfield]:
+                if str(it).startswith("http"):
+                    query += "<" + str(it) + "> "
+                elif idfield == "wikidata" and "wikidata" in self.triplestoreurl:
+                    query += "wd:" + str(it) + " "
+                # elif self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and self.language != None and self.language != "":
+                #     query += "\"" + str(it).replace("\"", "\\\"") + "\"@" + self.language + " "
+                else:
+                    query += "\"" + str(it).replace("\"", "\\\"") + "\" "
+            query += " } . \n"
+            proppp = self.propertyy.data(1)
+            if self.propertyy.data(1).startswith("//"):
+                proppp = "http:" + proppp
+            if self.table.item(self.row, 7).text() != "" and "wikidata" in self.triplestoreurl:
+                query += "?item wdt:P31 <" + self.table.item(self.row, 7).text() + "> .\n"
+            elif self.table.item(self.row, 7).text() != "":
+                query += "?item rdf:type <" + self.table.item(self.row, 7).text() + "> .\n"
+            
+            if self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and "wikidata" in self.triplestoreurl:
+                if idfield != "wikidata":
+                    query += "?item ?rel ?vals .\n"
+                    query += "?item <" + proppp + "> ?val . \n"
+                else:
+                    query += "?vals <" + proppp + "> ?val . \n"
             else:
-                query += "\"" + str(it).replace("\"", "\\\"") + "\" "
-        query += " } . \n"
-        proppp = self.propertyy.data(1)
-        if self.propertyy.data(1).startswith("//"):
-            proppp = "http:" + proppp
-        if self.table.item(self.row, 7).text() != "" and "wikidata" in self.triplestoreurl:
-            query += "?item wdt:P31 <" + self.table.item(self.row, 7).text() + "> .\n"
-        elif self.table.item(self.row, 7).text() != "":
-            query += "?item rdf:type <" + self.table.item(self.row, 7).text() + "> .\n"
-        
-        if self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and "wikidata" in self.triplestoreurl:
-            if self.idfield != "wikidata":
-                query += "?item ?rel ?vals .\n"
+                query += "?item <" + self.idprop + "> ?vals .\n"
                 query += "?item <" + proppp + "> ?val . \n"
-            else:
-                query += "?vals <" + proppp + "> ?val . \n"
-        else:
-            query += "?item <" + self.idprop + "> ?vals .\n"
-            query += "?item <" + proppp + "> ?val . \n"
-        
-        if (self.content == "Enrich Value" or self.content == "Enrich Both") and not "wikidata" in self.triplestoreurl:
-            query += "OPTIONAL{ ?val rdfs:label ?valLabel }"
-        elif (self.content == "Enrich Value" or self.content == "Enrich Both") and "wikidata" in self.triplestoreurl:
-            query += "SERVICE wikibase:label { bd:serviceParam wikibase:language \"" + ["en", self.language][self.language != None and self.language != ""] + ",[AUTO_LANGUAGE]\". }\n"
-        query += "} "
-        QgsMessageLog.logMessage("idfield: " + self.idfield,
-                                 MESSAGE_CATEGORY, Qgis.Info)
-        QgsMessageLog.logMessage("proppp: " + str(proppp),
-                                 MESSAGE_CATEGORY, Qgis.Info)
-        QgsMessageLog.logMessage("idprop: " + self.idprop,
-                                 MESSAGE_CATEGORY, Qgis.Info)
-        QgsMessageLog.logMessage(query.replace("<", "").replace(">", ""),
-                                 MESSAGE_CATEGORY, Qgis.Info)
-        QgsMessageLog.logMessage(self.triplestoreurl,
-                                 MESSAGE_CATEGORY, Qgis.Info)
-        print(self.triplestoreurl)
-        try:
-            sparql = SPARQLWrapper(self.triplestoreurl)#,
-                                   #agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
-            sparql.setQuery(query)
-            sparql.setMethod(POST)
-            print("now sending query")
-            sparql.setReturnFormat(JSON)
-            results = sparql.query().convert()
-        except Exception as e:
-            QgsMessageLog.logMessage("Trying GET query",
-                                     MESSAGE_CATEGORY, Qgis.Info)
+            
+            if (self.content == "Enrich Value" or self.content == "Enrich Both") and not "wikidata" in self.triplestoreurl:
+                query += "OPTIONAL{ ?val rdfs:label ?valLabel }"
+            elif (self.content == "Enrich Value" or self.content == "Enrich Both") and "wikidata" in self.triplestoreurl:
+                query += "SERVICE wikibase:label { bd:serviceParam wikibase:language \"" + ["en", self.language][self.language != None and self.language != ""] + ",[AUTO_LANGUAGE]\". }\n"
+            query += "} "
+            
             try:
-                sparql = SPARQLWrapper(self.triplestoreurl,
-                                       agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
+                sparql = SPARQLWrapper(self.triplestoreurl)#,
+                                    #agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
                 sparql.setQuery(query)
-                sparql.setMethod(GET)
+                sparql.setMethod(POST)
+                print("now sending query")
                 sparql.setReturnFormat(JSON)
                 results = sparql.query().convert()
             except Exception as e:
-                # msgBox=QMessageBox()
-                # msgBox.setText("The following exception occurred: "+str(e))
-                # msgBox.exec()
-                return False
-        print(str(results))
-        QgsMessageLog.logMessage(str(results),
-                                 MESSAGE_CATEGORY, Qgis.Info)
-        # resultcounter=0
-        for resultcounter in results["results"]["bindings"]:
-            if self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and "wikidata" in self.triplestoreurl and self.idfield == "wikidata":
-                resultcounter["vals"]["value"] = resultcounter["vals"]["value"].replace("http://www.wikidata.org/entity/", "")
-            #http://www.wikidata.org/entity/
-            if self.content == "Enrich Value":
-                self.resultmap[resultcounter["vals"]["value"]] = resultcounter["valLabel"]["value"]
-            elif self.content == "Enrich URI":
-                self.resultmap[resultcounter["vals"]["value"]] = resultcounter["val"]["value"]
-            else:
-                self.resultmap[resultcounter["vals"]["value"]] = resultcounter["valLabel"]["value"] + ";" + \
-                                                                 resultcounter["val"]["value"]
+                QgsMessageLog.logMessage("Trying GET query", MESSAGE_CATEGORY, Qgis.Info)
+                try:
+                    sparql = SPARQLWrapper(self.triplestoreurl,
+                                        agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
+                    sparql.setQuery(query)
+                    sparql.setMethod(GET)
+                    sparql.setReturnFormat(JSON)
+                    results = sparql.query().convert()
+                except Exception as e:
+                    # msgBox=QMessageBox()
+                    # msgBox.setText("The following exception occurred: "+str(e))
+                    # msgBox.exec()
+                    return False
+            
+            # resultcounter=0
+            for resultcounter in results["results"]["bindings"]:
+                if resultcounter["vals"]["value"] not in self.resultmap:
+                    if self.idprop == "http://www.w3.org/2000/01/rdf-schema#label" and "wikidata" in self.triplestoreurl and idfield == "wikidata":
+                        resultcounter["vals"]["value"] = resultcounter["vals"]["value"].replace("http://www.wikidata.org/entity/", "")
+                    #http://www.wikidata.org/entity/
+                    if self.content == "Enrich Value":
+                        self.resultmap[resultcounter["vals"]["value"]] = resultcounter["valLabel"]["value"]
+                    elif self.content == "Enrich URI":
+                        self.resultmap[resultcounter["vals"]["value"]] = resultcounter["val"]["value"]
+                    else:
+                        self.resultmap[resultcounter["vals"]["value"]] = resultcounter["valLabel"]["value"] + ";" + resultcounter["val"]["value"]
+        
         self.columntype = self.detectColumnType(self.resultmap, self.table)
-        QgsMessageLog.logMessage(str(self.columntype),
-                                 MESSAGE_CATEGORY, Qgis.Info)
-        QgsMessageLog.logMessage(str(self.resultmap),
-                                 MESSAGE_CATEGORY, Qgis.Info)
+
         return True
 
     ## Detects the type of a column which is to be entered into a QGIS vector layer.
@@ -201,28 +188,30 @@ class EnrichmentQueryTask(QgsTask):
         for f in self.layer.getFeatures():
             if rowww >= self.resulttable.rowCount():
                 self.resulttable.insertRow(rowww)
-            if f[self.idfield] in self.resultmap:
-                QgsMessageLog.logMessage(str(f[self.idfield]) + " - " + str(self.resultmap[f[self.idfield]]),
-                                         MESSAGE_CATEGORY, Qgis.Info)
-                if self.strategy == "Merge":
-                    newitem = QTableWidgetItem(str(f[self.item]) + str(self.resultmap[f[self.idfield]]))
-                elif self.strategy == "Keep Local":
-                    if f[item] == None:
-                        newitem = QTableWidgetItem(str(self.resultmap[f[self.idfield]]))
+            for idfield in self.idfield.split(", "):
+                if f[idfield] in self.resultmap:
+                    QgsMessageLog.logMessage(str(f[idfield]) + " - " + str(self.resultmap[f[idfield]]),
+                                            MESSAGE_CATEGORY, Qgis.Info)
+                    if self.strategy == "Merge":
+                        newitem = QTableWidgetItem(str(f[self.item]) + str(self.resultmap[f[idfield]]))
+                    elif self.strategy == "Keep Local":
+                        if f[self.item] == None:
+                            newitem = QTableWidgetItem(str(self.resultmap[f[idfield]]))
+                        else:
+                            newitem = QTableWidgetItem(str(f[self.item]))
+                    elif self.strategy == "Ask User":
+                        newitem = QTableWidgetItem(str(f[self.item]) + ";" + str(self.resultmap[f[idfield]]))
+                    elif self.strategy == "Keep Remote":
+                        if not f[idfield] in self.resultmap or self.resultmap[f[idfield]] == None:
+                            newitem = QTableWidgetItem(str(f[self.item]))
+                        else:
+                            newitem = QTableWidgetItem(str(self.resultmap[f[idfield]]))
                     else:
-                        newitem = QTableWidgetItem(str(f[self.item]))
-                elif self.strategy == "Ask User":
-                    newitem = QTableWidgetItem(str(f[self.item]) + ";" + str(self.resultmap[f[self.idfield]]))
-                elif self.strategy == "Keep Remote":
-                    if not f[idfield] in self.resultmap or self.resultmap[f[self.idfield]] == None:
-                        newitem = QTableWidgetItem(str(f[self.item]))
-                    else:
-                        newitem = QTableWidgetItem(str(self.resultmap[f[self.idfield]]))
-                else:
-                    newitem = QTableWidgetItem(str(self.resultmap[f[self.idfield]]))
-                QgsMessageLog.logMessage(str(rowww) + " - " + str(self.row) + " - " + str(newitem), MESSAGE_CATEGORY,
-                                         Qgis.Info)
-                self.resulttable.setItem(rowww, self.row, newitem)
+                        newitem = QTableWidgetItem(str(self.resultmap[f[idfield]]))
+                    QgsMessageLog.logMessage(str(rowww) + " - " + str(self.row) + " - " + str(newitem), MESSAGE_CATEGORY,
+                                            Qgis.Info)
+                    self.resulttable.setItem(rowww, self.row, newitem)
+                    break
             rowww += 1
         self.layer.commitChanges()
         self.progress.close()
