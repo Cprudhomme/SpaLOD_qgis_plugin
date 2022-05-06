@@ -605,10 +605,22 @@ background-color: rgb(253, 252, 250);</string>
               <item>
                <widget class="QCheckBox" name="checkBoxUnionConcept">
                 <property name="styleSheet">
-                 <string notr="true">padding: 10px;</string>
+                 <string notr="true">padding: 10px;
+padding-bottom: 0px;</string>
                 </property>
                 <property name="text">
                  <string>Concept union</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBoxPartOf">
+                <property name="styleSheet">
+                 <string notr="true">padding: 10px;
+padding-top: 0px;</string>
+                </property>
+                <property name="text">
+                 <string>Part of</string>
                 </property>
                </widget>
               </item>

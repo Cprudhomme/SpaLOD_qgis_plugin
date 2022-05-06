@@ -458,7 +458,7 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
         # so that when the Enrichment menu is selected the Enrichment window will open
         # @Antoine
 
-
+        self.checkBoxPartOf.clicked.connect(self.viewselectaction)
         self.concepts = []
 
     def buildEnrichmentDlg(self):
@@ -696,9 +696,9 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
                         requestConceptPartResult = requestConceptPart.replace("%%concept%%", concept)
 
                     if i == 0:
-                        result += requestConceptPartResult + " } \nUNION {\n"
+                        result += requestConceptPartResult + " } \nUNION {\n  "
                     else:
-                        result += requestConceptPartResult
+                        result += ["\n  ", ""][i == 1] + requestConceptPartResult
 
                     i += 1
 
@@ -711,6 +711,14 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
                         querytext = querytext.replace("wd:Q%%concept%% .", "wd:" + concept + " .")
                 else:
                     querytext = querytext.replace("%%concept%%", concept)
+
+            if "partOf" in self.triplestoreconf[endpointIndex] and self.checkBoxPartOf.isChecked():
+                selectQuery = self.triplestoreconf[endpointIndex]["partOf"]["select"]
+                searchQuery = self.triplestoreconf[endpointIndex]["partOf"]["search"]
+
+                regRes = re.search(r"[\s\S]*SELECT.*?WHERE[\s\S]*?{([\s\S]*)(}[\s\S]*)", querytext)
+
+                querytext = "SELECT " + selectQuery + " WHERE {" + regRes.group(1) + searchQuery + "\n" + regRes.group(2)
 
             self.inp_sparql2.setPlainText(querytext)
             self.inp_sparql2.columnvars = {}

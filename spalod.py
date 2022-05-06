@@ -344,6 +344,7 @@ class SpaLOD:
         self.dlg.savedQueries.clear()
         self.dlg.concepts = []
 
+        self.dlg.checkBoxPartOf.setVisible("partOf" in self.triplestoreconf[endpointIndex])
 
         if "endpoint" in self.triplestoreconf[endpointIndex] and self.triplestoreconf[endpointIndex][
             "endpoint"] in self.savedQueriesJSON:
