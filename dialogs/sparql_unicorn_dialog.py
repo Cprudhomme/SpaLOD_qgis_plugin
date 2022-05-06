@@ -594,27 +594,28 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
             except Exception as e:
                 match = re.search(r"line:([0-9]+),", str(e))
                 match2 = re.search(r"col:([0-9]+),", str(e))
-                start = (
-                    int(match.group(1))
-                    - len(
-                        self.triplestoreconf[self.endpointCB.currentIndex()]["prefixes"]
+                if match != None:
+                    start = (
+                        int(match.group(1))
+                        - len(
+                            self.triplestoreconf[self.endpointCB.currentIndex()]["prefixes"]
+                        )
+                        - 1
                     )
-                    - 1
-                )
-                self.errorLabel.setText(
-                    re.sub("line:([0-9]+),", "line: " + str(start) + ",", str(e))
-                )
-                self.inp_sparql2.errorline = start - 1
-                if "line" in str(e):
-                    ex = str(e)
-                    start = ex.find("line:") + 5
-                    end = ex.find(",", start)
-                    start2 = ex.find("col:") + 4
-                    end2 = ex.find(")", start2)
-                    self.errorline = ex[start:end]
-                    self.sparqlhighlight.errorhighlightcol = ex[start2:end2]
-                    self.sparqlhighlight.errorhighlightline = self.errorline
-                    self.sparqlhighlight.currentline = 0
+                    self.errorLabel.setText(
+                        re.sub("line:([0-9]+),", "line: " + str(start) + ",", str(e))
+                    )
+                    self.inp_sparql2.errorline = start - 1
+                    if "line" in str(e):
+                        ex = str(e)
+                        start = ex.find("line:") + 5
+                        end = ex.find(",", start)
+                        start2 = ex.find("col:") + 4
+                        end2 = ex.find(")", start2)
+                        self.errorline = ex[start:end]
+                        self.sparqlhighlight.errorhighlightcol = ex[start2:end2]
+                        self.sparqlhighlight.errorhighlightline = self.errorline
+                        self.sparqlhighlight.currentline = 0
 
     ##
     # The loadQueryFunc allows users to load their previously saved queries in the Qgis Plugin.
@@ -631,11 +632,10 @@ class SPARQLunicornDialog(QtWidgets.QMainWindow, FORM_CLASS):
             )
 
     def viewselectaction(self, selected=None, deselected=None):
-
         endpointIndex = self.endpointCB.currentIndex()
-        if endpointIndex == 0:
-            self.justloadingfromfile = False
-            return
+        # if endpointIndex == 0:
+        #     self.justloadingfromfile = False
+        #     return
         concept = ""
         curindex = self.proxyModel.mapToSource(
             self.geoTreeView.selectionModel().currentIndex()

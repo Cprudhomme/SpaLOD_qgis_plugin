@@ -280,7 +280,6 @@ class SpaLOD:
     #  @param getlabels indicates whether to also query labels for the returned geoconcepts
     def getGeoConcepts(self, triplestoreurl, query, queryvar, graph, getlabels, examplequery):
         viewlist = []
-        resultlist = []
         if graph != None:
             results = graph.query(query)
             self.dlg.autocomplete["completerClassList"] = {}
@@ -294,8 +293,12 @@ class SpaLOD:
                                           query, self.triplestoreconf[self.dlg.endpointCB.currentIndex()],
                                           self.dlg.inp_sparql2, queryvar, getlabels, self.dlg.layercount,
                                           self.dlg.geoTreeViewModel, examplequery, self.dlg.geoTreeView,
-                                          self.dlg.autocomplete, self.dlg)
+                                          self.dlg.autocomplete, self.dlg, onFinished=self.onFinished)
         QgsApplication.taskManager().addTask(self.qtask)
+
+    def onFinished(self):
+        self.dlg.geoTreeView.selectionModel().setCurrentIndex(self.dlg.geoTreeView.model().index(0, 0), QItemSelectionModel.SelectCurrent)
+        self.dlg.viewselectaction()
 
     def getGeoCollectionInstances(self, triplestoreurl, query, queryvar, graph, featureOrGeoCollection, examplequery):
         viewlist = []
@@ -387,8 +390,8 @@ class SpaLOD:
             # self.dlg.inp_sparql2.updateNewClassList()
 
             if len(conceptlist) > 0:
-                self.dlg.geoTreeView.selectionModel().setCurrentIndex(self.dlg.geoTreeView.model().index(0, 0),
-                                                                       QItemSelectionModel.SelectCurrent)
+                self.dlg.geoTreeView.selectionModel().setCurrentIndex(self.dlg.geoTreeView.model().index(0, 0), QItemSelectionModel.SelectCurrent)
+                self.dlg.viewselectaction()
 
             if "examplequery" in self.triplestoreconf[endpointIndex]:
                 self.dlg.inp_sparql2.setPlainText(self.triplestoreconf[endpointIndex]["examplequery"])

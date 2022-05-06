@@ -1,15 +1,4 @@
-[{
-        "name": "File",
-        "prefixes": "",
-        "endpoint": "",
-        "geoconceptquery": "SELECT DISTINCT ?class (count(?class) as ?count) WHERE { ?a rdf:type ?class . ?a <http://www.opengis.net/ont/geosparql#hasGeometry> ?a_geom .}",
-        "querytemplate": [{
-            "label": "All Attributes",
-            "query": "SELECT DISTINCT ?item ?rel ?val ?wkt WHERE {\n ?item rdf:type <%%concept%%> .\n ?item ?rel ?val . \n OPTIONAL { ?val geo:asWKT ?wkt}\n}\n"
-        }],
-        "mandatoryvariables": [],
-        "active": true
-    },
+[
     {
         "name": "Atlantgis",
         "prefixes": {
