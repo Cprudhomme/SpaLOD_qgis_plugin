@@ -488,7 +488,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        </div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        self.checkBoxPartOf.clicked.connect(self.viewselectaction)</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        self.concepts = []</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
 </div><!-- fragment -->
@@ -753,35 +753,35 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    <span class="keyword">def </span><a class="code" href="a00129.html#ad83f7ca03ce1e9b8dbe51a33bac5334f">buildSearchDialog</a>(</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        self,</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        row,</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        column,</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        interlinkOrEnrich,</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        table,</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        propOrClass,</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        bothOptions=False,</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        currentprefixes=None,</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        addVocabConf=None,</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    ):</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        self.currentcol = column</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        self.currentrow = row</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        self.interlinkdialog = SearchDialog(</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;            column,</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;            row,</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;            self.triplestoreconf,</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;            self.prefixes,</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;            interlinkOrEnrich,</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;            table,</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            propOrClass,</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;            bothOptions,</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            currentprefixes,</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            addVocabConf,</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        )</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        self.interlinkdialog.setMinimumSize(650, 400)</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        self.interlinkdialog.setWindowTitle(<span class="stringliteral">&quot;Search Interlink Concept&quot;</span>)</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;        self.interlinkdialog.exec_()</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160; </div>
+<div class="fragment"><div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keyword">def </span><a class="code" href="a00129.html#ad83f7ca03ce1e9b8dbe51a33bac5334f">buildSearchDialog</a>(</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        self,</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        row,</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        column,</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        interlinkOrEnrich,</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        table,</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        propOrClass,</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        bothOptions=False,</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        currentprefixes=None,</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;        addVocabConf=None,</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    ):</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        self.currentcol = column</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        self.currentrow = row</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        self.interlinkdialog = SearchDialog(</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            column,</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            row,</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            self.triplestoreconf,</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            self.prefixes,</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            interlinkOrEnrich,</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;            table,</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;            propOrClass,</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            bothOptions,</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;            currentprefixes,</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;            addVocabConf,</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        )</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        self.interlinkdialog.setMinimumSize(650, 400)</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        self.interlinkdialog.setWindowTitle(<span class="stringliteral">&quot;Search Interlink Concept&quot;</span>)</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        self.interlinkdialog.exec_()</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="a00213.html#a0229f67169973a11be67544cdfa9e80f">SPARQLunicornDialog.createEnrichSearchDialog()</a>, <a class="el" href="a00213.html#af7775dd5ac22ed3a6f37edb833097f41">SPARQLunicornDialog.createEnrichSearchDialogProp()</a>, <a class="el" href="a00213.html#aabb28be67cbf74b09579fbe0038b819e">SPARQLunicornDialog.createInterlinkSearchDialog()</a>, <a class="el" href="a00241.html#a0e48a906160218f92fdfa0e1cb3aed8f">EnrichmentDialog.createValueMappingSearchDialog()</a>, and <a class="el" href="a00321.html#aaf7224b03642e3cfe85bd396f1f4b08f">ToolTipPlainText.keyPressEvent()</a>.</p>
 
@@ -810,12 +810,12 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="keyword">def </span>getPointFromCanvas(self):</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        self.d = BBOXDialog(</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;            self.inp_sparql2, self.triplestoreconf, self.endpointCB.currentIndex()</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        )</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        self.d.setWindowTitle(<span class="stringliteral">&quot;Choose BoundingBox&quot;</span>)</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        self.d.exec_()</div>
+<div class="fragment"><div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;    <span class="keyword">def </span>getPointFromCanvas(self):</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;        self.d = BBOXDialog(</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            self.inp_sparql2, self.triplestoreconf, self.endpointCB.currentIndex()</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        )</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        self.d.setWindowTitle(<span class="stringliteral">&quot;Choose BoundingBox&quot;</span>)</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        self.d.exec_()</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -881,21 +881,21 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keyword">def </span>loadUnicornLayers(self):</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        layers = QgsProject.instance().layerTreeRoot().children()</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        <span class="comment"># Populate the comboBox with names of all the loaded unicorn layers</span></div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        self.loadedLayers.clear()</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        <span class="comment"># self.chooseLayerInterlink.clear()</span></div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;        <span class="comment"># self.chooseLayerEnrich.clear()</span></div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;        <span class="keywordflow">for</span> layer <span class="keywordflow">in</span> layers:</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            ucl = layer.name()</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            <span class="comment"># if type(layer) == QgsMapLayer.VectorLayer:</span></div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            self.loadedLayers.addItem(layer.name())</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;            <span class="comment"># self.chooseLayerInterlink.addItem(layer.name())</span></div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;            <span class="comment"># self.chooseLayerEnrich.addItem(layer.name())</span></div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        </div>
+<div class="fragment"><div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    <span class="keyword">def </span>loadUnicornLayers(self):</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        layers = QgsProject.instance().layerTreeRoot().children()</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        <span class="comment"># Populate the comboBox with names of all the loaded unicorn layers</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        self.loadedLayers.clear()</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        <span class="comment"># self.chooseLayerInterlink.clear()</span></div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        <span class="comment"># self.chooseLayerEnrich.clear()</span></div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">for</span> layer <span class="keywordflow">in</span> layers:</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;            ucl = layer.name()</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;            <span class="comment"># if type(layer) == QgsMapLayer.VectorLayer:</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            self.loadedLayers.addItem(layer.name())</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            <span class="comment"># self.chooseLayerInterlink.addItem(layer.name())</span></div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;            <span class="comment"># self.chooseLayerEnrich.addItem(layer.name())</span></div>
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160; </div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -924,13 +924,13 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keyword">def </span>onContext(self, position):</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        menu = QMenu(<span class="stringliteral">&quot;Menu&quot;</span>, self.geoTreeView)</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        action = QAction(<span class="stringliteral">&quot;Open in Webbrowser&quot;</span>)</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        menu.addAction(action)</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        action.triggered.connect(self.openURL)</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        menu.exec_(self.geoTreeView.viewport().mapToGlobal(position))</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="fragment"><div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keyword">def </span>onContext(self, position):</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        menu = QMenu(<span class="stringliteral">&quot;Menu&quot;</span>, self.geoTreeView)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        action = QAction(<span class="stringliteral">&quot;Open in Webbrowser&quot;</span>)</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        menu.addAction(action)</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        action.triggered.connect(self.openURL)</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        menu.exec_(self.geoTreeView.viewport().mapToGlobal(position))</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="a00209.html#aa050210d902e2c6b62a25f53b04e998c">SPARQLunicornDialog.openURL()</a>.</p>
 
@@ -951,14 +951,14 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    <span class="keyword">def </span>openURL(self):</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        curindex = self.proxyModel.mapToSource(</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;            self.geoTreeView.selectionModel().currentIndex()</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        )</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        concept = self.geoTreeViewModel.itemFromIndex(curindex).data(2)</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        url = QUrl(concept)</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        QDesktopServices.openUrl(url)</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
+<div class="fragment"><div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="keyword">def </span>openURL(self):</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        curindex = self.proxyModel.mapToSource(</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;            self.geoTreeView.selectionModel().currentIndex()</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        )</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        concept = self.geoTreeViewModel.itemFromIndex(curindex).data(2)</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        url = QUrl(concept)</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        QDesktopServices.openUrl(url)</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="a00209.html#ac718e6195097812dffa9cfd2407131ad">SPARQLunicornDialog.geoTreeViewModel</a>, and <a class="el" href="a00209.html#a5e50e135cdd6239342d6d2c080e43542">SPARQLunicornDialog.proxyModel</a>.</p>
 
@@ -1204,9 +1204,9 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;                        requestConceptPartResult = requestConceptPart.replace(<span class="stringliteral">&quot;%%concept%%&quot;</span>, concept)</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                    <span class="keywordflow">if</span> i == 0:</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;                        result += requestConceptPartResult + <span class="stringliteral">&quot; } \nUNION {\n&quot;</span></div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;                        result += requestConceptPartResult + <span class="stringliteral">&quot; } \nUNION {\n  &quot;</span></div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;                    <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                        result += requestConceptPartResult</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                        result += [<span class="stringliteral">&quot;\n  &quot;</span>, <span class="stringliteral">&quot;&quot;</span>][i == 1] + requestConceptPartResult</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                    i += 1</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160; </div>
@@ -1220,38 +1220,46 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;                <span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;                    querytext = querytext.replace(<span class="stringliteral">&quot;%%concept%%&quot;</span>, concept)</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160; </div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            self.inp_sparql2.setPlainText(querytext)</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            self.inp_sparql2.columnvars = {}</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        </div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        <span class="keywordflow">if</span> (</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;            self.geoTreeView.selectionModel().currentIndex() <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;            <span class="keywordflow">and</span> self.geoTreeViewModel.itemFromIndex(curindex) <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;            <span class="keywordflow">and</span> <span class="stringliteral">&quot;#&quot;</span> <span class="keywordflow">in</span> self.geoTreeViewModel.itemFromIndex(curindex).text()</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        ):</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;            self.inp_label.setText(</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;                self.geoTreeViewModel.itemFromIndex(curindex)</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                .text()[</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                    self.geoTreeViewModel.itemFromIndex(curindex).text().rfind(<span class="stringliteral">&quot;#&quot;</span>)</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                    + 1 :</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                ]</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;                .lower()</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;                .replace(<span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;_&quot;</span>)</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            )</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        <span class="keywordflow">elif</span> (</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            self.geoTreeView.selectionModel().currentIndex() <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;            <span class="keywordflow">and</span> self.geoTreeViewModel.itemFromIndex(curindex) <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        ):</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;            self.inp_label.setText(</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                self.geoTreeViewModel.itemFromIndex(curindex)</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;                .text()[</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;                    self.geoTreeViewModel.itemFromIndex(curindex).text().rfind(<span class="stringliteral">&quot;/&quot;</span>)</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;                    + 1 :</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;                ]</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                .lower()</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                .replace(<span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;_&quot;</span>)</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;            )</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160; </div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            <span class="keywordflow">if</span> <span class="stringliteral">&quot;partOf&quot;</span> <span class="keywordflow">in</span> self.triplestoreconf[endpointIndex] <span class="keywordflow">and</span> self.checkBoxPartOf.isChecked():</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;                selectQuery = self.triplestoreconf[endpointIndex][<span class="stringliteral">&quot;partOf&quot;</span>][<span class="stringliteral">&quot;select&quot;</span>]</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                searchQuery = self.triplestoreconf[endpointIndex][<span class="stringliteral">&quot;partOf&quot;</span>][<span class="stringliteral">&quot;search&quot;</span>]</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;                regRes = re.search(<span class="stringliteral">r&quot;[\s\S]*SELECT.*?WHERE[\s\S]*?{([\s\S]*)(}[\s\S]*)&quot;</span>, querytext)</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;                querytext = <span class="stringliteral">&quot;SELECT &quot;</span> + selectQuery + <span class="stringliteral">&quot; WHERE {&quot;</span> + regRes.group(1) + searchQuery + <span class="stringliteral">&quot;\n&quot;</span> + regRes.group(2)</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;            self.inp_sparql2.setPlainText(querytext)</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            self.inp_sparql2.columnvars = {}</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <span class="keywordflow">if</span> (</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;            self.geoTreeView.selectionModel().currentIndex() <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;            <span class="keywordflow">and</span> self.geoTreeViewModel.itemFromIndex(curindex) <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            <span class="keywordflow">and</span> <span class="stringliteral">&quot;#&quot;</span> <span class="keywordflow">in</span> self.geoTreeViewModel.itemFromIndex(curindex).text()</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        ):</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            self.inp_label.setText(</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;                self.geoTreeViewModel.itemFromIndex(curindex)</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;                .text()[</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;                    self.geoTreeViewModel.itemFromIndex(curindex).text().rfind(<span class="stringliteral">&quot;#&quot;</span>)</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                    + 1 :</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;                ]</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                .lower()</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                .replace(<span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;_&quot;</span>)</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;            )</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <span class="keywordflow">elif</span> (</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;            self.geoTreeView.selectionModel().currentIndex() <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            <span class="keywordflow">and</span> self.geoTreeViewModel.itemFromIndex(curindex) <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        ):</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;            self.inp_label.setText(</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                self.geoTreeViewModel.itemFromIndex(curindex)</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                .text()[</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                    self.geoTreeViewModel.itemFromIndex(curindex).text().rfind(<span class="stringliteral">&quot;/&quot;</span>)</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                    + 1 :</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                ]</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                .lower()</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;                .replace(<span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;_&quot;</span>)</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;            )</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="a00209.html#ae37688930e07800a0332ed7c0a3676e3">SPARQLunicornDialog.concepts</a>, <a class="el" href="a00147.html#a46979924d8c070886506e89bb37bffd2">SpaLOD_qgis_plugin.util.sparqlhighlighter.format()</a>, <a class="el" href="a00209.html#ac718e6195097812dffa9cfd2407131ad">SPARQLunicornDialog.geoTreeViewModel</a>, <a class="el" href="a00213.html#a0ab9869ce99f2eee80ea8d82f315e99a">SPARQLunicornDialog.inp_sparql2</a>, <a class="el" href="a00209.html#a5e50e135cdd6239342d6d2c080e43542">SPARQLunicornDialog.proxyModel</a>, <a class="el" href="a00177.html#a330d24be0afd5a96238ca9e128328a2d">ConvertCRSDialog.triplestoreconf</a>, <a class="el" href="a00197.html#a330d24be0afd5a96238ca9e128328a2d">LoadGraphDialog.triplestoreconf</a>, <a class="el" href="a00205.html#aafcf1146e38f7f4733cbf5dc6a6fb147">SearchDialog.triplestoreconf</a>, <a class="el" href="a00181.html#a330d24be0afd5a96238ca9e128328a2d">EnrichmentMainWindow.triplestoreconf</a>, <a class="el" href="a00193.html#a330d24be0afd5a96238ca9e128328a2d">InterlinkMainWindow.triplestoreconf</a>, <a class="el" href="a00173.html#a330d24be0afd5a96238ca9e128328a2d">BBOXDialog.triplestoreconf</a>, <a class="el" href="a00161.html#a330d24be0afd5a96238ca9e128328a2d">SpaLOD.triplestoreconf</a>, and <a class="el" href="a00209.html#a330d24be0afd5a96238ca9e128328a2d">SPARQLunicornDialog.triplestoreconf</a>.</p>
 
