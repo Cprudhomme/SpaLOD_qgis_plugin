@@ -1,6 +1,6 @@
 var a00047 =
 [
-    [ "TripleStoreDialog", "a00209.html", "a00209" ],
+    [ "TripleStoreDialog", "a00217.html", "a00217" ],
     [ "addNewSPARQLEndpoint", "a00047.html#a629e7c80cc0c5352fd4e73ed5a9d68a2", null ],
     [ "addPrefixToList", "a00047.html#ac244745c0d73ecdf6ee46057957b1e44", null ],
     [ "applyCustomSPARQLEndPoint", "a00047.html#a32cbb4ef1955d5385119aa80a9ba2618", null ],

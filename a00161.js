@@ -13,6 +13,7 @@ var a00161 =
     [ "initGui", "a00161.html#a6a9077c9bcb6838602c2d40d62d8fa3a", null ],
     [ "layerToTTLString", "a00161.html#ab229514567f36a825b2756e65973c3c7", null ],
     [ "matchColumnValueFromTripleStore", "a00161.html#a4a1fa7bee96d55e0146bf3858bd9e340", null ],
+    [ "onFinished", "a00161.html#af96b1b15af00189d23c14b01ee70b7c3", null ],
     [ "resetTripleStoreConfig", "a00161.html#aa36b714ac179f155426d67a231ee0906", null ],
     [ "run", "a00161.html#ad22709b2e67308af35f55680d5a026e0", null ],
     [ "saveTripleStoreConfig", "a00161.html#a56dd7c70176958e0d40c28dd37937097", null ],

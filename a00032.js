@@ -1,6 +1,6 @@
 var a00032 =
 [
-    [ "LoadGraphDialog", "a00189.html", "a00189" ],
+    [ "LoadGraphDialog", "a00197.html", "a00197" ],
     [ "check_state", "a00032.html#ae7e886b119d3b298e474e5af6d64e119", null ],
     [ "check_state1", "a00032.html#a273a950c3fae36671e072542800fef3a", null ],
     [ "loadFile", "a00032.html#a050d681aa25de7931dde1cbba148e4db", null ],

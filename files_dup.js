@@ -1,9 +1,9 @@
 var files_dup =
 [
     [ "__init__.py", "a00002.html", "a00002" ],
-    [ "dialogs/__init__.py", "a00834.html", null ],
-    [ "tasks/__init__.py", "a00837.html", null ],
-    [ "util/__init__.py", "a00840.html", null ],
+    [ "dialogs/__init__.py", "a00854.html", null ],
+    [ "tasks/__init__.py", "a00857.html", null ],
+    [ "util/__init__.py", "a00860.html", null ],
     [ "bboxdialog.py", "a00020.html", "a00020" ],
     [ "convertcrsdialog.py", "a00023.html", "a00023" ],
     [ "convertcrstask.py", "a00068.html", "a00068" ],
@@ -23,9 +23,9 @@ var files_dup =
     [ "loadgraphtask.py", "a00083.html", "a00083" ],
     [ "loginwindowdialog.py", "a00035.html", "a00035" ],
     [ "mappingtools.py", "a00098.html", [
-      [ "CircleMapTool", "a00277.html", "a00277" ],
-      [ "PolygonMapTool", "a00281.html", "a00281" ],
-      [ "RectangleMapTool", "a00285.html", "a00285" ]
+      [ "CircleMapTool", "a00285.html", "a00285" ],
+      [ "PolygonMapTool", "a00289.html", "a00289" ],
+      [ "RectangleMapTool", "a00293.html", "a00293" ]
     ] ],
     [ "oauth.py", "a00101.html", "a00101" ],
     [ "plugin_upload.py", "a00011.html", "a00011" ],
@@ -39,9 +39,9 @@ var files_dup =
     [ "sparqlhighlighter.py", "a00104.html", "a00104" ],
     [ "subclassquerytask.py", "a00092.html", "a00092" ],
     [ "tooltipplaintext.py", "a00107.html", [
-      [ "SPARQLCompleter", "a00305.html", "a00305" ],
-      [ "LineNumberArea", "a00309.html", "a00309" ],
-      [ "ToolTipPlainText", "a00313.html", "a00313" ]
+      [ "SPARQLCompleter", "a00313.html", "a00313" ],
+      [ "LineNumberArea", "a00317.html", "a00317" ],
+      [ "ToolTipPlainText", "a00321.html", "a00321" ]
     ] ],
     [ "triplestoredialog.py", "a00047.html", "a00047" ],
     [ "triplestorequickadddialog.py", "a00050.html", "a00050" ],

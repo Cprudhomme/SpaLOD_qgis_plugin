@@ -1,5 +1,5 @@
-<map id="WarningLayerDlg" name="WarningLayerDlg">
-<area shape="rect" id="node1" title="The WarningLayerDlg class contains the warning layer dialogs variables and methodes @Antoine." alt="" coords="35,80,168,107"/>
+<map id="ValueMappingDialog" name="ValueMappingDialog">
+<area shape="rect" id="node1" title="The ValueMappingDialog class contains all the variables and methods for the value mapping dialog @Ant..." alt="" coords="23,80,179,107"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,80,32"/>
-<area shape="rect" id="node3" href="$a00829.html" title=" " alt="" coords="105,5,215,32"/>
+<area shape="rect" id="node3" href="$a00849.html" title=" " alt="" coords="105,5,215,32"/>
 </map>

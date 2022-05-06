@@ -1,6 +1,6 @@
 var a00056 =
 [
-    [ "ValueMappingDialog", "a00221.html", "a00221" ],
+    [ "ValueMappingDialog", "a00229.html", "a00229" ],
     [ "addMappingToTable", "a00056.html#ae1ee46438aba0b78f81aee194b064153", null ],
     [ "applyMapping", "a00056.html#ab37816dd7f07d48ba3c3b4cc8f1225b6", null ],
     [ "buildSearchDialog", "a00056.html#ad83f7ca03ce1e9b8dbe51a33bac5334f", null ],
