@@ -110,6 +110,10 @@ class SpaLOD:
             application at run time.
         :type iface: QgsInterface
         """
+        import os, ssl
+        if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+            getattr(ssl, '_create_unverified_context', None)):
+            ssl._create_default_https_context = ssl._create_unverified_context
 
         # Save reference to the QGIS interface
         self.iface = iface
@@ -190,7 +194,7 @@ class SpaLOD:
         # a = str('numpy' in sys.modules)
         # iface.messageBar().pushMessage("load libs", a, level=Qgis.Success)
 
-        icon_path = ':/plugins/sparql_unicorn/icon.png'
+        icon_path = os.path.join(os.path.dirname(__file__), "icon.png")
         self.add_action(
             icon_path,
             text=self.tr(u'Adds GeoJSON layer from a Wikidata'),
@@ -276,7 +280,6 @@ class SpaLOD:
     #  @param getlabels indicates whether to also query labels for the returned geoconcepts
     def getGeoConcepts(self, triplestoreurl, query, queryvar, graph, getlabels, examplequery):
         viewlist = []
-        resultlist = []
         if graph != None:
             results = graph.query(query)
             self.dlg.autocomplete["completerClassList"] = {}
@@ -290,8 +293,12 @@ class SpaLOD:
                                           query, self.triplestoreconf[self.dlg.endpointCB.currentIndex()],
                                           self.dlg.inp_sparql2, queryvar, getlabels, self.dlg.layercount,
                                           self.dlg.geoTreeViewModel, examplequery, self.dlg.geoTreeView,
-                                          self.dlg.autocomplete, self.dlg)
+                                          self.dlg.autocomplete, self.dlg, onFinished=self.onFinished)
         QgsApplication.taskManager().addTask(self.qtask)
+
+    def onFinished(self):
+        self.dlg.geoTreeView.selectionModel().setCurrentIndex(self.dlg.geoTreeView.model().index(0, 0), QItemSelectionModel.SelectCurrent)
+        self.dlg.viewselectaction()
 
     def getGeoCollectionInstances(self, triplestoreurl, query, queryvar, graph, featureOrGeoCollection, examplequery):
         viewlist = []
@@ -335,7 +342,10 @@ class SpaLOD:
         conceptlist = []
         self.dlg.geoTreeViewModel.clear()
         self.dlg.savedQueries.clear()
+        self.dlg.concepts = []
 
+        self.dlg.checkBoxPartOf.setVisible("partOf" in self.triplestoreconf[endpointIndex])
+        self.dlg.bboxButton.setVisible("bboxquery" in self.triplestoreconf[endpointIndex] and self.triplestoreconf[endpointIndex]["bboxquery"]["type"] != "pointdistance")
 
         if "endpoint" in self.triplestoreconf[endpointIndex] and self.triplestoreconf[endpointIndex][
             "endpoint"] in self.savedQueriesJSON:
@@ -375,15 +385,15 @@ class SpaLOD:
 
             for concept in conceptlist:
                 item = QStandardItem()
-                item.setData(concept, 1)
+                item.setData(concept)
                 item.setText(concept[concept.rfind('/') + 1:])
                 self.dlg.autocomplete["completerClassList"][concept[concept.rfind('/') + 1:]] = "<" + concept + ">"
                 self.dlg.geoTreeViewModel.appendRow(item)
             # self.dlg.inp_sparql2.updateNewClassList()
 
             if len(conceptlist) > 0:
-                self.dlg.geoTreeView.selectionModel().setCurrentIndex(self.dlg.geoTreeView.model().index(0, 0),
-                                                                       QItemSelectionModel.SelectCurrent)
+                self.dlg.geoTreeView.selectionModel().setCurrentIndex(self.dlg.geoTreeView.model().index(0, 0), QItemSelectionModel.SelectCurrent)
+                self.dlg.viewselectaction()
 
             if "examplequery" in self.triplestoreconf[endpointIndex]:
                 self.dlg.inp_sparql2.setPlainText(self.triplestoreconf[endpointIndex]["examplequery"])

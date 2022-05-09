@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>679</width>
+    <width>779</width>
     <height>539</height>
    </rect>
   </property>
@@ -18,6 +18,18 @@
 background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795455 rgba(0, 57, 70, 255), stop:0.5625 rgba(0, 85, 104, 255), stop:0.954545 rgba(0, 107, 131, 255));}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_4">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item row="0" column="0">
     <widget class="QFrame" name="frame">
      <property name="minimumSize">
@@ -28,9 +40,9 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0795
      </property>
      <property name="styleSheet">
       <string notr="true">QObject#frame{
-	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0113636 rgba(113, 181, 190, 255));
+	background-color:rgb(200, 201, 219);
 	
-border-radius:20px;}
+}
 </string>
      </property>
      <property name="frameShape">
@@ -40,6 +52,18 @@ border-radius:20px;}
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_5">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
       <item row="0" column="0" rowspan="2">
        <widget class="QWidget" name="widget_3" native="true">
         <property name="maximumSize">
@@ -55,20 +79,19 @@ border-radius:20px;}
             <widget class="QLabel" name="conceptSearchLabel">
              <property name="minimumSize">
               <size>
-               <width>111</width>
+               <width>150</width>
                <height>17</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>111</width>
-               <height>17</height>
+               <width>9999</width>
+               <height>99</height>
               </size>
              </property>
              <property name="font">
               <font>
                <pointsize>9</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -84,7 +107,7 @@ border-radius:20px;}
             <widget class="QLineEdit" name="conceptSearchEdit">
              <property name="minimumSize">
               <size>
-               <width>251</width>
+               <width>0</width>
                <height>25</height>
               </size>
              </property>
@@ -113,14 +136,13 @@ border-color:rgb(45, 45, 45);</string>
              </property>
              <property name="maximumSize">
               <size>
-               <width>83</width>
+               <width>999</width>
                <height>25</height>
               </size>
              </property>
              <property name="font">
               <font>
                <pointsize>9</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -145,20 +167,19 @@ color: rgb(255, 255, 255);</string>
             <widget class="QLabel" name="tripleStoreLabel">
              <property name="minimumSize">
               <size>
-               <width>111</width>
+               <width>150</width>
                <height>17</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>111</width>
-               <height>17</height>
+               <width>9999</width>
+               <height>99</height>
               </size>
              </property>
              <property name="font">
               <font>
                <pointsize>9</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -172,15 +193,21 @@ color: rgb(255, 255, 255);</string>
            </item>
            <item>
             <widget class="QComboBox" name="tripleStoreEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
-               <width>251</width>
+               <width>0</width>
                <height>25</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>251</width>
+               <width>999</width>
                <height>25</height>
               </size>
              </property>
@@ -200,19 +227,6 @@ selection-color:rgb(0, 81, 135);</string>
              </property>
             </widget>
            </item>
-           <item>
-            <spacer name="horizontalSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
           </layout>
          </item>
          <item row="2" column="0">
@@ -221,20 +235,19 @@ selection-color:rgb(0, 81, 135);</string>
             <widget class="QLabel" name="costumpropertyLabel">
              <property name="minimumSize">
               <size>
-               <width>131</width>
+               <width>150</width>
                <height>20</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>131</width>
-               <height>20</height>
+               <width>9999</width>
+               <height>99</height>
               </size>
              </property>
              <property name="font">
               <font>
                <pointsize>9</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -250,7 +263,7 @@ selection-color:rgb(0, 81, 135);</string>
             <widget class="QLineEdit" name="costumproperty">
              <property name="minimumSize">
               <size>
-               <width>251</width>
+               <width>0</width>
                <height>25</height>
               </size>
              </property>
@@ -279,14 +292,13 @@ border-color:rgb(45, 45, 45);</string>
              </property>
              <property name="maximumSize">
               <size>
-               <width>101</width>
+               <width>999</width>
                <height>25</height>
               </size>
              </property>
              <property name="font">
               <font>
                <pointsize>9</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -310,6 +322,12 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item row="0" column="1">
        <widget class="QWidget" name="widget_2" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>81</width>
@@ -318,7 +336,7 @@ color: rgb(255, 255, 255);</string>
         </property>
         <property name="maximumSize">
          <size>
-          <width>81</width>
+          <width>999</width>
           <height>70</height>
          </size>
         </property>
@@ -333,14 +351,13 @@ color: rgb(255, 255, 255);</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>106</width>
+             <width>999</width>
              <height>23</height>
             </size>
            </property>
            <property name="font">
             <font>
              <pointsize>9</pointsize>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -365,14 +382,13 @@ color: rgb(255, 255, 255);</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>106</width>
+             <width>999</width>
              <height>23</height>
             </size>
            </property>
            <property name="font">
             <font>
              <pointsize>9</pointsize>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -392,6 +408,12 @@ color: rgb(255, 255, 255);</string>
       </item>
       <item row="1" column="1">
        <widget class="QPushButton" name="applyButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>83</width>
@@ -401,7 +423,6 @@ color: rgb(255, 255, 255);</string>
         <property name="font">
          <font>
           <pointsize>9</pointsize>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -431,14 +452,13 @@ color: rgb(255, 255, 255);</string>
            </property>
            <property name="maximumSize">
             <size>
-             <width>121</width>
-             <height>20</height>
+             <width>999</width>
+             <height>99</height>
             </size>
            </property>
            <property name="font">
             <font>
              <pointsize>9</pointsize>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>

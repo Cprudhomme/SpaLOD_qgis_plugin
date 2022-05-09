@@ -60,16 +60,15 @@ class SearchDialog(QDialog, FORM_CLASS):
             self.findConcept.setChecked(True)
         if column == 4 or (not interlinkOrEnrich and column != 4) or (not interlinkOrEnrich and propOrClass):
             self.findProperty.setChecked(True)
-        if not bothOptions:
-            self.findProperty.setEnabled(False)
-            self.findConcept.setEnabled(False)
+        # if not bothOptions:
+        #     self.findProperty.setEnabled(False)
+        #     self.findConcept.setEnabled(False)
         for triplestore in self.triplestoreconf:
-            if not "File" == triplestore["name"]:
-                self.tripleStoreEdit.addItem(triplestore["name"])
+            self.tripleStoreEdit.addItem(triplestore["name"])
         if addVocab != None:
             for cov in addVocab:
                 self.tripleStoreEdit.addItem(addVocab[cov]["label"])
-        self.tripleStoreEdit.setCurrentIndex(2)
+        self.tripleStoreEdit.setCurrentIndex(1)
         #self.tripleStoreEdit.setEnabled(False)
         self.searchButton.clicked.connect(self.getClassesFromLabel)
         urlregex = QRegExp("http[s]?://(?:[a-zA-Z#]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+")
@@ -126,34 +125,23 @@ class SearchDialog(QDialog, FORM_CLASS):
         self.searchResult.clear()
         query = ""
         position = self.tripleStoreEdit.currentIndex()
-        if self.tripleStoreEdit.currentIndex() > len(self.triplestoreconf):
-            if self.findProperty.isChecked():
-                self.addVocab[self.addVocab.keys()[position - len(self.triplestoreconf)]]["source"]["properties"]
-                viewlist = {k: v for k, v in d.iteritems() if label in k}
-            else:
-                self.addVocab[self.addVocab.keys()[position - len(self.triplestoreconf)]]["source"]["classes"]
-                viewlist = {k: v for k, v in d.iteritems() if label in k}
-            for res in viewlist:
-                item = QListWidgetItem()
-                item.setData(1, val)
-                item.setText(key)
-                self.searchResult.addItem(item)
+        
+        if self.findProperty.isChecked():
+            if "propertyfromlabelquery" in self.triplestoreconf[self.tripleStoreEdit.currentIndex()]:
+                query = self.triplestoreconf[self.tripleStoreEdit.currentIndex()]["propertyfromlabelquery"].replace("%%label%%", label)
         else:
-            if self.findProperty.isChecked():
-                if "propertyfromlabelquery" in self.triplestoreconf[self.tripleStoreEdit.currentIndex() + 1]:
-                    query = self.triplestoreconf[self.tripleStoreEdit.currentIndex() + 1]["propertyfromlabelquery"].replace("%%label%%", label)
-            else:
-                if "classfromlabelquery" in self.triplestoreconf[self.tripleStoreEdit.currentIndex() + 1]:
-                    query = self.triplestoreconf[self.tripleStoreEdit.currentIndex() + 1]["classfromlabelquery"].replace("%%label%%", label)
-            if query == "":
-                msgBox = QMessageBox()
-                msgBox.setText("No search query specified for this triplestore")
-                msgBox.exec()
-                return
-            self.qtask=SearchTask("Searching classes/properties for "+label+" in "+self.triplestoreconf[self.tripleStoreEdit.currentIndex() + 1]["endpoint"],
-                            self.triplestoreconf[self.tripleStoreEdit.currentIndex() + 1]["endpoint"],
-               query,self.triplestoreconf,self.findProperty,self.tripleStoreEdit,self.searchResult,self.prefixes,label,language,None)
-            QgsApplication.taskManager().addTask(self.qtask)
+            if "classfromlabelquery" in self.triplestoreconf[self.tripleStoreEdit.currentIndex()]:
+                query = self.triplestoreconf[self.tripleStoreEdit.currentIndex()]["classfromlabelquery"].replace("%%label%%", label)
+        if query == "":
+            msgBox = QMessageBox()
+            msgBox.setText("No search query specified for this triplestore")
+            msgBox.exec()
+            return
+        self.qtask=SearchTask("Searching classes/properties for "+label+" in "+self.triplestoreconf[self.tripleStoreEdit.currentIndex()]["endpoint"],
+                        self.triplestoreconf[self.tripleStoreEdit.currentIndex()]["endpoint"],
+        query,self.triplestoreconf,self.findProperty,self.tripleStoreEdit,self.searchResult,self.prefixes,label,language,None)
+        QgsApplication.taskManager().addTask(self.qtask)
+
         return viewlist
 
     def applyConceptToColumn2(self):
@@ -198,7 +186,7 @@ class SearchDialog(QDialog, FORM_CLASS):
             else:
                 item2 = QTableWidgetItem()
                 item2.setText(self.tripleStoreEdit.currentText())
-                item2.setData(0, self.triplestoreconf[self.tripleStoreEdit.currentIndex() + 1]["endpoint"])
+                item2.setData(0, self.triplestoreconf[self.tripleStoreEdit.currentIndex()]["endpoint"])
                 self.table.setItem(self.currentrow, self.currentcol, item)
                 self.table.setItem(self.currentrow, (self.currentcol + 1), item2)
         self.close()

@@ -1,20 +1,9 @@
-[{
-        "name": "File",
-        "prefixes": "",
-        "endpoint": "",
-        "geoconceptquery": "SELECT DISTINCT ?class (count(?class) as ?count) WHERE { ?a rdf:type ?class . ?a <http://www.opengis.net/ont/geosparql#hasGeometry> ?a_geom .}",
-        "querytemplate": [{
-            "label": "All Attributes",
-            "query": "SELECT DISTINCT ?item ?rel ?val ?wkt WHERE {\n ?item rdf:type <%%concept%%> .\n ?item ?rel ?val . \n OPTIONAL { ?val geo:asWKT ?wkt}\n}\n"
-        }],
-        "mandatoryvariables": [],
-        "active": true
-    },
+[
     {
         "name": "Atlantgis",
         "prefixes": {
             "geosparql": "http://www.opengis.net/ont/geosparql#",
-            "atlantgis": "http://atlantgis.squirrel.link/ontology#",
+            "atlantgis": "http://atlantgis.squirrel.link/ontology/",
             "owl": "http://www.w3.org/2002/07/owl#",
             "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
             "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -37,14 +26,15 @@
             "query": "SELECT ?item ?geo WHERE {\n ?item geosparql:hasGeometry ?geom_obj .\n ?geom_obj geosparql:asWKT ?geo .\n }"
         }],
         "crs": 4326,
-        "staticconcepts": ["http://atlantgis.squirrel.link/ontology#ArchaeologicalSite",
-            "http://atlantgis.squirrel.link/ontology#CoastLine",
-            "http://atlantgis.squirrel.link/ontology#LandType",
-            "http://atlantgis.squirrel.link/ontology#Goldkupfererz",
-            "http://atlantgis.squirrel.link/ontology#Zinn",
-            "http://atlantgis.squirrel.link/ontology#Silber",
-            "http://atlantgis.squirrel.link/ontology#Stream",
-            "http://atlantgis.squirrel.link/ontology#Voronoi"
+        "staticconcepts": [
+            "http://atlantgis.squirrel.link/ontology/ArchaeologicalSite",
+            "http://atlantgis.squirrel.link/ontology/CoastLine",
+            "http://atlantgis.squirrel.link/ontology/LandType",
+            "http://atlantgis.squirrel.link/ontology/Goldkupfererz",
+            "http://atlantgis.squirrel.link/ontology/Zinn",
+            "http://atlantgis.squirrel.link/ontology/Silber",
+            "http://atlantgis.squirrel.link/ontology/Stream",
+            "http://atlantgis.squirrel.link/ontology/Voronoi"
         ],
         "active": true
     },
@@ -85,7 +75,8 @@
         "endpoint": "https://query.wikidata.org/sparql",
         "bboxquery": {
             "type": "minmax",
-            "query": "SERVICE wikibase:box {\n ?item wdt:P625 ?geo .\n bd:serviceParam wikibase:cornerSouthWest \"%%minPoint%%\"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .\nbd:serviceParam wikibase:cornerNorthEast \"%%maxPoint%%\"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .\n}\n }"
+            "queryTemplatePartToDelete": "?item wdt:P625 ?geo .",
+            "query": "SERVICE wikibase:box {\n ?item wdt:P625 ?geo .\n bd:serviceParam wikibase:cornerSouthWest \"%%minPoint%%\"^^geo:wktLiteral .\nbd:serviceParam wikibase:cornerNorthEast \"%%maxPoint%%\"^^geo:wktLiteral .\n}\n }"
         },
         "mandatoryvariables": ["item", "geo"],
 		"featurecollectionclasses":["http://www.opengis.net/ont/geosparql#FeatureCollection"],
@@ -120,7 +111,11 @@
         "whattoenrichquery": "SELECT (COUNT(distinct ?con) AS ?countcon) (COUNT(?rel) AS ?countrel) ?rel WHERE { ?con wdt:P31 %%concept%% . ?con wdt:P625 ?coord . ?con wdt:P17  %%area%% . ?con ?rel ?val . } GROUP BY ?rel ORDER BY DESC(?countrel)",
         "geoconceptlimit": 500,
         "staticconcepts": [],
-        "active": true
+        "active": true,
+        "partOf": {
+            "select": "?item ?itemLabel ?geo ?part ?partLabel",
+            "search": "optional { ?part wdt:P361 ?item. }."
+        }
     },
     {
         "name": "Ordnance Survey UK",
@@ -131,7 +126,7 @@
             "spatial": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/",
             "gaz": "http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
         },
-        "endpoint": "http://data.ordnancesurvey.co.uk/datasets/os-linked-data/apis/sparql",
+        "endpoint": "https://data.ordnancesurvey.co.uk/datasets/os-linked-data/apis/sparql",
         "classfromlabelquery": "SELECT DISTINCT ?class { ?class rdf:type owl:Class . ?class rdfs:label ?label . FILTER(CONTAINS(?label,\"%%label%%\"))} LIMIT 100 ",
         "mandatoryvariables": ["item", "easting", "northing"],
 		"featurecollectionclasses":["http://www.opengis.net/ont/geosparql#FeatureCollection"],
@@ -193,7 +188,7 @@
         "staticconcepts": ["http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing", "http://www.w3.org/2004/02/skos/core#Concept", "http://nomisma.org/ontology#Mint", "http://nomisma.org/ontology#Region"],
         "bboxquery": {
             "type": "pointdistance",
-            "query": "?loc spatial:nearby (%%lat%% %%lon%% %%width%% 'km') ."
+            "query": "?loc spatial:nearby (%%lat%% %%lon%% %%distance%% 'km') ."
         },
         "active": true
     },
@@ -278,7 +273,7 @@
         "staticconcepts": [],
         "bboxquery": {
             "type": "pointdistance",
-            "query": "Filter(bif:st_intersects (?geo, bif:st_point (%%lat%%,%%lon%%),%%width%%))"
+            "query": "Filter(bif:st_intersects (?geo, bif:st_point (%%lat%%,%%lon%%),%%distance%%))"
         },
         "active": true
     },
@@ -293,7 +288,8 @@
             "ogc": "http://www.opengis.net/ont/geosparql#",
             "owl": "http://www.w3.org/2002/07/owl#",
             "lgdo": "http://linkedgeodata.org/ontology/",
-            "wgs84_pos": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+            "wgs84_pos": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+            "dul": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
         },
         "endpoint": "http://dbpedia.org/sparql",
         "mandatoryvariables": ["item", "lat", "lon"],
@@ -313,15 +309,19 @@
         "staticconcepts": [],
         "bboxquery": {
             "type": "pointdistance",
-            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%width%%))"
+            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%distance%%))"
         },
-        "active": true
+        "active": true,
+        "partOf": {
+            "select": "?item ?lat ?lon ?part",
+            "search": "optional { ?part dbo:isPartOf ?item. }."
+        }
     },
     {
         "name": "Geonames",
         "bboxquery": {
             "type": "pointdistance",
-            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%width%%))"
+            "query": "FILTER(bif:st_within(bif:st_point(?lon, ?lat), bif:st_point(%%lon%%,%%lat%%),%%distance%%))"
         },
         "prefixes": {
             "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -333,21 +333,20 @@
             "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
             "wgs84_pos": "http://www.w3.org/2003/01/geo/wgs84_pos#"
         },
-        "endpoint": "http://factforge.net/repositories/ff-news",
+        "endpoint": "http://linkeddata.fh-htwchur.ch/lodestar/servlet/query",
         "classfromlabelquery": "SELECT DISTINCT ?class { ?class rdf:type owl:Class . ?class rdfs:label ?label . FILTER(CONTAINS(?label,\"%%label%%\"))} LIMIT 100 ",
         "mandatoryvariables": ["item", "lat", "lon"],
         "featurecollectionclasses":["http://www.opengis.net/ont/geosparql#FeatureCollection"],
         "geometrycollectionclasses":["http://www.opengis.net/ont/geosparql#GeometryCollection"],
-		"geoconceptquery": "SELECT DISTINCT ?class WHERE { ?a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?class . ?a <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat . ?a <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long .} LIMIT 100",
+		"geoconceptquery": "SELECT DISTINCT ?class WHERE { ?a <http://www.geonames.org/ontology#featureCode> ?class . ?a <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat . ?a <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long .} LIMIT 100",
         "querytemplate": [{
+            "label": "Item+Label",
+            "query": "SELECT ?item ?lat ?lon WHERE {\n ?item a gn:Feature.\n ?item gn:featureCode <%%concept%%> .\n ?item wgs84_pos:lat ?lat .\n ?item wgs84_pos:long ?lon .\n } LIMIT 10"
+        }, {
             "label": "All Attributes",
             "query": "SELECT ?item ?lat ?lon WHERE {\n ?item a gn:Feature .\n ?item wgs84_pos:lat ?lat .\n ?item wgs84_pos:long ?lon .\n } LIMIT 10"
-        }, {
-            "label": "Item+Label",
-            "query": "SELECT ?item ?lat ?lon WHERE {\n ?item a gn:Feature.\n ?item gn:featureCode gn:%%concept%% .\n ?item wgs84_pos:lat ?lat .\n ?item wgs84_pos:long ?lon .\n } LIMIT 10"
         }],
         "geoconceptlimit": 500,
-        "staticconcepts": ["ADM1", "ADM1H", "ADM2", "ADM2H", "ADM3", "ADM3H", "ADM4", "ADM4H", "ADM5", "ADM5H", "ADMD", "ADMDH", "ADMF", "AGRC", "AGRF", "AIRB", "AIRF", "AIRH", "AIRP", "AIRQ", "AIRS", "AIRT", "AMTH", "AMUS", "ANCH", "ANS", "APNU", "AQC", "ARCH", "ARCHV", "ARCU", "AREA", "ARRU", "ART", "ASPH", "ASTR", "ASYL", "ATHF", "ATM", "ATOL", "BANK", "BAR", "BAY", "BAYS", "BCH", "BCHS", "BCN", "BDG", "BDGQ", "BDLD", "BDLU", "BGHT", "BKSU", "BLDA", "BLDG", "BLDO", "BLDR", "BLHL", "BLOW", "BNCH", "BNK", "BNKR", "BNKU", "BNKX", "BOG", "BP", "BRKS", "BRKW", "BSND", "BSNP", "BSNU", "BSTN", "BTL", "BTYD", "BUR", "BUSH", "BUSTN", "BUSTP", "BUTE", "CAPE", "CAPG", "CARN", "CAVE", "CDAU", "CFT", "CH", "CHN", "CHNL", "CHNM", "CHNN", "CLDA", "CLF", "CLG", "CMN", "CMP", "CMPL", "CMPLA", "CMPMN", "CMPO", "CMPQ", "CMPRF", "CMTY", "CNFL", "CNL", "CNLA", "CNLB", "CNLD", "CNLI", "CNLN", "CNLQ", "CNLSB", "CNLX", "CNS", "CNSU", "CNYN", "CNYU", "COLF", "COMC", "CONE", "CONT", "COVE", "CRDR", "CRKT", "CRNT", "CRQ", "CRQS", "CRRL", "CRSU", "CRTR", "CSNO", "CST", "CSTL", "CSTM", "CSWY", "CTHSE", "CTRA", "CTRB", "CTRCM", "CTRF", "CTRM", "CTRR", "CTRS", "CUET", "CULT", "CUTF", "CVNT", "DAM", "DAMQ", "DAMSB", "DARY", "DCK", "DCKB", "DCKD", "DCKY", "DEPU", "DEVH", "DIKE", "DIP", "DLTA", "DOMG", "DPOF", "DPR", "DPRG", "DSRT", "DTCH", "DTCHD", "DTCHI", "DTCHM", "DUNE", "DVD", "EDGU", "ERG", "ESCU", "EST", "ESTO", "ESTR", "ESTSG", "ESTT", "ESTX", "ESTY", "FAN", "FANU", "FCL", "FISH", "FJD", "FJDS", "FLD", "FLDI", "FLLS", "FLLSX", "FLTM", "FLTT", "FLTU", "FNDY", "FORD", "FRM", "FRMQ", "FRMS", "FRMT", "FRST", "FRSTF", "FRZU", "FSR", "FT", "FURU", "FY", "FYT", "GAP", "GAPU", "GASF", "GATE", "GDN", "GHAT", "GHSE", "GLCR", "GLYU", "GOSP", "GOVL", "GRAZ", "GRGE", "GROVE", "GRSLD", "GRVC", "GRVE", "GRVO", "GRVP", "GRVPN", "GULF", "GVL", "GYSR", "H", "HBR", "HBRX", "HDLD", "HERM", "HLL", "HLLS", "HLLU", "HLSU", "HLT", "HMCK", "HMDA", "HMSD", "HOLU", "HSE", "HSEC", "HSP", "HSPC", "HSPD", "HSPL", "HSTS", "HTH", "HTL", "HUT", "HUTS", "INDS", "INLT", "INLTQ", "INSM", "INTF", "ISL", "ISLET", "ISLF", "ISLM", "ISLS", "ISLT", "ISLX", "ISTH", "ITTR", "JTY", "KNLU", "KNSU", "KRST", "L", "LAND", "LAVA", "LBED", "LCTY", "LDGU", "LDNG", "LEPC", "LEV", "LEVU", "LGN", "LGNS", "LGNX", "LIBR", "LK", "LKC", "LKI", "LKN", "LKNI", "LKO", "LKOI", "LKS", "LKSB", "LKSC", "LKSI", "LKSN", "LKSNI", "LKX", "LNDF", "LOCK", "LTER", "LTHSE", "MALL", "MAR", "MDW", "MESA", "MESU", "MFG", "MFGB", "MFGC", "MFGCU", "MFGLM", "MFGM", "MFGN", "MFGPH", "MFGQ", "MFGSG", "MGV", "MILB", "MKT", "ML", "MLM", "MLO", "MLSG", "MLSGQ", "MLSW", "MLWND", "MLWTR", "MN", "MNA", "MNAU", "MNC", "MNCR", "MNCU", "MND", "MNDU", "MNFE", "MNMT", "MNN", "MNQ", "MNQR", "MOLE", "MOOR", "MOTU", "MRN", "MRSH", "MRSHN", "MSQE", "MSSN", "MSSNQ", "MSTY", "MT", "MTRO", "MTS", "MTU", "MUS", "MVA", "NKM", "NOV", "NRWS", "NSY", "NTK", "NTKS", "NVB", "OAS", "OBPT", "OBS", "OBSR", "OCH", "OCN", "OILF", "OILJ", "OILP", "OILQ", "OILR", "OILT", "OILW", "OPRA", "OVF", "P", "PAL", "PAN", "PANS", "PASS", "PCL", "PCLD", "PCLF", "PCLH", "PCLI", "PCLIX", "PCLS", "PEAT", "PEN", "PENX", "PGDA", "PIER", "PK", "PKLT", "PKS", "PKSU", "PKU", "PLAT", "PLATX", "PLDR", "PLN", "PLNU", "PLNX", "PLTU", "PMPO", "PMPW", "PND", "PNDI", "PNDN", "PNDNI", "PNDS", "PNDSF", "PNDSI", "PNDSN", "PNLU", "PO", "POOL", "POOLI", "PP", "PPL", "PPLA", "PPLA2", "PPLA3", "PPLA4", "PPLA5", "PPLC", "PPLCH", "PPLF", "PPLG", "PPLH", "PPLL", "PPLQ", "PPLR", "PPLS", "PPLW", "PPLX", "PPQ", "PRK", "PRKGT", "PRKHQ", "PRMN", "PRN", "PRNJ", "PRNQ", "PROM", "PRSH", "PRT", "PRVU", "PS", "PSH", "PSN", "PSTB", "PSTC", "PSTP", "PT", "PTGE", "PTS", "PYR", "PYRS", "QCKS", "QUAY", "R", "RCH", "RD", "RDA", "RDB", "RDCR", "RDCUT", "RDGB", "RDGE", "RDGG", "RDGU", "RDIN", "RDJCT", "RDST", "RDSU", "RECG", "RECR", "REG", "RES", "RESA", "RESF", "RESH", "RESN", "RESP", "REST", "RESV", "RESW", "RET", "RF", "RFC", "RFSU", "RFU", "RFX", "RGN", "RGNE", "RGNH", "RGNL", "RHSE", "RISU", "RJCT", "RK", "RKFL", "RKRY", "RKS", "RLG", "RLGR", "RNCH", "RNGA", "RPDS", "RR", "RRQ", "RSD", "RSGNL", "RSRT", "RSTN", "RSTNQ", "RSTP", "RSTPQ", "RSV", "RSVI", "RSVT", "RTE", "RUIN", "RVN", "RYD", "S", "SALT", "SAND", "SBED", "SBKH", "SCH", "SCHA", "SCHC", "SCHL", "SCHM", "SCHN", "SCHT", "SCNU", "SCRB", "SCRP", "SCSU", "SD", "SDL", "SDLU", "SEA", "SECP", "SHFU", "SHLU", "SHOL", "SHOR", "SHPF", "SHRN", "SHSE", "SHSU", "SHVU", "SILL", "SILU", "SINK", "SLCE", "SLID", "SLP", "SLPU", "SMSU", "SMU", "SNOW", "SNTR", "SPA", "SPIT", "SPLY", "SPNG", "SPNS", "SPNT", "SPRU", "SPUR", "SQR", "ST", "STBL", "STDM", "STKR", "STLMT", "STM", "STMA", "STMB", "STMC", "STMD", "STMH", "STMI", "STMIX", "STMM", "STMQ", "STMS", "STMSB", "STMX", "STNB", "STNC", "STNE", "STNF", "STNI", "STNM", "STNR", "STNS", "STNW", "STPS", "STRT", "SWMP", "SWT", "SYG", "SYSI", "T", "TAL", "TERR", "TERU", "THTR", "TMB", "TMPL", "TMSU", "TMTU", "TNGU", "TNKD", "TNL", "TNLC", "TNLN", "TNLRD", "TNLRR", "TNLS", "TOLL", "TOWR", "TRAM", "TRANT", "TRB", "TREE", "TRGD", "TRGU", "TRIG", "TRL", "TRMO", "TRNU", "TRR", "TUND", "TWO", "U", "UNIP", "UNIV", "UPLD", "USGE", "V", "VAL", "VALG", "VALS", "VALU", "VALX", "VETF", "VIN", "VINS", "VLC", "VLSU", "WAD", "WADB", "WADJ", "WADM", "WADS", "WADX", "WALL", "WALLA", "WEIR", "WHRF", "WHRL", "WLL", "WLLQ", "WLLS", "WRCK", "WTLD", "WTLDI", "WTRC", "WTRH", "WTRW", "ZN", "ZNB", "ZNF", "ZOO"],
         "active": true
     },
     {

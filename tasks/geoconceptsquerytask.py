@@ -16,7 +16,7 @@ MESSAGE_CATEGORY = 'GeoConceptsQueryTask'
 class GeoConceptsQueryTask(QgsTask):
 
     def __init__(self, description, triplestoreurl, query, triplestoreconf, sparql, queryvar, getlabels, layercount,
-                 geoClassList, examplequery, geoClassListGui, completerClassList, dlg):
+                 geoClassList, examplequery, geoClassListGui, completerClassList, dlg, onFinished = None):
         super().__init__(description, QgsTask.CanCancel)
         self.exception = None
         self.triplestoreurl = triplestoreurl
@@ -44,8 +44,11 @@ class GeoConceptsQueryTask(QgsTask):
         self.proxyPort = s.value("proxy/proxyPort")
         self.proxyUser = s.value("proxy/proxyUser")
         self.proxyPassword = s.value("proxy/proxyPassword")
+        self.onFinished = onFinished
 
     def run(self):
+        self.dlg.inp_sparql2.setEnabled(False)
+        self.dlg.inp_sparql2.setStyleSheet('border-radius:10px;background-color: #bbb;')
         QgsMessageLog.logMessage('Started task "{}"'.format(self.description()), MESSAGE_CATEGORY, Qgis.Info)
         if self.proxyHost != None and self.proxyHost != "" and self.proxyPort != None and self.proxyPort != "":
             QgsMessageLog.logMessage('Proxy? ' + str(self.proxyHost), MESSAGE_CATEGORY, Qgis.Info)
@@ -121,6 +124,8 @@ class GeoConceptsQueryTask(QgsTask):
         return result
 
     def finished(self, result):
+        self.dlg.inp_sparql2.setEnabled(True)
+        self.dlg.inp_sparql2.setStyleSheet("border-radius:10px;background-color: rgb(253, 252, 250);")
         self.geoClassList.clear()
         self.geoTreeViewModel.clear()
         self.rootNode=self.geoTreeViewModel.invisibleRootItem()
@@ -133,7 +138,7 @@ class GeoConceptsQueryTask(QgsTask):
             for concept in self.resultlist:
                 # self.layerconcepts.addItem(concept)
                 item = QStandardItem()
-                item.setData(concept, 1)
+                item.setData(concept)
                 item.setText(concept[concept.rfind('/') + 1:])
                 item.setForeground(QColor(0,0,0))
                 item.setEditable(False)
@@ -152,14 +157,14 @@ class GeoConceptsQueryTask(QgsTask):
                     self.completerClassList["completerClassList"][
                         concept[concept.rfind('/') + 1:]] = "<" + concept + ">"
             # self.sparql.updateNewClassList()
-            self.geoClassListGui.selectionModel().setCurrentIndex(self.geoClassList.index(0, 0),
-                                                                  QItemSelectionModel.SelectCurrent)
-            self.dlg.viewselectaction()
+            # self.geoClassListGui.selectionModel().setCurrentIndex(self.geoClassList.index(0, 0),
+            #                                                       QItemSelectionModel.SelectCurrent)
+            # self.dlg.viewselectaction()
         elif len(self.viewlist) > 0:
             for concept in self.viewlist:
                 # self.layerconcepts.addItem(concept)
                 item = QStandardItem()
-                item.setData(concept, 1)
+                item.setData(concept)
                 item.setText(concept[concept.rfind('/') + 1:])
                 item.setForeground(QColor(0,0,0))
                 item.setEditable(False)
@@ -181,9 +186,12 @@ class GeoConceptsQueryTask(QgsTask):
                 # item.setData(1,concept)
                 # item.setText(concept[concept.rfind('/')+1:])
                 # self.geoClassList.addItem(item)
-            self.sparql.updateNewClassList()
-            self.geoClassListGui.selectionModel().setCurrentIndex(self.geoClassList.index(0, 0),
-                                                                  QItemSelectionModel.SelectCurrent)
-            self.dlg.viewselectaction()
+            # self.sparql.updateNewClassList()
+            # self.geoClassListGui.selectionModel().setCurrentIndex(self.geoClassList.index(0, 0), QItemSelectionModel.Rows)
+            # self.geoClassListGui.selectionModel().select(self.geoClassList.index(0, 0), QItemSelectionModel.Rows)
+            # self.dlg.viewselectaction()
         if self.amountoflabels != -1:
             self.layercount.setText("[" + str(self.amountoflabels) + "]")
+
+        if self.onFinished != None:
+            self.onFinished()
